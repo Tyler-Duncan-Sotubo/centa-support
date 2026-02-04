@@ -1,0 +1,149 @@
+.hero {
+  padding: 3.5rem 0;
+  background: var(--ifm-background-color);
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.title {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1.25rem;
+}
+
+.search {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  background: var(--ifm-background-surface-color);
+}
+
+.searchButton {
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: white;
+  cursor: pointer;
+}
+
+.quickLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.quickLink {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--ifm-toc-border-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.heroCard {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 1rem;
+  background: var(--ifm-background-surface-color);
+  overflow: hidden;
+}
+
+.heroCardInner {
+  padding: 1.25rem;
+}
+
+.cardTitle {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.popularList {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.cardFooter {
+  margin-top: 1rem;
+}
+
+.cardCta {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section {
+  padding: 2.5rem 0 3rem;
+}
+
+.sectionTitle {
+  margin-bottom: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 1rem;
+  background: var(--ifm-background-surface-color);
+  text-decoration: none;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cardHeading {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.cardDescription {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.cardArrow {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  align-self: center;
+}
+
+/* Responsive */
+@media (max-width: 996px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
