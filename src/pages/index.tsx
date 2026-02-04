@@ -7,54 +7,13 @@ import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 
-type Module = {
-  title: string;
-  description: string;
-  to: string;
-};
-
-const MODULES: Module[] = [
-  {
-    title: "Core HR",
-    description: "Employee records, profiles, org structure.",
-    to: "/core-hr",
-  },
-  {
-    title: "Attendance",
-    description: "Time tracking, timesheets, clock-in/out.",
-    to: "/attendance",
-  },
-  {
-    title: "Leave",
-    description: "Requests, approvals, balances, policies.",
-    to: "/leave",
-  },
-  {
-    title: "Appraisals",
-    description: "Performance reviews and feedback cycles.",
-    to: "/appraisals",
-  },
-  {
-    title: "Payroll",
-    description: "Payslips, deductions, payroll outputs.",
-    to: "/payroll",
-  },
-  // Add the rest of your 14 modules here
-];
-
 function HelpCenterHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   function onSearchSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    const input = form.querySelector<HTMLInputElement>('input[name="q"]');
-    const q = input?.value?.trim();
-    if (!q) return;
-
-    // If you later add local search or Algolia, you can route to their search page.
-    // For now, just take users to docs where the search bar will be visible.
-    window.location.href = `/docs/intro?query=${encodeURIComponent(q)}`;
+    // For now, just take users to the docs root
+    window.location.href = "/";
   }
 
   return (
@@ -65,7 +24,7 @@ function HelpCenterHeader() {
             {siteConfig.title || "CentaHR Support"}
           </Heading>
           <p className={styles.subtitle}>
-            Find guides, how-tos, and troubleshooting across all modules.
+            Find guides, how-tos, and troubleshooting across CentaHR.
           </p>
 
           <form className={styles.search} onSubmit={onSearchSubmit}>
@@ -75,27 +34,22 @@ function HelpCenterHeader() {
               type="search"
               placeholder="Search the help center…"
               aria-label="Search the help center"
+              disabled
             />
-            <button className={styles.searchButton} type="submit">
+            <button className={styles.searchButton} type="submit" disabled>
               Search
             </button>
           </form>
 
           <div className={styles.quickLinks}>
-            <Link className={styles.quickLink} to="/docs/intro">
+            <Link className={styles.quickLink} to="/intro">
               Getting started
             </Link>
-            <Link className={styles.quickLink} to="/docs/faq">
-              FAQs
-            </Link>
-            <Link className={styles.quickLink} to="/docs/troubleshooting">
-              Troubleshooting
-            </Link>
-            <Link className={styles.quickLink} to="/docs/release-notes">
-              Release notes
-            </Link>
-            <Link className={styles.quickLink} to="/docs/contact">
-              Contact support
+            <Link
+              className={styles.quickLink}
+              to="/attendance/employee-clock-in-out"
+            >
+              Clock in and clock out
             </Link>
           </div>
         </div>
@@ -107,21 +61,18 @@ function HelpCenterHeader() {
             </Heading>
             <ul className={styles.popularList}>
               <li>
-                <Link to="/docs/appraisals/start-appraisals">
-                  How employees can start appraisals
+                <Link to="/attendance/employee-clock-in-out">
+                  Employee clock in and clock out
                 </Link>
               </li>
               <li>
-                <Link to="/docs/leave/request-leave">How to request leave</Link>
-              </li>
-              <li>
-                <Link to="/docs/payroll/download-payslips">
-                  How to download payslips
+                <Link to="/attendance/not-at-assigned-location">
+                  Clock in blocked due to location
                 </Link>
               </li>
             </ul>
             <div className={styles.cardFooter}>
-              <Link className={styles.cardCta} to="/docs">
+              <Link className={styles.cardCta} to="/">
                 Browse all articles →
               </Link>
             </div>
@@ -139,18 +90,19 @@ function ModuleGrid() {
         <Heading as="h2" className={styles.sectionTitle}>
           Browse by module
         </Heading>
+
         <div className={styles.grid}>
-          {MODULES.map((m) => (
-            <Link key={m.title} to={m.to} className={styles.card}>
-              <div className={styles.cardBody}>
-                <Heading as="h3" className={styles.cardHeading}>
-                  {m.title}
-                </Heading>
-                <p className={styles.cardDescription}>{m.description}</p>
-              </div>
-              <div className={styles.cardArrow}>→</div>
-            </Link>
-          ))}
+          <Link to="/attendance/overview" className={styles.card}>
+            <div className={styles.cardBody}>
+              <Heading as="h3" className={styles.cardHeading}>
+                Attendance
+              </Heading>
+              <p className={styles.cardDescription}>
+                Time tracking, clock-in/out, and attendance rules.
+              </p>
+            </div>
+            <div className={styles.cardArrow}>→</div>
+          </Link>
         </div>
       </div>
     </section>
