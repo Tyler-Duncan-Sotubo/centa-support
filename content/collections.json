@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "getting-started",
+    "title": "Getting started",
+    "description": "Signing in, finding your way around, and setting up your company",
+    "icon": "grid",
+    "sections": [
+      {
+        "id": "employees",
+        "title": "For employees"
+      },
+      {
+        "id": "admins",
+        "title": "For HR admins"
+      }
+    ]
+  },
+  {
+    "slug": "staff",
+    "title": "Staff",
+    "description": "Employee records, onboarding, offboarding, teams and your organisation",
+    "icon": "users",
+    "sections": [
+      {
+        "id": "start",
+        "title": "Start here"
+      },
+      {
+        "id": "company",
+        "title": "Your organisation"
+      },
+      {
+        "id": "people",
+        "title": "Employees"
+      },
+      {
+        "id": "lifecycle",
+        "title": "Joiners and leavers"
+      }
+    ]
+  },
+  {
+    "slug": "performance",
+    "title": "Performance",
+    "description": "Appraisals, tasks, objectives, one-to-ones and 360° feedback",
+    "icon": "target",
+    "sections": [
+      {
+        "id": "start",
+        "title": "Start here"
+      },
+      {
+        "id": "setup",
+        "title": "Set up Performance"
+      },
+      {
+        "id": "use",
+        "title": "Day to day"
+      },
+      {
+        "id": "rollout",
+        "title": "Roll it out"
+      },
+      {
+        "id": "reference",
+        "title": "Reference"
+      }
+    ]
+  },
+  {
+    "slug": "attendance",
+    "title": "Attendance",
+    "description": "Clocking in and out, shifts, rotas and timesheets",
+    "icon": "clock",
+    "sections": [
+      {
+        "id": "start",
+        "title": "Start here"
+      },
+      {
+        "id": "setup",
+        "title": "Set up Attendance"
+      },
+      {
+        "id": "use",
+        "title": "Day to day"
+      },
+      {
+        "id": "employees",
+        "title": "For employees"
+      }
+    ]
+  },
+  {
+    "slug": "leave",
+    "title": "Leave",
+    "description": "Leave types, approvals, balances, holidays and requests",
+    "icon": "calendar",
+    "sections": [
+      {
+        "id": "start",
+        "title": "Start here"
+      },
+      {
+        "id": "setup",
+        "title": "Set up Leave"
+      },
+      {
+        "id": "use",
+        "title": "Day to day"
+      },
+      {
+        "id": "employees",
+        "title": "For employees"
+      }
+    ]
+  },
+  {
+    "slug": "payroll",
+    "title": "Payroll",
+    "description": "Pay runs, payslips, deductions, remittances and salary advances",
+    "icon": "wallet",
+    "sections": [
+      {
+        "id": "start",
+        "title": "Start here"
+      },
+      {
+        "id": "setup",
+        "title": "Set up Payroll"
+      },
+      {
+        "id": "use",
+        "title": "Run payroll"
+      },
+      {
+        "id": "employees",
+        "title": "For employees"
+      }
+    ]
+  },
+  {
+    "slug": "troubleshooting",
+    "title": "Troubleshooting",
+    "description": "Fixes for signing in, emails, links and missing pages",
+    "icon": "key",
+    "sections": [
+      {
+        "id": "guides",
+        "title": "Guides"
+      }
+    ]
+  }
+]

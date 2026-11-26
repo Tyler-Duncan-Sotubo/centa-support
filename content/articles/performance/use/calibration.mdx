@@ -1,0 +1,94 @@
+---
+title: "Calibration"
+summary: "Compare finished appraisal scores across teams and adjust the ones that are out of line."
+section: "use"
+order: 5
+updated: "2026-11-26"
+---
+Calibration makes one manager's 80 mean the same as another's. Run it once the manager appraisals in a cycle are complete, before you share results or use them for pay and promotion decisions.
+
+Go to **Performance → Calibration** and pick the cycle. Only completed manager appraisals appear.
+
+<Screen
+  label="The Calibration page: a score spread across five bands, the average score by reviewer, and a list of finished appraisals with an Adjust score option."
+  path={["Performance", "Calibration"]}
+  title="Calibration"
+  description="Compare finished reviews across teams, and even out the scoring."
+  actions={<Select value="H1 2026 Appraisal" width={170} />}
+  caption="Names and numbers are examples."
+>
+  <Columns template="1fr 1fr">
+    <Card title="Score spread" description="18 finished reviews">
+      <Bars
+        max={7}
+        rows={[
+          { label: "Under 60", value: 1 },
+          { label: "60–69", value: 3 },
+          { label: "70–79", value: 7 },
+          { label: "80–89", value: 5 },
+          { label: "90–100", value: 2 },
+        ]}
+      />
+    </Card>
+    <Card title="Average by reviewer" description="Spot anyone scoring far above or below the rest">
+      <Bars
+        max={100}
+        rows={[
+          { label: "Tunde Bakare", value: 74 },
+          { label: "Ngozi Obi", value: 88 },
+          { label: "Kemi Lawal", value: 71 },
+        ]}
+      />
+    </Card>
+  </Columns>
+  <Card>
+    <Columns template="1fr auto">
+      <Table
+        columns="1.5fr 1.2fr 0.6fr 1fr"
+        head={["Employee", "Reviewer", "Score", "Recommendation"]}
+        rows={[
+          [<Person name="Ifeoma Nwosu" sub="Finance" />, "Ngozi Obi", "92", <Badge tone="success">Promote</Badge>],
+          [<Person name="Adaeze Okafor" sub="Sales" />, "Tunde Bakare", "78", <Badge tone="success">Promote</Badge>],
+          [<Person name="Bola Ahmed" sub="Sales" />, "Tunde Bakare", "64", <Badge>Hold</Badge>],
+        ]}
+      />
+      <Menu mark={1} items={["Adjust score", "Put back the original"]} />
+    </Columns>
+  </Card>
+</Screen>
+
+## Read the page
+
+- **Score spread** counts finished appraisals in five bands: under 60, 60–69, 70–79, 80–89 and 90–100.
+- **Average by reviewer** shows each manager's average score. Look for anyone far above or below the rest: in the drawing, Ngozi Obi scores 14 points above the next reviewer.
+
+## Adjust a score
+
+1. Open the person's row menu and choose **Adjust score** (marked 1 above).
+2. Enter the new **Score out of 100**.
+3. Under **Why**, say why it's changing. A reason is required.
+4. Save. The new score is the one everyone sees, and the reviewer's original is kept.
+
+<Screen label="The adjust score dialog, with a new score of 85 and a reason." bare>
+  <Dialog
+    title="Adjust Ifeoma Nwosu’s score"
+    footer={<><Button variant="outline">Cancel</Button><Button>Save</Button></>}
+  >
+    <Field label="Score out of 100">
+      <Input value="85" width={100} />
+    </Field>
+    <Field label="Why">
+      <Input tall value="Ngozi's scores run about 14 points above the other reviewers. Brought in line after the calibration meeting." />
+    </Field>
+  </Dialog>
+</Screen>
+
+To undo an adjustment, choose **Put back the original** from the row menu.
+
+## Who can calibrate
+
+- **HR** can calibrate everyone.
+- **A manager of managers** can calibrate the people in their own line. Managers whose reports have no reports of their own see “Calibration is for HR, and for managers of managers.”
+- **Nobody can change their own score.**
+
+Only the score changes. The appraisal's answers and conclusion stay locked, as the reviewer left them.

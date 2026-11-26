@@ -1,0 +1,76 @@
+---
+title: "Step 1: Leave settings"
+navTitle: "Leave settings"
+summary: "Choose who approves leave, the yearly allowance, carryover, who can take leave, which days count, and who's told."
+section: "setup"
+order: 1
+updated: "2026-11-26"
+---
+These settings apply to every kind of leave. A new company starts with the line manager approving, 20 days a year, up to 5 days carried over, and weekends and public holidays left out of leave days.
+
+Go to **Leave → Settings → Leave settings**. Changes save as you make them.
+
+<Screen
+  label="The Leave settings page: the approval workflow with two steps, auto-approve after 7 days, and the entitlement card with 20 days, carryover allowed up to 5 days, and no negative balances."
+  path={["Leave", "Settings", "Leave settings"]}
+  title="Leave settings"
+  description="Approvals, entitlement, eligibility and notifications."
+>
+  <Card title="Approval workflow" description="Each step decides in this order" action={<Toggle on />}>
+    <Stack gap={10}>
+      <Inline gap={10}>
+        <Meta>Step 1</Meta>
+        <Select value="Line manager" width={200} />
+      </Inline>
+      <Inline gap={10}>
+        <Meta>Step 2</Meta>
+        <Select value="HR manager" width={200} />
+        <Meta>Only when over</Meta>
+        <Input value="5" width={56} />
+        <Meta>days</Meta>
+      </Inline>
+      <div>
+        <Button variant="outline">Add a step</Button>
+      </div>
+      <Row mark={1} label="Auto-approve after" hint="Days with no decision before a request is approved. Requests whose leave has already started are left for a person. 0 turns this off."><Input value="7" width={70} /></Row>
+    </Stack>
+  </Card>
+  <Card title="Entitlement">
+    <Row mark={2} label="Annual leave entitlement" hint="In days"><Input value="20" width={70} /></Row>
+    <Row mark={3} label="Allow carryover of unused leave"><Toggle on /></Row>
+    <Row label="Carryover limit" hint="In days"><Input value="5" width={70} /></Row>
+    <Row mark={4} label="Allow negative leave balance"><Toggle /></Row>
+  </Card>
+</Screen>
+
+## Approval workflow
+
+With **Multi-level approval** off, each person's line manager approves their leave. Switch it on to add steps; each step decides in order.
+
+- **Who can approve a step:** from the reporting line (**Line manager**, **Manager's manager** or **Department head**), anyone with a role such as HR manager, or **A specific person**.
+- **Only when over:** later steps can apply only to longer requests, for example HR only for requests over 5 days.
+- **Auto-approve after** (1): requests with no decision after this many days approve themselves. Leave that has already started is left for a person to decide. Set 0 to turn it off.
+
+## Entitlement
+
+| | Setting | What it does | Default |
+| --- | --- | --- | --- |
+| 2 | Annual leave entitlement | The yearly allowance of annual leave | 20 days |
+| 3 | Allow carryover of unused leave | Lets unused days roll into next year, up to the **Carryover limit** | On, 5 days |
+| 4 | Allow negative leave balance | Lets people take more leave than they have, going below zero | Off |
+
+## Eligibility and days
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| Allow leave for unconfirmed employees | Lets people still on probation request any leave. Off, they can only request the **Allowed leave types**. | Off: Sick Leave and Unpaid Leave only |
+| Exclude weekends from leave days | Leaves the **Weekend days** out when counting a request | On: Saturday and Sunday |
+| Exclude public holidays | Leaves your [holidays](/leave/setup/holidays) out when counting a request | On |
+
+## Notifications
+
+Choose who hears about requests: **Notify HR**, **Notify approver**, **Notify line manager**, and **Notify employee when approved or rejected**. To start with, the approver hears about new requests and the employee hears the decision, by email. **CC roles** copies people with the roles you list.
+
+## Next
+
+[Step 2: Leave types and policies](/leave/setup/types-and-policies).

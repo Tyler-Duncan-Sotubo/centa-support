@@ -1,0 +1,82 @@
+---
+title: "Departments and job roles"
+summary: "Set up the departments people belong to and the jobs they do, one at a time or from a spreadsheet."
+section: "company"
+order: 1
+updated: "2026-11-26"
+---
+Departments and job roles are lists you pick from as you add people, so set them up first. They show on profiles and the org chart, and reports use them, such as payroll costs by department.
+
+## Job roles
+
+A job role is a job people do, such as Account Executive or Operations Manager. Several people can share one.
+
+1. Go to **Staff → Company → Job roles** and click **Add Job Role**.
+2. Enter the **Title**, choose the **Level** and add a **Description**.
+3. Click **Add**.
+
+<Screen label="The Add Job Role dialog: a title, a level and a description." bare>
+  <Dialog
+    title="Add Job Role"
+    footer={<><Button variant="outline">Cancel</Button><Button>Add</Button></>}
+  >
+    <Field label="Title" required>
+      <Input value="Account Executive" />
+    </Field>
+    <Field label="Level" required>
+      <Select value="Mid" />
+    </Field>
+    <Field label="Description" required>
+      <Input tall value="Looks after a group of customer accounts and grows sales with them." />
+    </Field>
+  </Dialog>
+</Screen>
+
+The levels are Entry, Junior, Mid, Senior and Lead.
+
+## Departments
+
+1. Go to **Staff → Company → Departments** and click **Add Department**.
+2. Enter the **Name**, and choose the **Head of Department** if you've added them already.
+3. Click **Add**.
+
+<Screen
+  label="The Departments page: each department with its head and the people in it."
+  path={["Staff", "Company", "Departments"]}
+  title="Departments"
+  description="Manage your departments here."
+  actions={<><Button variant="outline">Import</Button><Button>Add Department</Button></>}
+  caption="Names are examples."
+>
+  <Card>
+    <Table
+      columns="1.2fr 1.4fr 1fr 0.3fr"
+      head={["Name", "Head Of Department", "Members", ""]}
+      rows={[
+        ["Sales", <Person name="Adaeze Okafor" />, "12 people", <More />],
+        ["Finance", <Person name="Ngozi Obi" />, "4 people", <More />],
+        ["Operations", "–", "9 people", <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+**Members** shows who's in each department; click someone to open their profile. Heads of department are marked **Head** on the org chart.
+
+People join a department when you add them, or later from the **Employment** tab of their profile.
+
+## Add a lot at once
+
+Both pages have **Import**:
+
+1. Click **Import**, then **Download Example** for the spreadsheet layout.
+2. Fill it in, one department or job role per row.
+3. Drag the file into the window, or click to choose it, then click **Upload**.
+
+## Change or remove one
+
+Use the menu on a row to **Edit** or **Delete** it. Before deleting, move anyone in that department or job role to another one.
+
+## Offices
+
+Offices are the third list to set up. They decide where people can clock in, so they have their own guide: [offices and clock-in locations](/attendance/setup/offices).

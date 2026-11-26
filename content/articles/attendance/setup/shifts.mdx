@@ -1,0 +1,78 @@
+---
+title: "Step 3: Shifts"
+navTitle: "Shifts"
+summary: "Create shift patterns with their own hours, working days and clocking rules."
+section: "setup"
+order: 3
+updated: "2026-11-26"
+---
+A shift is a pattern of hours, such as a morning shift from 7:00 to 15:00. Use shifts when people work different hours; you give people their shifts on the [rota](/attendance/setup/rota).
+
+Shifts only apply when **Use shifts** is on in [attendance settings](/attendance/setup/settings). With it on, people need a shift on the rota for the day to clock in.
+
+## Create a shift
+
+Go to **Attendance → Settings → Shift management** and click **Add shift**.
+
+<Screen
+  label="The New shift form: name, office, start and end time, working days, and clocking rules for lateness, early clock-in and late clock-out."
+  path={["Attendance", "Settings", "Shift management"]}
+  title="New shift"
+>
+  <Columns template="1fr 1fr">
+    <Card title="Shift">
+      <Stack gap={12}>
+        <Field label="Shift name" required>
+          <Input value="Morning shift" />
+        </Field>
+        <Field label="Office" mark={1}>
+          <Select value="Lekki Office" />
+        </Field>
+        <Columns template="1fr 1fr">
+          <Field label="Start time" required>
+            <Input value="07:00" />
+          </Field>
+          <Field label="End time" required>
+            <Input value="15:00" />
+          </Field>
+        </Columns>
+        <Field label="Working days" mark={2}>
+          <Select value="Monday to Friday" />
+        </Field>
+      </Stack>
+    </Card>
+    <Card title="Clocking rules">
+      <Stack gap={10}>
+        <Field label="Late tolerance (minutes)" mark={3}>
+          <Input value="10" width={100} />
+        </Field>
+        <Row label="Allow early clock-in" mark={4}><Toggle on /></Row>
+        <Field label="Early clock-in (minutes)">
+          <Input value="15" width={100} />
+        </Field>
+        <Row label="Allow late clock-out" mark={5}><Toggle /></Row>
+        <Field label="Notes">
+          <Input placeholder="Optional" />
+        </Field>
+      </Stack>
+    </Card>
+  </Columns>
+</Screen>
+
+| | Field | What it does |
+| --- | --- | --- |
+| 1 | Office | The office the shift belongs to. Only people located at that office can be given it. |
+| 2 | Working days | The days this shift runs. |
+| 3 | Late tolerance (minutes) | Minutes after the shift starts before a clock-in counts as late. |
+| 4 | Allow early clock-in | Lets people clock in before the shift starts, up to the minutes you set. Off, nobody can clock in before the start time. |
+| 5 | Allow late clock-out | Lets people clock out after the shift ends, up to the minutes you set. |
+
+## Things to know
+
+- **Shift times replace the default hours** for anyone on the rota that day. Lateness, early finishes and overtime are worked out against the shift.
+- **Changing a shift** affects days from now on. Days already recorded keep their status.
+- **Shifts are per office**, so a company with two offices may need a morning shift at each.
+
+## Next
+
+[Step 4: Plan the rota](/attendance/setup/rota).

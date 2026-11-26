@@ -1,0 +1,58 @@
+---
+title: "Complete your onboarding"
+navTitle: "Onboarding"
+summary: "What new joiners do when they first sign in: the onboarding steps your HR team set up."
+section: "employees"
+order: 3
+updated: "2026-11-26"
+---
+When you sign in as a new joiner, CentaHR opens **Onboarding** before anything else. Your HR team chooses the steps; finishing them gives HR what they need to pay you and set you up.
+
+## Work through the steps
+
+1. Sign in with the email and password from your invitation.
+2. On **Start Your Journey with Us**, the steps are listed on the left. Start with the first.
+3. Fill in each step and click **Next**. Your answers are saved at each step, so you can stop and come back later. **Previous** takes you back a step.
+4. On the last step, click **Finish**.
+
+<Screen
+  label="The onboarding page: the list of steps on the left, with the current step's form on the right."
+  rail={false}
+  path={["Onboarding"]}
+  title="Start Your Journey with Us"
+  description="Complete the steps below to onboard successfully."
+  caption="Your company chooses the steps; these are examples."
+>
+  <Columns template="0.8fr 1.6fr">
+    <Card>
+      <div>
+        <Item done>Personal details</Item>
+        <Item>Bank details</Item>
+        <Item>Emergency contact</Item>
+        <Item>Documents</Item>
+      </div>
+    </Card>
+    <Card title="Bank details">
+      <Stack gap={12}>
+        <Field label="Bank" required>
+          <Select placeholder="Choose your bank" />
+        </Field>
+        <Field label="Account number" required>
+          <Input placeholder="10 digits" />
+        </Field>
+        <Inline gap={8}>
+          <Button variant="outline">Previous</Button>
+          <Button>Next</Button>
+        </Inline>
+      </Stack>
+    </Card>
+  </Columns>
+</Screen>
+
+## Things to know
+
+- **Use your own details.** Your bank details are where your salary is paid.
+- **Not sure about a step?** Ask your HR team; they can see what you've filled in.
+- **Steps left** show on **Home** under **To do** until you've finished them.
+
+Once you're done, see [find your way around the employee portal](/getting-started/employee-basics).

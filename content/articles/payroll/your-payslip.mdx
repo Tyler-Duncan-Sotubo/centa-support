@@ -1,0 +1,58 @@
+---
+title: "Your payslip explained"
+navTitle: "Your payslip"
+summary: "Where to find your payslips, and what each line on them means."
+section: "employees"
+order: 1
+updated: "2026-11-26"
+---
+Your payslips are on your profile. Each month's payslip is added once that month's payroll is approved.
+
+1. Go to **Profile** in the employee portal, and open the **Payroll** tab.
+2. **Payslip Summary** lists each month. Choose a year to see older ones.
+3. Click **PDF** beside a month to download that payslip.
+
+<Screen
+  label="The Payroll tab of your profile: the payslip summary for each month, with net salary, gross salary, deductions and a PDF button."
+  path={["Profile"]}
+  title="Profile"
+  description="Your details, employment and payslips"
+  caption="Figures are examples. Some columns are left out here."
+>
+  <Tabs items={[{ label: "Personal" }, { label: "Employment" }, { label: "Payroll", active: true }, { label: "Org chart" }]} />
+  <Card title="Payslip Summary" action={<Select value="2026" />}>
+    <Table
+      columns="1.2fr 1fr 1fr 1fr 0.7fr"
+      head={["Month", "Net Salary", "Gross Salary", "Deductions", "Payslip"]}
+      rows={[
+        ["December 2026", "₦397,495", "₦500,000", "₦102,505", <Button variant="outline">PDF</Button>],
+        ["November 2026", "₦397,495", "₦500,000", "₦102,505", <Button variant="outline">PDF</Button>],
+        ["October 2026", "₦397,495", "₦500,000", "₦102,505", <Button variant="outline">PDF</Button>],
+      ]}
+    />
+  </Card>
+</Screen>
+
+## What's on your payslip
+
+Your net pay is at the top. Below it, each line shows this month's amount and your total so far this year (YTD).
+
+| Line | What it is |
+| --- | --- |
+| Basic, Housing, Transport | Your pay, split the way your company sets it |
+| Other Allowance | The rest of your gross pay, such as utility or meal allowances |
+| Gross Earnings | Your pay for the month before anything is taken off: usually a twelfth of your yearly salary |
+| PAYE Tax | Income tax, paid to the tax authority for you |
+| Pension Contribution | Usually 8% of your basic, housing and transport, paid to your pension administrator. Your employer adds 10% on top, which isn't taken from your pay. |
+| NHF Contribution | National Housing Fund, 2.5% of your basic pay, if it applies to you |
+| Salary Advance | This month's repayment, if you're repaying one |
+| Reimbursements | Approved expenses paid back to you with your salary |
+| Net pay | Gross earnings, less total deductions, plus reimbursements. This is what's paid into your bank account. |
+
+For example, take a gross of ₦500,000: ₦250,000 basic, ₦125,000 housing, ₦50,000 transport and ₦75,000 other. Pension is ₦34,000 and NHF is ₦6,250. For someone paying ₦1,000,000 a year in rent, PAYE is ₦62,255. That leaves ₦397,495.
+
+## Something looks wrong?
+
+- **Joined or left mid-month?** You may be paid only for the days you worked.
+- **Unpaid leave** can reduce your pay for the month.
+- **Still unsure?** Ask your HR or payroll team. They can see how your pay was worked out.

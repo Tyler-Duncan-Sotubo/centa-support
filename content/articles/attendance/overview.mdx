@@ -1,0 +1,52 @@
+---
+title: "Attendance in CentaHR"
+navTitle: "Overview"
+summary: "How clocking in works, what HR sets up, and what managers and employees see."
+section: "start"
+order: 1
+updated: "2026-11-26"
+---
+Attendance records when people start and finish work. Employees clock in and out from the employee portal or the Centa HR app, and CentaHR checks they're at one of your offices. Each day is marked present, late or absent, and feeds the timesheet and reports.
+
+## How a working day runs
+
+<Flow
+  stages={[
+    { title: "Working hours are set", text: "HR sets the company's working hours, or gives people shifts on the rota.", actors: ["HR"] },
+    { title: "Clock in", text: "The employee clocks in from the portal or the app. CentaHR checks they're within 100 metres of an office, and that it isn't too early.", actors: ["Employees"] },
+    { title: "Clock out", text: "At the end of the day they clock out, again from an office. There's one clock-in and one clock-out a day.", actors: ["Employees"] },
+    { title: "The day is marked", text: "CentaHR marks the day present or late, and works out early finishes and overtime against their hours.", actors: ["Automatic"] },
+    { title: "Mistakes are fixed", text: "Someone who forgot to clock in or out requests a correction, and their line manager approves it.", actors: ["Employees", "Managers"] },
+    { title: "Review and report", text: "Managers check the timesheet each day. HR uses the reports each month.", actors: ["Managers", "HR"] },
+  ]}
+/>
+
+## The parts of Attendance
+
+| Part | What it is | Who uses it |
+| --- | --- | --- |
+| [Attendance settings](/attendance/setup/settings) | Working hours, late tolerance, early clock-in, overtime and half days | HR |
+| [Offices](/attendance/setup/offices) | Where people can clock in, pinned on a map | HR |
+| [Shifts](/attendance/setup/shifts) | Shift patterns with their own hours and clocking rules | HR |
+| [Rota](/attendance/setup/rota) | Who works which shift, day by day | HR, line managers |
+| [Timesheet](/attendance/use/timesheet) | Who clocked in and when, and who's late or absent | HR, line managers |
+| [Corrections](/attendance/use/corrections) | Requests to fix a missed or wrong clock-in | Employees, line managers |
+| [Reports](/attendance/use/reports) | Attendance by month, person, department and shift | HR |
+
+HR (Super admin, Admin and HR manager roles) see everyone. Line managers see the people below them in the reporting line.
+
+## Set it up
+
+1. Check [before you start](/attendance/before-you-start): offices, each person's location, and holidays.
+2. Choose your [attendance settings](/attendance/setup/settings).
+3. Pin your [offices](/attendance/setup/offices) on the map.
+4. Create [shifts](/attendance/setup/shifts), if people work different hours.
+5. Plan the [rota](/attendance/setup/rota), to give people their shifts.
+
+Each step matches an item on **Attendance → Setup checklist**: General settings, Office locations, Shift management and Assign rota. Clicking an item opens its page and ticks it off.
+
+<Callout type="tip" title="Everyone works the same hours?">
+
+Skip shifts and the rota. Set your working hours in [attendance settings](/attendance/setup/settings), pin your offices, and people can start clocking in.
+
+</Callout>

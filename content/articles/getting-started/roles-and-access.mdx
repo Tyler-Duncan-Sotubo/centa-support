@@ -1,0 +1,62 @@
+---
+title: "Roles and access"
+summary: "Who can see what, how to give someone a role, and how approvals and sign-in are protected."
+section: "admins"
+order: 3
+updated: "2026-11-26"
+---
+What someone can do in CentaHR depends on their role and on who reports to them. Manage it under your avatar menu → **Users**, on the **Team and security** page.
+
+<Screen
+  label="The Team and security page on its Users tab: each user's role and last sign-in, and the Invite user button."
+  path={["Account", "Users"]}
+  title="Team and security"
+  description="Who can use Centa and how they sign in."
+  actions={<Button>Invite user</Button>}
+  caption="Names are examples."
+>
+  <Tabs items={[{ label: "Users", active: true }, { label: "Roles" }, { label: "Approvals" }, { label: "Two-step sign-in" }, { label: "Security history" }]} />
+  <Card>
+    <Table
+      columns="1.6fr 1fr 1fr 0.3fr"
+      head={["User", "Role", "Last sign-in", ""]}
+      rows={[
+        [<Person name="Amaka Okafor" sub="amaka@okaforfoods.com" />, <Badge tone="primary">Super admin</Badge>, "Today", <More />],
+        [<Person name="Ngozi Obi" sub="ngozi@okaforfoods.com" />, <Badge tone="primary">HR manager</Badge>, "Yesterday", <More />],
+        [<Person name="Tunde Bakare" sub="tunde@okaforfoods.com" />, <Badge tone="violet">Line manager</Badge>, "3 days ago", <More />],
+        [<Person name="Adaeze Okafor" sub="adaeze@okaforfoods.com" />, <Badge>Employee</Badge>, "Never", <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+## The roles
+
+| Role | What they can do |
+| --- | --- |
+| Super admin | Full access, including users, roles and system settings |
+| Admin | Manage users, assign roles, and oversee HR and payroll |
+| HR manager | Look after employee records, hiring and HR tasks |
+| Payroll specialist | Handle payroll, tax documents and salary payments |
+| Line manager | Use the dashboard for the people below them: their timesheets, rota, approvals and reviews |
+| Employee | Use the employee portal and the app for their own work |
+
+Being someone's manager comes from the reporting line, not the role. Anyone with people under them sees those people's records and approves their requests, whatever their role. Set reporting lines on **Staff → Company → Org chart**.
+
+## Give someone access
+
+- **Someone new:** click **Invite user**, enter their **Name**, **Email address** and **Role**, and click **Send invite**.
+- **Change a role:** open the person's menu, choose **Edit**, pick the new **Role** and click **Save**. You can't change your own role.
+
+## Approvals
+
+On the **Approvals** tab:
+
+- **Default manager** approves for anyone without a line manager, and for imported employees with none. Choose someone senior, such as the head of HR.
+- **Waiting approvals** sets when the approver gets a reminder, and when a request escalates to their manager and HR. Requests also escalate straight away if the approver is on leave with no stand-in.
+
+## Sign-in protection
+
+- **Two-step sign-in** is on to start with: everyone gets a code by email as a second step when they sign in after three days away. Switch it under **Two-step sign-in**.
+- **Security history** lists sign-ins, so you can see who signed in and when.
+- **People who leave lose access** the day after their last day, once their offboarding is confirmed under **Staff → Offboarding**.

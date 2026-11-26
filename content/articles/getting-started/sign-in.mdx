@@ -1,0 +1,75 @@
+---
+title: "Sign in for the first time"
+navTitle: "Sign in"
+summary: "Accept your invitation, set your password, and sign in to CentaHR."
+section: "employees"
+order: 1
+updated: "2026-11-26"
+---
+Your HR team adds you to CentaHR, and you get an email inviting you to join. You set a password once; after that, you sign in at [app.centahr.com](https://app.centahr.com/login).
+
+## Accept your invitation
+
+1. Open the email from CentaHR. It comes from noreply@centahr.com, and the subject starts “Invitation to Join” followed by your company's name.
+2. Click the link in the email.
+3. Your email is already filled in. **Create a password** of at least 8 characters, type it again under **Confirm password**, and click **Activate account**.
+
+<AuthScreen
+  label="The You're invited to Centa page: your email, a password, the same password again, and the Activate account button."
+  title="You’re invited to Centa"
+  description="Set a password to activate your account and join your team."
+>
+  <Field label="Email">
+    <Input value="adaeze@yourcompany.com" />
+  </Field>
+  <Field label="Create a password">
+    <Input placeholder="At least 8 characters" />
+  </Field>
+  <Field label="Confirm password">
+    <Input placeholder="Type it again" />
+  </Field>
+  <div>
+    <Button>Activate account</Button>
+  </div>
+</AuthScreen>
+
+The link works once. If it says it has expired or been used, see [the link doesn't work](/troubleshooting/password-reset-token-expired).
+
+## Sign in
+
+1. Go to [app.centahr.com](https://app.centahr.com/login).
+2. Enter your **Work email** and **Password**, and click **Log in**.
+
+Where you land depends on who you are:
+
+| You are | You land on |
+| --- | --- |
+| A new joiner who hasn't finished onboarding | **Onboarding**: a few steps to complete first. See [complete your onboarding](/getting-started/complete-onboarding). |
+| An employee | **Home** in the employee portal. See [find your way around](/getting-started/employee-basics). |
+| HR or an admin | The dashboard |
+
+## Confirm it's you
+
+If your company has two-step sign-in on, CentaHR emails you a 6-digit code when you haven't signed in for three days, and the first time you sign in.
+
+1. Open the email and type the code under **Verification code**.
+2. Click **Verify and continue**.
+
+<AuthScreen
+  label="The Confirm it's you page: a 6-digit verification code and the Verify and continue button."
+  title="Confirm it’s you"
+  description="Keeping your team’s data safe matters to us. Enter the 6-digit code we sent to adaeze@yourcompany.com."
+>
+  <Field label="Verification code">
+    <Input value="4  8  2  9  1  7" />
+  </Field>
+  <div>
+    <Button>Verify and continue</Button>
+  </div>
+</AuthScreen>
+
+The code works for 10 minutes. If it has run out, click **Send a new code**. See [the sign-in code doesn't work](/troubleshooting/sign-in-code) if you're stuck.
+
+## Forgot your password?
+
+On the sign-in page, click **Forgot password?**, enter your work email, and click **Send reset link**. The link in the email works once, for 24 hours. Then choose a **New password** and click **Update password**.

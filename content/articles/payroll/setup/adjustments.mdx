@@ -1,0 +1,61 @@
+---
+title: "Step 3: Pay adjustments"
+navTitle: "Pay adjustments"
+summary: "Add deductions and bonuses for individual people, once or for a set period."
+section: "setup"
+order: 3
+updated: "2026-11-26"
+---
+Pay adjustments are amounts added to or taken from one person's pay, beyond salary and statutory deductions: a cooperative contribution, a staff loan repayment, a sales bonus.
+
+Go to **Payroll → Settings → Pay adjustments**. The page has two tabs: **Deductions** and **Bonuses**.
+
+## Deductions
+
+Click **Add deduction**.
+
+<Screen label="The Assign Deduction dialog: the deduction type, a fixed or percentage rate, its value, start and end dates, and the employee." bare>
+  <Dialog
+    title="Assign Deduction"
+    footer={<><Button variant="outline">Cancel</Button><Button>Save</Button></>}
+  >
+    <Field label="Deduction type">
+      <Select value="Cooperative contribution" />
+    </Field>
+    <Columns template="1fr 1fr">
+      <Field label="Rate type">
+        <Select value="Fixed" />
+      </Field>
+      <Field label="Rate value">
+        <Input value="15,000" />
+      </Field>
+    </Columns>
+    <Columns template="1fr 1fr">
+      <Field label="Start date">
+        <Input value="1 January 2027" />
+      </Field>
+      <Field label="End date">
+        <Input value="31 December 2027" />
+      </Field>
+    </Columns>
+    <Field label="Assign to">
+      <Select value="Adaeze Okafor" />
+    </Field>
+  </Dialog>
+</Screen>
+
+1. Choose the **Deduction type**.
+2. Choose the **Rate type**: **Fixed** for an amount, or **Percentage** of pay.
+3. Enter the **Rate value**.
+4. Choose the **Start date** and **End date**: the deduction applies to every pay run between them.
+5. Choose who it's for under **Assign to**, and save.
+
+Deleting a deduction stops it from the next pay run.
+
+## Bonuses
+
+On the **Bonuses** tab, click **Add bonus**. Choose the **Bonus type**, enter the **Amount**, choose who it's for under **Assign to**, and save. It's paid in the next pay run.
+
+## One-off changes in a pay run
+
+For a change to a single month, you can also add bonuses or deductions while reviewing a pay run. See [run payroll](/payroll/use/run-payroll).

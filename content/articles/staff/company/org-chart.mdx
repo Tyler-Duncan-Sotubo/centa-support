@@ -1,0 +1,77 @@
+---
+title: "Org chart and reporting lines"
+navTitle: "Org chart"
+summary: "See who reports to whom, give people a line manager, and fix broken reporting lines."
+section: "company"
+order: 2
+updated: "2026-11-26"
+---
+The org chart is built from each person's line manager. It matters beyond the picture: a person's line manager approves their leave and other requests, sees their records, and runs their reviews.
+
+Go to **Staff → Company → Org chart**. The heading shows how many people, departments and levels you have.
+
+<Screen
+  label="The org chart: a chief executive at the top, with department heads below and their teams under them, and a panel for the selected person showing who they report to and their direct reports."
+  path={["Staff", "Company", "Org chart"]}
+  title="Org chart"
+  description="24 people · 4 departments · 3 levels"
+  actions={<><Button variant="outline">Find me</Button><Button variant="outline">Expand all</Button><Button variant="outline">Collapse</Button></>}
+  caption="Names are examples."
+>
+  <Inline>
+    <Input placeholder="Name, title or department" width={240} />
+    <Select value="Highlight a department" width={200} />
+    <Segmented items={["Chart", "List"]} active="Chart" />
+  </Inline>
+  <Columns template="1.6fr 1fr">
+    <Card>
+      <Stack gap={14}>
+        <Person name="Amaka Okafor" sub="Managing Director" />
+        <Columns template="1fr 1fr">
+          <Person name="Adaeze Okafor" sub="Head of Sales · 6 reports" />
+          <Person name="Ngozi Obi" sub="Finance Manager · 3 reports" />
+        </Columns>
+      </Stack>
+    </Card>
+    <Card title="Adaeze Okafor" description="Head of Sales">
+      <SectionLabel>Reports to</SectionLabel>
+      <Person name="Amaka Okafor" sub="Managing Director" />
+      <Button variant="outline" mark={1}>Change manager</Button>
+      <SectionLabel>Direct reports · 6</SectionLabel>
+      <Person name="Chinedu Eze" sub="Account Executive" />
+      <Person name="Bola Ahmed" sub="Sales Analyst" />
+    </Card>
+  </Columns>
+</Screen>
+
+## Find your way around
+
+- **Search** by name, job title or department, and the chart moves to them.
+- **Highlight a department** to pick out its people.
+- **Chart** or **List** switches between the picture and an indented list. **Expand all** and **Collapse** open and close every branch.
+- **Find me** jumps to you.
+
+Click anyone to see who they report to and their direct reports. **View profile** opens their record.
+
+## Give someone a line manager
+
+1. Click the person on the chart.
+2. Under **Reports to**, click **Change manager** <Mark n={1} />.
+3. Choose their manager under **Choose a manager**, and click **Save**.
+
+Someone with no manager sits at the top of the chart, marked **No manager: top of the organisation.** Only your most senior person should be there. You can also change someone's manager from the **Employment** tab of their profile, under **Reporting Manager**.
+
+<Callout type="note" title="People without a line manager">
+
+Their requests go to your default manager instead, so choose one. See [roles and access](/getting-started/roles-and-access).
+
+</Callout>
+
+## Fix reporting lines
+
+If anything is wrong, a warning appears above the chart: **Some reporting lines need fixing**.
+
+- **Someone reports to a person who's left.** They show at the top until they have a new manager. Click their name and give them one.
+- **A reporting loop,** where two people end up reporting to each other. Change one of their managers to break it.
+
+When someone is leaving, you can move their direct reports to a new manager as part of their offboarding. See [offboard someone](/staff/lifecycle/offboard-someone).

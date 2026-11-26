@@ -1,0 +1,64 @@
+---
+title: "Request leave"
+summary: "How to check your balance, ask for leave, and follow your requests."
+section: "employees"
+order: 1
+updated: "2026-11-26"
+---
+You request leave from the employee portal or the Centa HR app. Your line manager decides, and you're told when they do.
+
+## Check your balance
+
+Go to **Leave**. Your balances show for each kind of leave, with your requests below. Filter them by **Pending**, **Approved** or **Rejected**.
+
+If you see **No leave balance yet**, your company hasn't set your leave up yet. Ask your HR team.
+
+## Ask for leave
+
+1. Go to **Leave** and click **New request**, or use **Request leave** on **Home**.
+2. Choose the **Leave type**, **Start date** and **End date**.
+3. Add a **Reason or notes**, if you like.
+4. Check **Working days requested** and **Balance left**, then click **Submit request**.
+
+<Screen
+  label="The Request leave form: leave type, start and end dates, reason, the working days requested and the balance left, and the Submit request button."
+  path={["Leave"]}
+  title="Request leave"
+  description="Submit a new leave request for approval."
+>
+  <Card>
+    <Stack gap={12}>
+      <Field label="Leave type">
+        <Select value="Annual Leave" />
+      </Field>
+      <Columns template="1fr 1fr">
+        <Field label="Start date">
+          <Input value="Mon 7 December 2026" />
+        </Field>
+        <Field label="End date">
+          <Input value="Fri 11 December 2026" />
+        </Field>
+      </Columns>
+      <Field label="Reason or notes">
+        <Input tall value="Family visit" />
+      </Field>
+      <div>
+        <Row label="Working days requested"><Meta>5</Meta></Row>
+        <Row label="Balance left"><Meta>9 days</Meta></Row>
+      </div>
+      <div>
+        <Button>Submit request</Button>
+      </div>
+    </Stack>
+  </Card>
+</Screen>
+
+Weekends and public holidays aren't counted, so a week off is usually five working days.
+
+## After you ask
+
+- **Pending:** waiting for your line manager, or for each person in turn if your company uses more than one approver.
+- **Approved:** it's booked. It shows on your timesheet and your team's calendar.
+- **Rejected:** your manager may add a reason. You can ask for different dates.
+
+If your request is refused straight away, CentaHR says why. See [why a leave request is refused](/leave/request-problems).

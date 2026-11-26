@@ -1,0 +1,81 @@
+---
+title: "Reports"
+summary: "The Performance overview, and the reports you can filter and export."
+section: "use"
+order: 6
+updated: "2026-11-26"
+---
+Start with the Overview for the state of the current cycle, and use Reports for lists you filter and export.
+
+## Overview
+
+**Performance → Overview** shows the current cycle at a glance.
+
+<Screen
+  label="The Performance overview: the current cycle, then cards for assessments, tasks, feedback and the top performer."
+  path={["Performance", "Overview"]}
+  title="Performance"
+  description="Cycles, assessments, tasks and feedback at a glance."
+  caption="Numbers are examples."
+>
+  <PanelCard>
+    <Stack gap={2}>
+      <Meta>Current cycle</Meta>
+      <Figure value="H1 2026 Appraisal" label="1 January to 30 June 2026" />
+    </Stack>
+  </PanelCard>
+  <Columns template="1fr 1fr">
+    <Card title="Assessments" description="In this cycle">
+      <Stack gap={10}>
+        <Inline gap={28}>
+          <Figure value="76" label="Average score" />
+          <Figure value="24" label="Assessments" />
+        </Inline>
+        <Progress value={29} />
+        <Meta>7 submitted, 11 in progress, 6 not started</Meta>
+      </Stack>
+    </Card>
+    <Card title="Tasks" description="Due in this cycle">
+      <Stack gap={10}>
+        <Inline gap={28}>
+          <Figure value="62%" label="Completed" />
+          <Figure value="40" label="Tasks" />
+        </Inline>
+        <Meta>25 completed, 4 overdue, 11 open</Meta>
+      </Stack>
+    </Card>
+    <Card title="Feedback" description="This cycle">
+      <Inline gap={28}>
+        <Figure value="31" label="Total given" />
+        <Figure value="1.3" label="Per person" />
+      </Inline>
+    </Card>
+    <Card title="Top performer" description="Highest score this cycle">
+      <Inline gap={16}>
+        <Person name="Ifeoma Nwosu" sub="Finance" />
+        <Figure value="92" label="Final score" />
+        <Badge tone="success">Promote</Badge>
+      </Inline>
+    </Card>
+  </Columns>
+</Screen>
+
+- **Assessments:** the average score, how many are submitted, in progress or not started, and the recommendations made.
+- **Tasks:** how many are due this cycle, the share completed, and how many are overdue or open.
+- **Feedback:** how much has been given, per person and by kind.
+- **Top performer:** the highest final score this cycle.
+
+## Reports
+
+Go to **Performance → Reports**. Filter by cycle, employee, department and type, then export as CSV or PDF.
+
+| Report | What it answers | Columns |
+| --- | --- | --- |
+| Task Achievement Report | Who has what to deliver, and whether it's on track | Employee, department, task title, type, status, weight, start and due dates, description |
+| Feedback Report | Who is giving and receiving 360° feedback | Employee, kind, anonymous or not, sender, date submitted, number of responses |
+| Appraisal Summary Report | Each person's appraisal score and promotion recommendation | Employee, department, score, promotion, date submitted, appraisal note |
+| Competency Heatmap Report | How many people sit at each level of each competency | Competency, level, count |
+
+While a cycle is running, the cycle page under **Performance → Appraisals** shows each person's status and score, and [Calibration](/performance/use/calibration) shows the spread of finished scores.
+
+Reports are for HR: people with the Super admin, Admin or HR manager role.

@@ -1,0 +1,113 @@
+---
+title: "Step 2: Values and competencies"
+navTitle: "Values and competencies"
+summary: "Add your company values as competencies, and write the questions appraisals ask about each one."
+section: "setup"
+order: 2
+short: "The qualities you appraise people on, and the questions you ask."
+updated: "2026-11-26"
+---
+Competencies are the qualities you appraise people on, and each one holds questions. Your company starts with 13 built-in competencies and 24 built-in questions, so you can run a first cycle without writing any. In an appraisal, these questions appear under the heading **Values**, grouped by competency.
+
+Go to **Performance → Settings → Values & competencies**. Competencies are listed on the left; the questions for the one you select are on the right.
+
+<Screen
+  label="The Values and competencies page: a list of competencies on the left with Communication selected, and its three questions in a table on the right."
+  path={["Performance", "Settings", "Values & competencies"]}
+  title="Competency Questions"
+  description="Manage questions under each competency."
+>
+  <Columns template="0.9fr 1.7fr">
+    <Card title="Competencies" action={<Button mark={1}>Add Competency</Button>}>
+      <Stack gap={6}>
+        <ListRow title="All Competencies" sub="26 questions" />
+        <ListRow title="Accountability" sub="0 questions" />
+        <ListRow title="Communication" sub="3 questions" active />
+        <ListRow title="Ownership" sub="2 questions" />
+        <ListRow title="Teamwork" sub="3 questions" />
+      </Stack>
+    </Card>
+    <Card>
+      <Stack gap={12}>
+        <Inline gap={10}>
+          <Input placeholder="Search questions..." width={220} />
+          <Button mark={2}>Add Question</Button>
+        </Inline>
+        <Table
+          columns="2.6fr 0.9fr 0.9fr 0.9fr"
+          head={["Question", "Type", "Mandatory", "Allow Notes"]}
+          rows={[
+            ["How clearly does the employee communicate in verbal interactions?", "Rating", <Yes />, <Yes />],
+            ["Does the employee communicate effectively in writing?", "Yes / No", <Yes on={false} />, <Yes on={false} />],
+            ["How well does the employee listen and respond to feedback?", "Rating", <Yes on={false} />, <Yes />],
+          ]}
+        />
+      </Stack>
+    </Card>
+  </Columns>
+</Screen>
+
+The built-in competencies are Accountability, Attendance, Communication, Customer Service, Job Knowledge, Leadership, Problem Solving, Productivity, Quality of Work, Self-Development, Skills, Teamwork and Technical. They're shared by every company on CentaHR, so they and their questions can't be edited or deleted. Accountability, Attendance and Skills have no built-in questions.
+
+## Add your company values
+
+Add each of your company values as a competency, so appraisals ask about them by name.
+
+1. Click **Add Competency**.
+2. Enter a **Name** (for example, Ownership) and a one-line **Description**. Names must be unique in your company.
+3. Save. Competencies you create can be edited or deleted from the list.
+
+## Add questions
+
+1. Select a competency on the left.
+2. Click **Add Question**.
+3. Write the question and choose its **Type**.
+4. Choose the **Competency** it belongs to, and click **Create**.
+
+<Screen
+  label="The Create Question dialog, with a Yes or No question added to the Ownership competency."
+  bare
+>
+  <Dialog
+    title="Create Question"
+    footer={<><Button variant="outline">Cancel</Button><Button>Create</Button></>}
+  >
+    <Field label="Question">
+      <Input value="Does the employee take ownership of problems until they're solved?" />
+    </Field>
+    <Field label="Type">
+      <Select value="Yes / No" />
+    </Field>
+    <Field label="Competency (optional)">
+      <Select value="Ownership" />
+    </Field>
+    <div>
+      <Row label="Is Mandatory"><Toggle /></Row>
+      <Row label="Allow Notes"><Toggle on /></Row>
+    </div>
+  </Dialog>
+</Screen>
+
+| Type | What the reviewer sees | Use it for |
+| --- | --- | --- |
+| Rating | 1 to 5 stars | How well or how often something happens |
+| Yes / No | Two buttons | A clear standard that is met or not |
+| Text | A text box | Examples and evidence |
+| Dropdown | A list of choices | One answer from a fixed set |
+
+Write questions about behaviour a manager can observe, such as “Does the employee meet deadlines consistently?”. Aim for 8 to 15 questions per appraisal: more than that and answers get thin.
+
+Switch on **Is Mandatory** for a question that must be answered before the appraisal can be completed, and **Allow Notes** to let the reviewer add a note to their answer.
+
+## Optional: expected levels per job role
+
+The **Appraisal Framework** item on the Setup checklist opens **Performance Framework**. There you can record the level each job role should reach in each competency: Beginner, Intermediate, Advanced, Proficient or Expert / Leader.
+
+1. Pick a job role on the left. Job roles come from **Staff → Company → Job roles**.
+2. Click **Add Expectation**, choose a competency and its **Expected Level**, and save.
+
+Expected levels show managers the standard each role should meet in each competency.
+
+## Next
+
+[Step 3: Review templates](/performance/setup/review-templates), which decide what each appraisal includes.

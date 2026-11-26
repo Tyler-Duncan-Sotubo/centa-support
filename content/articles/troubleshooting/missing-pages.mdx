@@ -1,0 +1,53 @@
+---
+title: "A page or module is missing"
+navTitle: "Missing pages"
+summary: "Why you can't see something in CentaHR, and who can change it."
+section: "guides"
+order: 5
+updated: "2026-11-26"
+---
+What you see in CentaHR depends on your role, on whether people report to you, and on which parts of CentaHR your company uses. Something missing usually means it doesn't apply to you yet.
+
+<Screen
+  label="The dashboard menu an HR manager sees, grouped into People, Time, Pay and Company."
+  rail={false}
+  caption="The dashboard menu for HR. Employees use the employee portal, with a shorter menu."
+>
+  <Columns template="220px 1fr">
+    <NavPanel
+      groups={[
+        { items: [{ label: "Dashboard", active: true }, { label: "Approvals" }, { label: "My team" }] },
+        { label: "People", items: [{ label: "Hiring" }, { label: "Staff" }, { label: "Performance" }] },
+        { label: "Time", items: [{ label: "Attendance" }, { label: "Leave" }] },
+        { label: "Pay", items: [{ label: "Payroll" }, { label: "Expenses" }, { label: "Benefits" }] },
+        { label: "Company", items: [{ label: "Assets" }, { label: "Documents" }] },
+      ]}
+    />
+    <Card title="Who sees what">
+      <Stack gap={8}>
+        <Meta>HR roles: the whole menu</Meta>
+        <Meta>Line managers: their people's pages</Meta>
+        <Meta>Employees: the employee portal</Meta>
+      </Stack>
+    </Card>
+  </Columns>
+</Screen>
+
+## What's missing, and why
+
+| What's missing | Why | Who can change it |
+| --- | --- | --- |
+| The dashboard | Employees use the employee portal; the dashboard is for HR, admins and line managers. | An HR admin, by changing your role |
+| My team | It appears when people report to you. | HR, by setting reporting lines on the org chart |
+| Approvals | It appears when you have something to approve. | Nobody: it shows up when there is |
+| Settings pages | Settings are for the Super admin, Admin and HR manager roles. | An HR admin |
+| Reports | Reports are for the Super admin, Admin and HR manager roles. | An HR admin |
+| Calibration | It's for HR, and for managers whose reports manage people too. | HR, through reporting lines |
+| Setup checklist | It leaves the menu once every item is done. | Nobody needs to: the settings pages are still there |
+| A module, such as Payroll | It depends on your role, or your company doesn't use it. | An HR admin |
+
+## Ask for access
+
+Ask your HR admin. They change roles under their avatar menu → **Users**: they open your row's menu, choose **Edit**, and pick your new role. See [roles and access](/getting-started/roles-and-access).
+
+After a role changes, sign out and sign in again to see the new menu.

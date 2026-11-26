@@ -1,0 +1,53 @@
+---
+title: "You can't sign in"
+navTitle: "Can't sign in"
+summary: "What each sign-in message means, and how to get back in."
+section: "guides"
+order: 1
+updated: "2026-11-26"
+---
+When signing in fails, CentaHR shows **That didn't work.** with the reason under it. Find yours below.
+
+<AuthScreen
+  label="The Welcome back sign-in page with a message saying That didn't work: Invalid credentials."
+  title="Welcome back"
+  description="Log in to your Centa workspace."
+>
+  <Toast title="That didn’t work." description="Invalid credentials" />
+  <Field label="Work email">
+    <Input value="adaeze@yourcompany.com" />
+  </Field>
+  <Field label="Password">
+    <Input value="••••••••••" />
+  </Field>
+  <div>
+    <Button>Log in</Button>
+  </div>
+</AuthScreen>
+
+| Message | What it means | What to do |
+| --- | --- | --- |
+| Invalid email or password | There's no account with that email address. | Use your work email, exactly as your HR team entered it. If you've never set a password, find your invitation email first. |
+| Invalid credentials | The password is wrong, or your account doesn't have access to this part of CentaHR. | [Reset your password](#reset-your-password). If that doesn't help, ask your HR team to check your role. |
+| Your access ended when you left. | Your employment has ended, so your account is closed. | Contact your former employer's HR team if you need payslips or documents. |
+
+If you're asked for a code after your password, see [the sign-in code doesn't work](/troubleshooting/sign-in-code).
+
+## Reset your password
+
+1. On the sign-in page, click **Forgot password?**.
+2. Enter your work email and click **Send reset link**.
+3. Open the newest email from CentaHR, click the link, choose a **New password**, and click **Update password**.
+
+The link works once, for 24 hours. If it doesn't work, see [a reset or invitation link doesn't work](/troubleshooting/password-reset-token-expired).
+
+## Never signed in before?
+
+You need to accept your invitation first: it's the email titled “Invitation to Join” followed by your company's name. See [sign in for the first time](/getting-started/sign-in). If you can't find it, see [you didn't get an email](/troubleshooting/emails-not-arriving).
+
+## Still stuck?
+
+- **Check the address.** A typo in your email, or a personal address instead of your work one, is the most common cause.
+- **Check your keyboard.** Caps Lock or a different keyboard layout changes your password.
+- **Ask your HR team.** They can check your email address and role in CentaHR.
+- **[Contact support](/contact)** if your HR team can't help.

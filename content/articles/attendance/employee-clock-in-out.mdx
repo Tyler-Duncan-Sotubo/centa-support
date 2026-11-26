@@ -1,0 +1,64 @@
+---
+title: "Clock in and out"
+summary: "How to clock in and out from the employee portal or the Centa HR app, and see your timesheet."
+section: "employees"
+order: 1
+updated: "2026-11-26"
+---
+You clock in when you start work and clock out when you finish, from **Home** in the employee portal or in the Centa HR app. CentaHR checks you're at your workplace each time.
+
+## Clock in
+
+1. Open **Home**. The **Today** panel shows the time and your status: **Not clocked in**.
+2. Click **Clock in**.
+3. The first time, your browser or phone asks to use your location. Allow it.
+
+<Screen
+  label="The Today panel on the employee portal's Home page: the time, Not clocked in, a note that your location is checked, and the Clock in button."
+  path={["Home"]}
+  title="Good morning, Adaeze"
+>
+  <PanelCard>
+    <Stack gap={14}>
+      <Meta>Today</Meta>
+      <Figure value="8:52 AM" label="Not clocked in" />
+      <Meta>Your location is checked when you clock in.</Meta>
+      <Inline gap={10}>
+        <Button variant="light" mark={2}>Clock in</Button>
+      </Inline>
+      <Inline gap={28}>
+        <Figure value="–" label="Clocked in" />
+        <Figure value="–" label="Clocked out" />
+      </Inline>
+    </Stack>
+  </PanelCard>
+</Screen>
+
+You'll see **Clocked in** with the time. The panel then counts the time you've worked so far today.
+
+## Clock out
+
+1. On **Home**, click **Clock out**.
+2. Click **Yes, clock out**. You can only clock in once a day, so clock out when you've finished for the day.
+
+<Screen label="The Clock out now? confirmation, saying it ends your work session for today." bare>
+  <Dialog
+    title="Clock out now?"
+    footer={<><Button variant="outline">Cancel</Button><Button>Yes, clock out</Button></>}
+  >
+    <Meta>This ends your work session for today, and you can only clock in once a day.</Meta>
+  </Dialog>
+</Screen>
+
+## The rules
+
+- **Be at work.** You need to be within 100 metres of your workplace, or of one of your company's offices.
+- **Not too early.** You can clock in a few minutes before your start time, but not earlier. Your company sets how many.
+- **Once a day.** One clock-in and one clock-out each day.
+- **On shifts?** You need a shift on the rota that day.
+
+If something stops you, see [clocking in or out doesn't work](/attendance/not-at-assigned-location).
+
+## Your timesheet
+
+Go to **Timesheet** to see each day of the month: your clock-ins, when you were late, and days absent, on leave or on holiday. If a day is wrong, click **Request a correction** and your line manager will review it. See [correction requests](/attendance/use/corrections).

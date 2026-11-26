@@ -1,0 +1,88 @@
+---
+title: "Before you start"
+summary: "The people data Performance depends on, and how to check it before your first cycle."
+section: "start"
+order: 2
+updated: "2026-11-26"
+---
+Performance runs on your people data: who works here, who reports to whom, and who can log in. Wrong reporting lines are the most common reason an appraisal goes to the wrong person, so check these first.
+
+- [ ] **Employees are in CentaHR with the right status.** Automatic appraisals include people who are Active or on Probation. People on leave aren't added automatically, so add them by hand if they should be appraised. Check under **Staff → Employees**.
+- [ ] **Everyone has a line manager.** The line manager writes the person's appraisal and approves their tasks. See [set reporting lines](#set-reporting-lines).
+- [ ] **Line managers can log in.** A manager without a CentaHR login can't write reviews, so their people's appraisals go to the default manager instead.
+- [ ] **A default manager is set.** They stand in for anyone without a line manager, including the person at the top of the org chart. See [choose a default manager](#choose-a-default-manager).
+- [ ] **Departments and job roles are filled in** under **Staff → Company**. Departments filter appraisals and reports, and job roles hold expected competency levels.
+- [ ] **Teams exist for shared work.** Team tasks are given to a team from **Staff → Teams**.
+- [ ] **People have the right roles.** See [roles](#roles).
+- [ ] **Employees have logins.** Self reviews, tasks and feedback need a CentaHR login. A manager can still appraise someone who hasn't signed in yet.
+
+## Set reporting lines
+
+1. Go to **Staff → Company → Org chart** and select a person.
+2. Under **Reports to**, click **Change manager**.
+3. Choose their manager and save.
+
+<Screen
+  label="A person's panel on the org chart: who they report to, a Change manager button, and their direct reports."
+  path={["Staff", "Company", "Org chart"]}
+  title="Org chart"
+  caption="Names in these drawings are examples."
+>
+  <Card>
+    <Stack gap={16}>
+      <Person name="Tunde Bakare" sub="Sales Manager" />
+      <div>
+        <SectionLabel>Reports to</SectionLabel>
+        <Stack gap={10}>
+          <Person name="Funmi Adeyemi" sub="Managing Director" />
+          <Button variant="outline" mark={2}>Change manager</Button>
+        </Stack>
+      </div>
+      <div>
+        <SectionLabel>Direct reports · 3</SectionLabel>
+        <Stack gap={8}>
+          <Person name="Adaeze Okafor" sub="Account Executive" />
+          <Person name="Chinedu Eze" sub="Account Executive" />
+          <Person name="Bola Ahmed" sub="Sales Analyst" />
+        </Stack>
+      </div>
+    </Stack>
+  </Card>
+</Screen>
+
+A change takes effect straight away for new appraisals and task approvals. Appraisals created before the change keep their reviewer.
+
+## Choose a default manager
+
+The default manager approves and appraises for anyone without a line manager, and for imported employees with none.
+
+1. Open your avatar menu at the top right and choose **Users**.
+2. Open the **Approvals** tab.
+3. Under **Default manager**, choose someone senior, such as the head of HR. It saves straight away.
+
+<Screen
+  label="The Default manager setting on the Approvals tab of the Team and security page, with a manager chosen."
+  path={["Account", "Users"]}
+  title="Team and security"
+  description="Who can use Centa and how they sign in."
+>
+  <Tabs items={[{ label: "Users" }, { label: "Roles" }, { label: "Approvals", active: true }, { label: "Two-step sign-in" }, { label: "Security history" }]} />
+  <Card
+    title="Default manager"
+    description="Approves for anyone without a line manager, and for imported employees with none."
+  >
+    <Select value="Ngozi Obi" width={260} />
+  </Card>
+</Screen>
+
+## Roles
+
+Give roles under your avatar menu → **Users**: open a person's menu, choose **Edit**, pick the **Role** and save.
+
+| Role | What they can do in Performance |
+| --- | --- |
+| Super admin, Admin, HR manager | Everything: the settings, every cycle and review, calibration for everyone, and reports |
+| Line manager | Use the admin dashboard for their own people: their reviews, tasks and one-to-ones, and calibration if they manage managers. No settings or reports. |
+| Employee | Use the employee portal and the mobile app for their own tasks, self reviews, feedback and one-to-ones |
+
+In CentaHR, being someone's manager comes from the reporting line, not the role. Anyone with people under them can see those people's performance records and write their reviews, whatever their role. The Line manager role adds the admin dashboard on top. More detail is in [roles and glossary](/performance/roles-and-glossary).

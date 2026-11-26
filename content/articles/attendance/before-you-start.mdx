@@ -1,0 +1,39 @@
+---
+title: "Before you start"
+summary: "What Attendance needs from your people data before anyone can clock in."
+section: "start"
+order: 2
+updated: "2026-11-26"
+---
+Clocking in depends on two things: where your offices are, and which office each person works from. Check these before you tell people to start clocking in.
+
+- [ ] **Your offices are added and pinned.** Every office needs its position on the map, or nobody can clock in there. See [offices and clock-in locations](/attendance/setup/offices).
+- [ ] **Everyone has a location.** Each person's **Location** is on their profile under **Employment details**. Someone with no location sees “No assigned office location for this employee” when they try to clock in.
+- [ ] **People work from home?** Add their home as a location of type Home or Remote, pin it, and set it as their location.
+- [ ] **Public holidays are added** under **Leave → Settings → Holidays**, so those days show as holidays, not absences.
+- [ ] **Line managers are set.** Correction requests go to each person's line manager. Set reporting lines on **Staff → Company → Org chart**.
+- [ ] **People can log in.** Clocking in happens in the employee portal or the Centa HR app.
+
+<Screen
+  label="The Employment details card on an employee's profile, with the Location set to Head Office."
+  path={["Staff", "Employees", "Adaeze Okafor"]}
+  title="Employment details"
+  caption="Names in these drawings are examples."
+>
+  <Card>
+    <Row label="Job role"><Meta>Account Executive</Meta></Row>
+    <Row label="Department"><Meta>Sales</Meta></Row>
+    <Row mark={1} label="Location" hint="Where they clock in"><Select value="Head Office" width={200} /></Row>
+    <Row label="Line manager"><Meta>Tunde Bakare</Meta></Row>
+  </Card>
+</Screen>
+
+## Tell your employees
+
+When you're ready, let people know:
+
+1. They clock in and out from **Home** in the employee portal, or from the Centa HR app.
+2. Their phone or browser will ask for their location the first time: they need to allow it.
+3. They can only clock in once a day, and only near an office.
+
+Share [clock in and out](/attendance/employee-clock-in-out) with them.

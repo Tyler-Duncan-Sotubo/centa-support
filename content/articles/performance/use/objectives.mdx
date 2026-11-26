@@ -1,0 +1,62 @@
+---
+title: "Objectives"
+summary: "Set company and team objectives for a cycle, and see task progress roll up to them."
+section: "use"
+order: 2
+updated: "2026-11-26"
+---
+Objectives are what the company or a team is trying to achieve in a cycle. Tasks link to them, and their progress rolls up. Set company objectives before managers set tasks, so every task can link to one.
+
+Go to **Performance → Objectives** and pick the cycle.
+
+<Screen
+  label="The Objectives page for H1 2026: one company objective at 46% progress, and two team objectives that support it."
+  path={["Performance", "Objectives"]}
+  title="Objectives"
+  description="How everyone's tasks add up to what the company is trying to do."
+  actions={<><Select value="H1 2026 Appraisal" width={170} /><Button variant="outline">Team objective</Button><Button>Company objective</Button></>}
+>
+  <Card title="Company objective">
+    <Stack gap={8}>
+      <strong>Grow revenue from repeat customers</strong>
+      <Progress value={46} />
+    </Stack>
+  </Card>
+  <Card title="Team objectives">
+    <Stack gap={14}>
+      <Columns template="1.4fr 1fr">
+        <Stack gap={2}>
+          <strong>Launch the loyalty programme</strong>
+          <Meta>Sales</Meta>
+        </Stack>
+        <Progress value={60} />
+      </Columns>
+      <Columns template="1.4fr 1fr">
+        <Stack gap={2}>
+          <strong>Answer every ticket within a day</strong>
+          <Meta>Customer support</Meta>
+        </Stack>
+        <Progress value={32} />
+      </Columns>
+    </Stack>
+  </Card>
+</Screen>
+
+## Add an objective
+
+1. Click **Company objective** (HR) or **Team objective** (managers).
+2. Enter a **Title** and, if you like, a **Description**.
+3. For a team objective, choose the company objective it **Supports**, or **No company objective**.
+4. Click **Add objective**. Managers can now link tasks to it from the task form.
+
+## How progress is worked out
+
+- **An objective's progress is the plain average** of the tasks linked to it and the team objectives under it.
+- **A team task counts once**, however many people share it.
+- **Until a task is linked**, the objective shows “No tasks linked yet”, and it doesn't pull its parent's progress down.
+
+## Who can do what
+
+- **Company objectives** are set by HR.
+- **Team objectives** are set by managers.
+- **Only its creator or HR** can change or archive an objective. Archive one from its row menu.

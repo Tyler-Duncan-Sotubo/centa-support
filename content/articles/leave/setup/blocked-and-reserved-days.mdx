@@ -1,0 +1,76 @@
+---
+title: "Step 4: Blocked and reserved days"
+navTitle: "Blocked and reserved days"
+summary: "Stop leave on dates you need everyone in, and set days aside for particular people."
+section: "setup"
+order: 4
+updated: "2026-11-26"
+---
+Blocked days are dates nobody can take leave, such as a stock count or an audit. Reserved days are days set aside for one person, for a particular kind of leave. Requests that include either are refused, with the date that clashed.
+
+## Blocked days
+
+Go to **Leave → Settings → Blocked days** and click **Add Blocked Day**.
+
+<Screen label="The Add blocked day dialog: a name, a date and a reason." bare>
+  <Dialog
+    title="Add blocked day"
+    footer={<><Button variant="outline">Cancel</Button><Button>Save</Button></>}
+  >
+    <Field label="Name">
+      <Input value="Year-end stock count" />
+    </Field>
+    <Field label="Date">
+      <Input value="31 December 2026" />
+    </Field>
+    <Field label="Reason">
+      <Input value="Everyone is needed for the count" />
+    </Field>
+  </Dialog>
+</Screen>
+
+1. Enter a **Name**, for example Year-end stock count.
+2. Choose the **Date**.
+3. Add a **Reason**, so people know why, and save.
+
+Anyone who asks for leave on that date sees “Cannot request leave on blocked day”, with the date.
+
+## Reserved days
+
+Go to **Leave → Settings → Reserved days** and click **Add Reserved Day**.
+
+<Screen label="The Add reserved day dialog: the employee, start and end dates, the leave type and a reason." bare>
+  <Dialog
+    title="Add reserved day"
+    footer={<><Button variant="outline">Cancel</Button><Button>Save</Button></>}
+  >
+    <Field label="Employee">
+      <Select value="Chinedu Eze" />
+    </Field>
+    <Columns template="1fr 1fr">
+      <Field label="Start date">
+        <Input value="14 December 2026" />
+      </Field>
+      <Field label="End date">
+        <Input value="18 December 2026" />
+      </Field>
+    </Columns>
+    <Field label="Leave type" required>
+      <Select value="Annual Leave" />
+    </Field>
+    <Field label="Reason">
+      <Input value="Team retreat" />
+    </Field>
+  </Dialog>
+</Screen>
+
+1. Choose the **Employee**.
+2. Choose the **Start date** and **End date**.
+3. Choose the **Leave type** the days are for, add a **Reason**, and save.
+
+Use reserved days to hold dates you've already agreed with someone, such as a planned team retreat, so other leave requests can't take them.
+
+## Things to know
+
+- **Requests are checked when they're made.** Adding a blocked day doesn't cancel leave that's already approved for that date; review those requests in [leave management](/leave/use/requests).
+- **Tell people early.** Blocked days work best when everyone knows about them before they plan their leave.

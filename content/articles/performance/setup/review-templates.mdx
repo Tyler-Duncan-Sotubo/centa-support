@@ -1,0 +1,100 @@
+---
+title: "Step 3: Review templates"
+navTitle: "Review templates"
+summary: "Choose which sections each appraisal includes, and which questions it asks."
+section: "setup"
+order: 3
+short: "Which sections each appraisal includes."
+updated: "2026-11-26"
+---
+A template decides which sections an appraisal has and which questions it asks. Your company starts with one template, **Default Performance Review**, and automatic appraisals always use it. Edit it to suit you rather than deleting it.
+
+Go to **Performance → Settings → Templates**. The table shows each template, which one is the default, and which sections it includes.
+
+<Screen
+  label="The Performance Templates page, listing Default Performance Review as the default template, with a New Template button."
+  path={["Performance", "Settings", "Templates"]}
+  title="Performance Templates"
+  description="Manage performance review templates for your organization."
+  actions={<Button mark={1}>New Template</Button>}
+>
+  <Card>
+    <Table
+      columns="2.3fr 0.8fr 0.7fr 1fr 0.9fr 1.2fr 0.4fr"
+      head={["Template Name", "Default", "Tasks", "Attendance", "Feedback", "Questionnaire", ""]}
+      rows={[
+        [<strong>Default Performance Review</strong>, <Yes />, <Yes on={false} />, <Yes />, <Yes on={false} />, <Yes />, <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+## What a template can include
+
+| Option | What it does | Default Performance Review |
+| --- | --- | --- |
+| Questionnaire | The template's questions under **Values**, grouped by competency. Answers save as the reviewer goes. | On, with 8 built-in questions |
+| Tasks | The person's active and completed tasks in the cycle, with weight, due date and progress. The reviewer rates each task from 1 to 5 stars, and the ratings suggest a final score. | Off |
+| Feedback | 360° feedback the person received between the cycle's start and end dates. Anonymous feedback stays anonymous. | Off |
+| Attendance | Days present, absent and late during the cycle, from clock-ins. | On |
+| Require Signature | The employee and the reviewer must both sign the final report. | On |
+| Restrict Visibility | Only HR and the person's direct manager can view the appraisal. | Off |
+
+Every appraisal also ends with a **Conclusion**: a final summary, strengths, areas for improvement, a final score out of 100, and a recommendation of Promote, Hold or Exit.
+
+<Callout type="tip" title="Switch on Tasks if managers set tasks">
+
+Without **Tasks**, appraisals have no task ratings and no suggested score. Open the default template's menu, choose **Edit**, tick **Tasks**, and save. Tick **Feedback** too once you use 360° feedback.
+
+</Callout>
+
+## Create a template
+
+1. Click **New Template**.
+2. Give it a **Name** (for example, Mid-Year Review) and a short **Description**.
+3. Under **Options**, tick the sections it includes.
+4. Click **Create**. If you ticked Questionnaire, you're asked **Add questions now?** Click **Add questions**.
+5. Tick the questions to include and save.
+
+<Screen
+  label="The Create Template dialog: name and description fields, four section options with Tasks, Attendance and Questionnaire ticked, and switches for Require Signature and Restrict Visibility."
+  bare
+>
+  <Dialog
+    title="Create Template"
+    footer={<><Button variant="outline">Cancel</Button><Button>Create</Button></>}
+  >
+    <Field label="Name">
+      <Input value="Mid-Year Review" />
+    </Field>
+    <Field label="Description">
+      <Input placeholder="Short summary or purpose" />
+    </Field>
+    <div>
+      <SectionLabel>Options</SectionLabel>
+      <Columns template="1fr 1fr">
+        <Check checked label="Tasks" />
+        <Check checked label="Attendance" />
+        <Check label="Feedback" />
+        <Check checked label="Questionnaire" />
+      </Columns>
+    </div>
+    <div>
+      <Row label="Require Signature" hint="Employee and reviewer must sign the final report."><Toggle /></Row>
+      <Row label="Restrict Visibility" hint="Only HR and direct managers can view the review."><Toggle /></Row>
+    </div>
+  </Dialog>
+</Screen>
+
+To change a template's questions later, open its menu and choose **Edit questions**. To change its name or sections, choose **Edit**.
+
+## Before you edit a template
+
+- **Edit between cycles where you can.** Open appraisals read their template live, so a question you remove also disappears from appraisals in progress.
+- **Keep a default template.** Automatic appraisals always use the template marked **Default**, so edit Default Performance Review rather than deleting it.
+- **Other templates are for appraisals you add by hand.** When you create an appraisal yourself, you choose its template ([step 5](/performance/setup/first-cycle)).
+- **Who can see an appraisal:** HR, the reviewer and the managers above the person. Switch on **Restrict Visibility** to limit it to HR and the person's direct manager. See [roles and glossary](/performance/roles-and-glossary).
+
+## Next
+
+[Step 4: Task policies and feedback](/performance/setup/task-policies-and-feedback).

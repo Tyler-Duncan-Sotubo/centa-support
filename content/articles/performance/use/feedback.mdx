@@ -1,0 +1,70 @@
+---
+title: "360° feedback"
+summary: "How people give 360° feedback, who can see it, and how it reaches the appraisal."
+section: "use"
+order: 4
+updated: "2026-11-26"
+---
+360° feedback can be sent at any time, outside the appraisal: about yourself, to a colleague, to your manager, or by a manager to someone they manage. Which kinds people can send is set in [feedback settings](/performance/setup/task-policies-and-feedback#feedback-settings).
+
+## Give feedback
+
+1. Go to **Performance → 360° feedback** and click **Give feedback**.
+2. Choose the kind: **Self**, **Peer**, **Employee to manager** or **Manager to employee**.
+3. Choose the **Employee** it's about. Your company can limit some kinds of feedback to people in your own office or department.
+4. Choose **Who can see it**.
+5. Turn on **Send anonymously** if your name shouldn't show. It's there when your company allows anonymous feedback.
+6. Answer the questions and click **Send feedback**.
+
+<Screen
+  label="The Feedback for a colleague form: the employee, who can see it set to them and their managers, the Send anonymously switch, and two questions."
+  path={["Performance", "360° feedback"]}
+  title="Feedback for a colleague"
+  description="Peer feedback"
+>
+  <Card title="Who it’s for">
+    <Stack gap={12}>
+      <Field label="Employee" required>
+        <Select value="Chinedu Eze" />
+      </Field>
+      <Field label="Who can see it" mark={1}>
+        <Select value="Them and their managers" />
+      </Field>
+      <Row label="Send anonymously" hint="Your name won’t be shown with it.">
+        <Toggle />
+      </Row>
+    </Stack>
+  </Card>
+  <Card title="Questions">
+    <Stack gap={12}>
+      <Field label="Where does this person perform well?">
+        <Input tall value="Prepares every client meeting thoroughly." />
+      </Field>
+      <Field label="How can this person improve?">
+        <Input tall placeholder="Write your answer" />
+      </Field>
+    </Stack>
+  </Card>
+  <div>
+    <Button>Send feedback</Button>
+  </div>
+</Screen>
+
+## Who can see it
+
+The sender chooses, with the setting marked 1:
+
+| Who can see it | Who that means |
+| --- | --- |
+| Only them | The person it's about |
+| Only their managers | Their line manager, not the person |
+| Them and their managers | The person and their line manager |
+| Everyone in their department | Everyone in the person's department |
+
+Anonymous feedback shows as from “Anonymous” in feedback lists, reports and appraisals.
+
+## Feedback in the appraisal
+
+If the appraisal's template includes **Feedback** ([step 3](/performance/setup/review-templates)), everything the person received between the cycle's start and end dates appears on its Feedback tab. Archived feedback is left out.
+
+The 360° feedback page lists feedback by kind, with an **Archived** tab, and can be filtered by department. HR sees all of it; managers see feedback about the people in their line.

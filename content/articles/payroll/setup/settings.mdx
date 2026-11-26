@@ -1,0 +1,66 @@
+---
+title: "Step 1: General settings"
+navTitle: "General settings"
+summary: "Choose statutory deductions, how gross pay is split, who approves payroll, proration and 13th-month pay."
+section: "setup"
+order: 1
+updated: "2026-11-26"
+---
+These settings apply to every pay run. Go to **Payroll → Settings → General settings**. Changes save automatically.
+
+<Screen
+  label="Payroll General settings: statutory deductions with PAYE, pension and NHF switched on, and the salary structure split into basic, housing, transport and other allowances adding up to 100%."
+  path={["Payroll", "Settings", "General settings"]}
+  title="General settings"
+  description="Deductions, salary structure, approvals and extras. Changes save automatically."
+>
+  <Card title="Statutory deductions" description="Choose what’s deducted from pay in each pay run.">
+    <Row mark={1} label="PAYE" hint="Personal income tax"><Toggle on /></Row>
+    <Row label="Pension" hint="Employee and employer contributions"><Toggle on /></Row>
+    <Row label="NHF" hint="National Housing Fund"><Toggle on /></Row>
+    <Row label="NHIS" hint="National Health Insurance Scheme"><Toggle /></Row>
+    <Row label="NSITF" hint="Nigeria Social Insurance Trust Fund"><Toggle on /></Row>
+  </Card>
+  <Card title="Salary structure" description="How gross pay is split. The parts must add up to 100%.">
+    <Row mark={2} label="Basic"><Input value="50%" width={80} /></Row>
+    <Row label="Housing"><Input value="25%" width={80} /></Row>
+    <Row label="Transport"><Input value="10%" width={80} /></Row>
+    <Row label="Utility, Medical, Meal, Data and Balance"><Input value="15%" width={80} /></Row>
+  </Card>
+</Screen>
+
+## Statutory deductions
+
+Switch on each one your company pays. Switching one on asks for its details: your **Company TIN** and **VAT number** for PAYE, your **Pension number** for pension, and your **NHF number** for NHF.
+
+| Deduction | What CentaHR does |
+| --- | --- |
+| PAYE | Works out income tax on each person's yearly pay, after pension, NHF and rent relief, using the PAYE bands, and takes a twelfth each month |
+| Pension | Takes 8% from the employee and adds 10% from the employer, on basic, housing and transport, to start with |
+| NHF | Takes 2.5% of basic pay for the National Housing Fund, for people it applies to |
+| NHIS | National Health Insurance Scheme contributions |
+| NSITF | The employer's Nigeria Social Insurance Trust Fund contribution |
+
+A new company starts with only NSITF switched on: switch on the rest before your first pay run.
+
+## Salary structure
+
+Gross pay is split into parts that must add up to 100%. To start with: Basic 50%, Housing 25%, Transport 10%, and Utility 3%, Medical 3%, Meal 2%, Data 1% and Balance 6%. Change the percentages, remove parts, or add your own under **Add an allowance**.
+
+The split matters: pension and NHF are worked out on parts of pay, and payslips show each part.
+
+## Approval workflow
+
+With **Multi-level approval** off, payroll needs one approval. Switch it on and tick the **Approvers**: Super admin, Finance officer, Payroll specialist or HR manager. **Fallback approvers** step in when an approver isn't available.
+
+## Proration
+
+Switch on **Proration** to pay part of a salary when someone joins or leaves mid-month. Choose how days are counted under **Calculate using**: **Calendar days**, or **Working days** (Monday to Friday).
+
+## 13th month salary
+
+Switch it on to pay an extra month's salary once a year. Choose the **Payment date** and **Payment type**: a **Fixed amount** in naira, or a **% of gross salary**.
+
+## Next
+
+[Step 2: Pay schedules and pay groups](/payroll/setup/schedules-and-groups).

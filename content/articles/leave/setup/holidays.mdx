@@ -1,0 +1,61 @@
+---
+title: "Step 3: Holidays"
+navTitle: "Holidays"
+summary: "Add public holidays and company days off, so they aren't counted as leave or as absences."
+section: "setup"
+order: 3
+updated: "2026-11-26"
+---
+Holidays are days nobody is expected to work. They're left out when CentaHR counts leave days, they show on the leave calendar, and the attendance timesheet marks them as holidays instead of absences.
+
+Go to **Leave → Settings → Holidays**.
+
+<Screen
+  label="The Add holiday dialog: the holiday's name, date, year, type and country."
+  bare
+>
+  <Dialog
+    title="Add holiday"
+    footer={<><Button variant="outline">Cancel</Button><Button>Save</Button></>}
+  >
+    <Field label="Holiday name">
+      <Input value="Independence Day" />
+    </Field>
+    <Columns template="1fr 1fr">
+      <Field label="Date">
+        <Input value="1 October 2026" />
+      </Field>
+      <Field label="Year">
+        <Input value="2026" />
+      </Field>
+    </Columns>
+    <Columns template="1fr 1fr">
+      <Field label="Type">
+        <Input value="Public" />
+      </Field>
+      <Field label="Country">
+        <Select value="Nigeria" />
+      </Field>
+    </Columns>
+  </Dialog>
+</Screen>
+
+## Add a holiday
+
+1. Click **Add Holiday**.
+2. Enter the **Holiday name**, **Date** and **Year**.
+3. Enter a **Type**, such as Public or Company, and choose the **Country**.
+4. Save.
+
+To add a year's holidays at once, click **Import**.
+
+## Things to know
+
+- **Add next year's holidays early.** People request leave months ahead, and a missing holiday would be counted as a leave day.
+- **Movable holidays,** such as Eid, are announced late. Add them as soon as the date is confirmed.
+- **Company days off,** such as a founders' day, can be added the same way with a Type of Company.
+- **Stopping people working on holidays** is set in Attendance: see **Block on public holidays** in [attendance settings](/attendance/setup/settings).
+
+## Next
+
+[Step 4: Blocked and reserved days](/leave/setup/blocked-and-reserved-days).

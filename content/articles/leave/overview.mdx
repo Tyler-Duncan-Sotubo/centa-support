@@ -1,0 +1,43 @@
+---
+title: "Leave in CentaHR"
+navTitle: "Overview"
+summary: "How leave requests, approvals and balances work, and what HR sets up first."
+section: "start"
+order: 1
+updated: "2026-11-26"
+---
+Leave covers everything from annual leave to sick days. Employees request leave from the portal or the app; CentaHR checks the request against your rules and their balance, sends it for approval, and updates their balance and the calendar once it's decided.
+
+## How a leave request runs
+
+<Flow
+  stages={[
+    { title: "HR sets the rules", text: "Leave types, how each one is earned, who can take it, approvals, holidays and blocked days.", actors: ["HR"] },
+    { title: "Balances build up", text: "Each person gets their allowance for the year, or earns it month by month.", actors: ["Automatic"] },
+    { title: "The employee requests leave", text: "They choose the type and dates. CentaHR counts the working days and shows the balance left.", actors: ["Employees"] },
+    { title: "CentaHR checks it", text: "Enough balance, enough notice, not on a blocked day, and allowed for this person. Requests that break a rule are refused straight away, with the reason.", actors: ["Automatic"] },
+    { title: "Approval", text: "The line manager approves or rejects it, or each step in turn if you use a multi-level chain. Unanswered requests can approve themselves after a set number of days.", actors: ["Managers"] },
+    { title: "Leave is booked", text: "The balance goes down, the leave appears on the calendar and the timesheet, and the employee is told.", actors: ["Automatic", "Employees"] },
+  ]}
+/>
+
+## The parts of Leave
+
+| Part | What it is | Who uses it |
+| --- | --- | --- |
+| [Leave settings](/leave/setup/settings) | Approvals, entitlement, eligibility, days counted and notifications | HR |
+| [Leave types and policies](/leave/setup/types-and-policies) | The kinds of leave, and how each is earned and who can take it | HR |
+| [Holidays](/leave/setup/holidays) | Public holidays and company days off | HR |
+| [Blocked and reserved days](/leave/setup/blocked-and-reserved-days) | Dates nobody can take leave, and days set aside for someone | HR |
+| [Leave management](/leave/use/requests) | Every request and balance, and approving | HR, line managers |
+| [Calendar and reports](/leave/use/calendar-and-reports) | Who's off when, and where leave is going | HR, line managers |
+
+## Set it up
+
+1. Check [before you start](/leave/before-you-start).
+2. Choose your [leave settings](/leave/setup/settings).
+3. Create your [leave types and policies](/leave/setup/types-and-policies). Nobody can request leave until a type has a policy.
+4. Add your [public holidays](/leave/setup/holidays).
+5. Add any [blocked or reserved days](/leave/setup/blocked-and-reserved-days).
+
+Each step matches an item on **Leave → Setup checklist**: Leave settings, Leave types and policies, Holidays, Blocked days and Reserved days.

@@ -1,0 +1,45 @@
+---
+title: "Payroll in CentaHR"
+navTitle: "Overview"
+summary: "How a pay run works from salaries to payslips, and what HR sets up first."
+section: "start"
+order: 1
+updated: "2026-11-26"
+---
+Payroll works out everyone's pay each month from their salary, your salary structure, statutory deductions, bonuses and deductions. You check the figures, send them for approval, download the bank advice to pay people, and CentaHR produces payslips and the remittances you owe.
+
+## How a pay run works
+
+<Flow
+  stages={[
+    { title: "Salaries and rules are set", text: "Each person's gross salary and bank details, your salary structure, statutory deductions, pay schedule and approvers.", actors: ["HR"] },
+    { title: "Calculate", text: "Pick the pay date. CentaHR works out each person's basic, allowances, PAYE, pension, NHF, bonuses and deductions, and their net pay.", actors: ["HR", "Automatic"] },
+    { title: "Review", text: "Check the totals and each person's figures. Add bonuses or deductions, and sync to pick up changes.", actors: ["HR"] },
+    { title: "Approve", text: "The pay run goes to your approvers, who approve it with remarks. Without an approval workflow it's approved straight away.", actors: ["Managers"] },
+    { title: "Pay", text: "Download the bank advice, pay people from your bank, and finish the run.", actors: ["HR"] },
+    { title: "Payslips and remittances", text: "Payslips appear for each employee, and the PAYE, pension and other remittances due are listed for you to pay.", actors: ["Automatic", "Employees"] },
+  ]}
+/>
+
+## The parts of Payroll
+
+| Part | What it is | Who uses it |
+| --- | --- | --- |
+| [General settings](/payroll/setup/settings) | Statutory deductions, salary structure, approvals, proration and 13th-month pay | HR, payroll |
+| [Pay schedules and groups](/payroll/setup/schedules-and-groups) | When people are paid, and groups with their own rules | HR, payroll |
+| [Pay adjustments](/payroll/setup/adjustments) | Regular deductions and bonuses for individual people | HR, payroll |
+| [Run payroll](/payroll/use/run-payroll) | The monthly pay run, from calculating to payslips | Payroll |
+| [Remittances](/payroll/use/remittances) | PAYE, pension and other payments due to the authorities | Payroll, finance |
+| [Salary advances](/payroll/use/salary-advances) | Advances on pay, repaid from later payslips | HR, payroll |
+
+Payroll is for the Super admin, Admin, HR manager and Payroll specialist roles. Approvers can also include finance officers.
+
+## Set it up
+
+1. Check [before you start](/payroll/before-you-start): salaries, bank and tax details.
+2. Choose your [general settings](/payroll/setup/settings).
+3. Create a [pay schedule and pay groups](/payroll/setup/schedules-and-groups).
+4. Add any regular [pay adjustments](/payroll/setup/adjustments).
+5. [Run your first payroll](/payroll/use/run-payroll).
+
+Each step matches an item on **Payroll → Setup checklist**.

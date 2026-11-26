@@ -1,0 +1,64 @@
+---
+title: "Correction requests"
+navTitle: "Corrections"
+summary: "How employees ask to fix a missed or wrong clock-in, and how line managers approve it."
+section: "use"
+order: 2
+updated: "2026-11-26"
+---
+A correction fixes a day that's wrong: a forgotten clock-in or clock-out, or the wrong time. The employee asks; their line manager decides; the timesheet changes once it's approved.
+
+## Ask for a correction (employees)
+
+1. Go to **Timesheet** in the employee portal.
+2. Click **Request a correction**.
+3. Choose the **Day**, then enter the right **Clock-in** time, **Clock-out** time, or both.
+4. Under **Why**, say what happened, and click **Send request**.
+
+<Screen
+  label="The Request a correction dialog: the day, a clock-in time, a clock-out time and the reason."
+  bare
+>
+  <Dialog
+    title="Request a correction"
+    footer={<><Button variant="outline">Cancel</Button><Button>Send request</Button></>}
+  >
+    <Meta>Your line manager decides. Your timesheet changes once they approve.</Meta>
+    <Field label="Day">
+      <Input value="Tuesday 24 November 2026" />
+    </Field>
+    <Columns template="1fr 1fr">
+      <Field label="Clock-in">
+        <Input value="08:55" />
+      </Field>
+      <Field label="Clock-out">
+        <Input placeholder="--:--" />
+      </Field>
+    </Columns>
+    <Field label="Why">
+      <Input tall value="My phone died before I could clock in." />
+    </Field>
+  </Dialog>
+</Screen>
+
+Requests appear under **Your correction requests** on the same page, with their status.
+
+### Rules for requests
+
+- The day has to be today or in the past.
+- One request per day can wait at a time. To change it, wait for a decision first.
+- If there's no clock-in that day, the request has to include the time you started.
+- The clock-out has to be after the clock-in.
+
+## Approve or reject (line managers)
+
+1. Open **Approvals**. Correction requests show as **Timesheet**.
+2. Check the day, the times and the reason.
+3. Click **Approve** to update the timesheet, or **Reject**.
+
+Only the person's line manager can decide, or whoever stands in for them. If someone has no line manager, requests go to your company's default manager.
+
+## Things to know
+
+- **Approving changes the day's status.** A corrected clock-in after the start time still counts as late.
+- **Rejected requests stay on the employee's list**, so they can see the outcome and send a new one if they need to.

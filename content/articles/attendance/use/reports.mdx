@@ -1,0 +1,52 @@
+---
+title: "Attendance reports"
+navTitle: "Reports"
+summary: "Monthly attendance by person, department and shift, and how to export it."
+section: "use"
+order: 3
+updated: "2026-11-26"
+---
+Three reports cover attendance over a month. Each has an **Export** button to download it.
+
+Go to **Attendance** and choose a report under **Reports**.
+
+<Screen
+  label="The Attendance summary report: tiles for days present, late, absent and on leave, and a monthly table by person."
+  path={["Attendance", "Reports", "Attendance summary"]}
+  title="Attendance summary"
+  description="How attendance is tracking across the company."
+  actions={<Button variant="outline">Export</Button>}
+  caption="Numbers are examples."
+>
+  <Columns template="1fr 1fr 1fr 1fr">
+    <Card tight><Figure value="412" label="Days present" /></Card>
+    <Card tight><Figure value="31" label="Days late" /></Card>
+    <Card tight><Figure value="9" label="Days absent" /></Card>
+    <Card tight><Figure value="18" label="Days on leave" /></Card>
+  </Columns>
+  <Card>
+    <Table
+      columns="1.6fr 0.8fr 0.8fr 0.8fr"
+      head={["Employee", "Present", "Late", "Absent"]}
+      rows={[
+        [<Person name="Adaeze Okafor" />, "20", "1", "0"],
+        [<Person name="Chinedu Eze" />, "17", "4", "1"],
+        [<Person name="Bola Ahmed" />, "18", "0", "3"],
+      ]}
+    />
+  </Card>
+</Screen>
+
+| Report | What it answers | What it shows |
+| --- | --- | --- |
+| Attendance summary | How attendance is tracking across the company | Days present, late, absent and on leave, and the month for each person |
+| Department summary | Which departments attend best and worst | Company attendance, the highest and lowest department, and each department's rate |
+| Shift reports | Who was rostered each month, and who turned up | Shifts rostered, people rostered, shift types and turnout; each person's rostered, present and missed shifts. Filter by location and department. |
+
+## Who can see them
+
+Reports are for HR: people with the Super admin, Admin or HR manager role. Line managers see their own people on the [timesheet](/attendance/use/timesheet) instead.
+
+## Using them with payroll
+
+Before you run payroll, check the month's **Attendance summary** for absences and lateness, and make sure any [corrections](/attendance/use/corrections) are decided.

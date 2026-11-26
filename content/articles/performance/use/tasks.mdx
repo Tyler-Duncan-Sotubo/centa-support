@@ -1,0 +1,127 @@
+---
+title: "Tasks"
+summary: "Give people and teams tasks with weights, track progress, and rate tasks in the appraisal."
+section: "use"
+order: 1
+updated: "2026-11-26"
+---
+Tasks are what someone is expected to deliver in a cycle; other systems call them goals. They feed straight into the appraisal score, so start them on the first day of the cycle.
+
+Go to **Performance → Tasks**. The tabs are **Active**, **Incomplete**, **Completed**, **Overdue** and **Archived**.
+
+## Create a task
+
+Click **New task** and fill in the form.
+
+<Screen
+  label="The New task form, giving a shared team task to the Procurement team, linked to an objective, with a weight of 30 and Active status."
+  path={["Performance", "Tasks"]}
+  title="New task"
+  description="Set what needs doing, by whom and by when."
+>
+  <Columns template="1fr 1fr">
+    <Stack gap={14}>
+      <Card title="Task">
+        <Stack gap={12}>
+          <Field label="Title" required>
+            <Input value="Close Q3 supplier reviews" />
+          </Field>
+          <Field label="Description">
+            <Input tall placeholder="What done looks like" />
+          </Field>
+        </Stack>
+      </Card>
+      <Card title="Owner" description="One person, or a whole team.">
+        <Stack gap={12}>
+          <Field label="Owned by" required mark={1}>
+            <Select value="A team" />
+          </Field>
+          <Field label="Team" required>
+            <Select value="Procurement" />
+          </Field>
+          <Field label="How the team works on it" required mark={2}>
+            <Select value="One shared task" />
+          </Field>
+        </Stack>
+      </Card>
+    </Stack>
+    <Stack gap={14}>
+      <Card title="Contributes to" description="Progress on this task rolls up to the objective.">
+        <Field label="Objective" mark={3}>
+          <Select value="Cut supplier costs by 10%" />
+        </Field>
+      </Card>
+      <Card title="Timing">
+        <Stack gap={10}>
+          <Field label="Review cycle">
+            <Select value="H1 2026 Appraisal" />
+          </Field>
+          <Row mark={4} label="Repeat each cycle" hint="Rolls over into the next cycle when this one ends.">
+            <Toggle />
+          </Row>
+        </Stack>
+      </Card>
+      <Card title="Tracking">
+        <Columns template="1fr 1fr">
+          <Field label="Weight" mark={5} hint="How much it counts in the review.">
+            <Input value="30" />
+          </Field>
+          <Field label="Status" hint="Drafts aren't shown to the owner yet.">
+            <Select value="Active" />
+          </Field>
+        </Columns>
+      </Card>
+    </Stack>
+  </Columns>
+</Screen>
+
+| | Field | What to know |
+| --- | --- | --- |
+| 1 | Owned by | **An employee** or **A team**. Teams come from **Staff → Teams**. This can't be changed after the task is created. |
+| 2 | How the team works on it | **One shared task** gives the whole team one progress bar. **A separate copy for each person** gives everyone their own. |
+| 3 | Objective | The objective the task contributes to. Its progress rolls up there. |
+| 4 | Repeat each cycle | Copies the task into the next cycle when this one ends, as a draft for the manager to check and make active. |
+| 5 | Weight | 0 to 100: how much the task counts in the appraisal, compared with the person's other tasks. |
+
+Choose **No cycle: set the dates** under **Review cycle** to give a task its own dates instead.
+
+## Who can create tasks
+
+- **HR and admins:** for anyone.
+- **Managers:** for anyone below them in the reporting line. A team task needs everyone in the team to report to them.
+- **Employees:** for themselves. Their task waits in **Approvals** for their line manager (or HR) to approve. Rejecting one needs a reason.
+
+## Progress, check-ins and comments
+
+Owners add progress updates (a percentage and an optional note), comments and attachments. When a check-in falls due under your [task policies](/performance/setup/task-policies-and-feedback), CentaHR emails the owner a reminder.
+
+A completed task can't be edited. A task with any activity can't be deleted, only archived.
+
+## How tasks are scored in the appraisal
+
+If the template includes Tasks, the appraisal lists the person's **active** and **completed** tasks in the cycle. Drafts, tasks waiting for approval and archived tasks don't appear.
+
+<Screen
+  label="The Tasks tab of an appraisal: three tasks with their weight, progress and star rating, including a shared team task rated for the team result and the person's contribution."
+  path={["Performance", "Appraisals", "H1 2026 Appraisal"]}
+  title="Adaeze Okafor"
+  description="Manager review · H1 2026 Appraisal"
+>
+  <Card title="Tasks" description="Active and completed tasks in this cycle">
+    <Table
+      columns="2fr 0.6fr 1.3fr 1.5fr"
+      head={["Task", "Weight", "Progress", "Rating"]}
+      rows={[
+        ["Close Q3 supplier reviews", "30", <Progress value={100} />, <Stars value={4} />],
+        ["Onboard two new vendors", "20", <Progress value={60} />, <Stars value={3} />],
+        [<Stack gap={4}><span>Quarterly stock count</span><Badge tone="primary">Team task</Badge></Stack>, "50", <Progress value={80} />, <Stack gap={6}><Meta>Team result</Meta><Stars value={4} /><Meta>Their contribution</Meta><Stars value={5} /></Stack>],
+      ]}
+    />
+  </Card>
+</Screen>
+
+- **Each star is worth 20 points**, so 4 stars counts as 80 out of 100.
+- **The suggested score is the weighted average** of the rated tasks. If no rated task has a weight, each counts the same.
+- **A shared task gets two ratings:** **Team result**, one rating for everyone on the team, and **Their contribution**, for this person alone. Your **Team result share** ([step 1](/performance/setup/general-settings)) decides the blend. At the default 50%, 4 stars for the team and 5 for their contribution scores 90.
+
+In the drawing, the suggested score is (80 × 30 + 60 × 20 + 90 × 50) ÷ 100 = 81.
