@@ -40,6 +40,8 @@ Go to **Leave → Settings → Leave settings**. Changes save as you make them.
     <Row mark={3} label="Allow carryover of unused leave"><Toggle on /></Row>
     <Row label="Carryover limit" hint="In days"><Input value="5" width={70} /></Row>
     <Row mark={4} label="Allow negative leave balance"><Toggle /></Row>
+    <Row mark={5} label="Minimum notice" hint="Days before leave starts that a request must be made"><Input value="3" width={70} /></Row>
+    <Row label="Maximum consecutive days" hint="The most days one request can cover"><Input value="30" width={70} /></Row>
   </Card>
 </Screen>
 
@@ -58,6 +60,7 @@ With **Multi-level approval** off, each person's line manager approves their lea
 | 2 | Annual leave entitlement | The yearly allowance of annual leave | 20 days |
 | 3 | Allow carryover of unused leave | Lets unused days roll into next year, up to the **Carryover limit** | On, 5 days |
 | 4 | Allow negative leave balance | Lets people take more leave than they have, going below zero | Off |
+| 5 | Minimum notice and Maximum consecutive days | How many days ahead a request must be made, and the most days one request can cover. Requests outside these are refused with the reason. | 3 days, 30 days |
 
 ## Eligibility and days
 
