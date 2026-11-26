@@ -1,0 +1,195 @@
+---
+title: "Step 5: Run your first cycle"
+navTitle: "Your first cycle"
+summary: "Create or check the cycle, add people, track progress, and see how a manager completes an appraisal."
+section: "setup"
+order: 5
+short: "Check the cycle, set tasks and run the appraisals."
+updated: "2026-11-26"
+---
+A cycle is a dated period, such as H1 2026, that holds everyone's appraisals and tasks. With the default settings, the cycle and its manager appraisals create themselves. Your job is to check them, add self reviews if you want them, and follow up until every appraisal is submitted.
+
+## 1. Create the cycle
+
+If **Start cycles automatically** is on, the current cycle already exists: check its name and dates under **Performance → Appraisals**. Otherwise:
+
+1. Go to **Performance → Appraisals** and click **Create Appraisal Cycle**.
+2. Enter a **Name**, a **Start Date** and an **End Date**.
+3. Click **Create**. A cycle that has started shows as Active; one that starts later shows as Draft.
+
+<Screen label="The Create Performance Cycle dialog with a name, start date and end date filled in." bare>
+  <Dialog
+    title="Create Performance Cycle"
+    footer={<><Button variant="outline">Cancel</Button><Button>Create</Button></>}
+  >
+    <Field label="Name">
+      <Input value="H1 2026 Appraisal" />
+    </Field>
+    <Columns template="1fr 1fr">
+      <Field label="Start Date">
+        <Input value="1 Jan 2026" />
+      </Field>
+      <Field label="End Date">
+        <Input value="30 Jun 2026" />
+      </Field>
+    </Columns>
+  </Dialog>
+</Screen>
+
+Two cycles can't share a name or overlap. Make the dates cover the whole period you're appraising: tasks belong to a cycle, and the Feedback and Attendance sections only count what happened between its dates.
+
+<Callout type="danger" title="Deleting a cycle deletes everything in it">
+
+Its appraisals, tasks and objectives go with it, and they can't be brought back. To fix a cycle's name or dates, use **Edit** from its menu instead.
+
+</Callout>
+
+## 2. Add people
+
+**Automatically.** With **Create reviews automatically** on, a manager appraisal appears overnight for each active or probation employee, addressed to their line manager. New joiners are picked up the night after they join.
+
+**By hand.** Open the cycle and click **New Review**. Choose the **Employee**, the **Performance Cycle**, the **Template** and the **Review Type**, then click **Create**. Each person can have one review of each type per cycle.
+
+<Screen label="The Create Performance Review dialog: an employee, the H1 2026 cycle, the default template and the Manager review type." bare>
+  <Dialog
+    title="Create Performance Review"
+    footer={<><Button variant="outline">Cancel</Button><Button>Create</Button></>}
+  >
+    <Field label="Employee">
+      <Select value="Bola Ahmed" />
+    </Field>
+    <Columns template="1fr 1fr">
+      <Field label="Performance Cycle">
+        <Select value="H1 2026 Appraisal" />
+      </Field>
+      <Field label="Template">
+        <Select value="Default Performance Review" />
+      </Field>
+    </Columns>
+    <Field label="Review Type">
+      <Select value="Manager" />
+    </Field>
+  </Dialog>
+</Screen>
+
+| Review type | Who writes it | Notes |
+| --- | --- | --- |
+| Manager | Their line manager, or the default manager if they have none | The main appraisal. It holds the final score. |
+| Self | The employee | They need a CentaHR login. Employees can also start their own (see [what managers and employees see](/performance/managers-and-employees)). |
+| Peer | Whoever creates it | To collect colleagues' views, use [360° feedback](/performance/use/feedback) instead. |
+
+## 3. Track progress
+
+Open the cycle from **Performance → Appraisals**. The tabs show how many appraisals are in each state, and you can filter by department or search for a person.
+
+<Screen
+  label="A cycle's appraisal list with tabs for All, Not Started, In Progress and Submitted, and four example appraisals."
+  path={["Performance", "Appraisals"]}
+  title="Appraisal — H1 2026 Appraisal"
+  description="Track and manage manager–employee conversations"
+  actions={<Button>New Review</Button>}
+  caption="Names and numbers are examples."
+>
+  <Inline gap={10}>
+    <Input placeholder="Search employee" width={190} />
+    <Select value="All Departments" width={170} />
+    <Select value="H1 2026 Appraisal" width={180} />
+  </Inline>
+  <Tabs
+    items={[
+      { label: "All", count: 24, active: true },
+      { label: "Not Started", count: 6 },
+      { label: "In Progress", count: 11 },
+      { label: "Submitted", count: 7 },
+    ]}
+  />
+  <Card>
+    <Table
+      columns="1.6fr 1.3fr 0.8fr 1fr 0.6fr 0.3fr"
+      head={["Employee", "Reviewer", "Type", "Status", "Score", ""]}
+      rows={[
+        [<Person name="Adaeze Okafor" sub="Sales" />, "Tunde Bakare", "Manager", <Badge tone="warning">In progress</Badge>, "–", <More />],
+        [<Person name="Chinedu Eze" sub="Sales" />, "Chinedu Eze", "Self", <Badge tone="success">Submitted</Badge>, "–", <More />],
+        [<Person name="Bola Ahmed" sub="Sales" />, "Tunde Bakare", "Manager", <Badge>Not started</Badge>, "–", <More />],
+        [<Person name="Ifeoma Nwosu" sub="Finance" />, "Ngozi Obi", "Manager", <Badge tone="success">Submitted</Badge>, "82", <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+- **Not Started:** the reviewer hasn't opened it. You can click **Start review** on their behalf, but only the reviewer can answer.
+- **In Progress:** answers save as the reviewer goes.
+- **Submitted:** complete and locked.
+
+Chase from the **Not Started** and **In Progress** tabs, and switch on the managers' [weekly digest](/performance/setup/general-settings), which lists what's waiting for them.
+
+## 4. How a manager completes an appraisal
+
+1. Open the appraisal and click **Start review**.
+2. Work through the tabs: **Values** (answer each question), **Tasks** (rate each task from 1 to 5 stars), **Feedback** and **Attendance**. Each tab has its own comment box.
+3. On **Conclusion**, write the **Final summary**, **Strengths** and **Areas for improvement**. **Suggest with Centa AI** can draft them for the manager to edit.
+4. Set the **Final score** out of 100. If tasks were rated, CentaHR shows the score they suggest. A different score needs a reason.
+5. Choose a recommendation: **Promote**, **Hold** or **Exit**.
+6. Click **Save draft** at any point. When it's finished, click **Complete review**. It locks: nobody can edit the answers or the conclusion after this.
+
+<Screen
+  label="A manager appraisal open on the Conclusion tab, with the final summary, strengths, areas for improvement, a final score of 78 matching the score the task ratings suggest, a Promote recommendation, and Save draft and Complete review buttons."
+  path={["Performance", "Appraisals", "H1 2026 Appraisal"]}
+  title="Adaeze Okafor"
+  description="Manager review · H1 2026 Appraisal"
+>
+  <Tabs
+    items={[
+      { label: "Values" },
+      { label: "Tasks" },
+      { label: "Feedback" },
+      { label: "Attendance" },
+      { label: "Conclusion", active: true },
+    ]}
+  />
+  <Card
+    title="Conclusion"
+    description="The final assessment of this review"
+    action={<Button variant="outline" mark={3}>Suggest with Centa AI</Button>}
+  >
+    <Stack gap={14}>
+      <Field label="Final summary">
+        <Input tall value="Adaeze closed every supplier review on time and brought two new vendors on board." />
+      </Field>
+      <Columns template="1fr 1fr">
+        <Field label="Strengths">
+          <Input tall value="Clear with customers; follows through." />
+        </Field>
+        <Field label="Areas for improvement">
+          <Input tall value="Delegate more of the weekly reporting." />
+        </Field>
+      </Columns>
+      <Columns template="1fr 1fr">
+        <Field label="Final score" mark={4}>
+          <Stack gap={4}>
+            <Figure value="78 / 100" label="Task ratings suggest 78" />
+          </Stack>
+        </Field>
+        <Field label="Recommendation" mark={5}>
+          <Select value="Promote" />
+        </Field>
+      </Columns>
+      <Inline gap={8}>
+        <Button variant="outline">Save draft</Button>
+        <Button mark={6}>Complete review</Button>
+      </Inline>
+    </Stack>
+  </Card>
+</Screen>
+
+The numbers on the drawing match the steps above. The employee can see the conclusion once the appraisal is complete.
+
+## 5. Finish the cycle
+
+When the manager appraisals are submitted, compare scores across teams on [Calibration](/performance/use/calibration). Then use [Reports](/performance/use/reports) for the results.
+
+Appraisals can still be completed after the end date. If cycles start automatically, the next one is created the night after this one ends.
+
+## Next
+
+Learn the [day-to-day tools](/performance/use/tasks), starting with tasks, or follow the [first 30 days plan](/performance/first-30-days).

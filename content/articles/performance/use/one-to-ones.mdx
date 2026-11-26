@@ -1,0 +1,56 @@
+---
+title: "One-to-ones"
+summary: "Private manager–employee meetings with a shared agenda, shared notes and private notes."
+section: "use"
+order: 3
+updated: "2026-11-26"
+---
+One-to-ones are regular meetings between a manager and someone who reports to them, with an agenda and notes. Only the two people in a one-to-one can open it, HR included, so people can speak freely.
+
+## Schedule one
+
+1. Go to **Performance → One-to-ones**, or open **My team** and choose **Schedule a one-to-one** from a person's menu.
+2. Click **Schedule**.
+3. Choose who it's **With** and **When**, and click **Schedule**.
+
+Anything left open on the agenda from your last one-to-one carries over.
+
+## During the meeting
+
+<Screen
+  label="A scheduled one-to-one: an agenda with one item done and one linked to a task, a box to add items, shared notes and private notes, and buttons to cancel it or mark it as done."
+  path={["Performance", "One-to-ones"]}
+  title="One-to-one with Adaeze Okafor"
+  description="Thursday 4 December 2026, 10:00"
+  actions={<><Badge tone="primary">Scheduled</Badge><Button variant="outline">Cancel it</Button><Button>Mark as done</Button></>}
+>
+  <Card title="Agenda" description="Either of you can add to this.">
+    <Stack gap={10}>
+      <div>
+        <Item done>Agree targets for the new quarter</Item>
+        <Item><Stack gap={2}><span>Blockers on the supplier reviews</span><Meta>Close Q3 supplier reviews</Meta></Stack></Item>
+      </div>
+      <Inline gap={8}>
+        <Input placeholder="Add something to talk about" width={240} />
+        <Select value="No task" width={130} />
+        <Button variant="outline">Add</Button>
+      </Inline>
+    </Stack>
+  </Card>
+  <Columns template="1fr 1fr">
+    <Card title="Shared notes" description="You both see these.">
+      <Input tall value="Supplier list to finance by Friday." />
+    </Card>
+    <Card title="Private notes" description="Only you can ever see these.">
+      <Input tall placeholder="Notes for yourself" />
+    </Card>
+  </Columns>
+</Screen>
+
+- **Either person** can add agenda items, tick them off, and link an item to one of the employee's current tasks.
+- **Shared notes** are seen by both people. **Private notes** are only ever seen by their author.
+- **Only the manager** can cancel the meeting or mark it as done.
+
+## What HR can see
+
+Nothing: one-to-ones don't appear for HR or in reports. To encourage them, include them in your [first 30 days plan](/performance/first-30-days) and ask managers to book them from **My team**.

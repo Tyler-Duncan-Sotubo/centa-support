@@ -1,0 +1,78 @@
+---
+title: "Offboard someone"
+summary: "Start someone's exit, work through their tasks, and what happens after their last day."
+section: "lifecycle"
+order: 4
+updated: "2026-11-26"
+---
+Offboarding takes someone from the day you know they're leaving to the day after their last day. They keep their access until their last day. The day after, their status changes and their sign-in stops working.
+
+## 1. Start it
+
+1. Open their profile from **Staff → Employees**, and on the **Employment** tab click **Terminate**.
+2. Under **Leaving**, choose the **Type** and **Reason**, and enter their **Last day**. Tick **Would rehire** if you'd take them back.
+3. Under **Tasks**, untick any that don't apply. Each one becomes a task with an owner and a due date.
+4. Add any **Notes** for HR, and click **Start offboarding**.
+
+<Screen
+  label="Offboarding a person: the type, reason and last day, whether you'd rehire them, the tasks from your checklist, and notes."
+  path={["Staff", "Employees", "Offboard"]}
+  title="Offboard Chinedu Eze"
+  description="They keep their access until their last day. The day after, their status changes and their sign-in stops working."
+  caption="Names are examples."
+>
+  <Columns template="1fr 1.2fr">
+    <Card title="Leaving">
+      <Field label="Type" required>
+        <Select value="Resigned" />
+      </Field>
+      <Field label="Reason" required>
+        <Select value="A new job" />
+      </Field>
+      <Field label="Last day" required>
+        <Input value="31 December 2026" />
+      </Field>
+      <Check checked label="Would rehire" />
+    </Card>
+    <Card title="Tasks" description="Each becomes a task with an owner and a due date. You can add or remove tasks later.">
+      <Check checked label="All tasks" />
+      <Check checked label="Remove employee from Payroll" />
+      <Check checked label="Calculate vacation payout" />
+      <Check checked label="Disable email address" />
+      <Check checked label="Return all company assets" />
+    </Card>
+  </Columns>
+  <Inline>
+    <Button>Start offboarding</Button>
+    <Button variant="outline">Cancel</Button>
+  </Inline>
+</Screen>
+
+## 2. Work through it
+
+**Staff → Offboarding** lists everyone leaving or recently gone, with their last day, how they're leaving, their tasks done and their status. Filter by **Still here**, **Tasks done** or **Left**. Open someone to work through their offboarding.
+
+- **Tasks:** tick each one as it's done. Add one with **Add a task**, or remove one that doesn't apply. Finishing every task doesn't end their employment; that happens after their last day.
+- **Before they go:** anyone who reports to them needs a new manager before the last day. Click **New manager** beside each person. Any **Leave not taken** is shown too, to settle in their final pay.
+- **Details:** the type, reason, whether you'd rehire them, and how they'll leave: **Resigned** or **Terminated**.
+- **Edit** changes the type, reason, last day, rehire choice or notes. If their last day moves, change it here.
+
+Line managers see their tasks under **To do for your team**, on **My team**.
+
+## 3. Their last day, and after
+
+The day after their last day:
+
+- Their status becomes **Resigned** or **Terminated**, and they move to **Former** on your [employee list](/staff/people/employees).
+- They can no longer sign in to CentaHR or the app.
+- Their offboarding shows as **Left**.
+
+Pay them for the days they worked in your next [pay run](/payroll/use/run-payroll). Click **Sync payroll** on the pay run to bring in people who left that month.
+
+## Download their record
+
+Click **Record** to download their employment record. The employment summary is always included. Choose what else to add: **Pay history**, **Statutory**, **Leave** and **Offboarding**.
+
+## Changed your mind?
+
+If they're staying after all, open their offboarding and choose **Cancel offboarding**. They stay employed, and the offboarding and its tasks are deleted.

@@ -1,0 +1,84 @@
+---
+title: "Troubleshooting Performance"
+summary: "Fixes for the most common Performance problems, from missing appraisals to scores that won't save."
+section: "reference"
+order: 1
+updated: "2026-11-26"
+---
+## Someone has no appraisal in the current cycle
+
+Automatic appraisals skip a person when any of these is true:
+
+- **Create reviews automatically** is off ([step 1](/performance/setup/general-settings)).
+- No cycle covers today, or the default template was deleted.
+- Their status isn't Active or Probation. People on leave are skipped.
+- They have no line manager with a login, and no default manager is set.
+
+Appraisals are added overnight, up to 100 people a night. To add someone now, open the cycle and click **New Review** ([step 5](/performance/setup/first-cycle#2-add-people)).
+
+## An appraisal went to the wrong manager
+
+The reviewer is the person's line manager when the appraisal is created. Fix the reporting line first ([before you start](/performance/before-you-start#set-reporting-lines)) so new appraisals go to the right person. To move an appraisal that already exists, [contact support](/contact).
+
+## An employee can't write a self review
+
+- They need a CentaHR login.
+- Each person can have one self review per cycle. If one exists, they open it from **Performance → Appraisals**.
+- The cycle has to exist. Check **Performance → Appraisals**.
+
+## There's no suggested score
+
+The suggested score comes from task ratings. Check that:
+
+- the appraisal's template includes **Tasks** ([step 3](/performance/setup/review-templates));
+- the person has tasks in this cycle that are **Active** or **Completed**;
+- the manager has rated at least one task.
+
+## A task isn't on the appraisal
+
+Only tasks in the appraisal's cycle that are **Active** or **Completed** appear. Drafts, tasks waiting for approval and archived tasks don't. Check the task's **Review cycle** and **Status** on its edit page.
+
+## A recurring task didn't appear in the new cycle
+
+It's copied overnight after the new cycle starts, as a **Draft**. Drafts aren't shown to the owner, so the manager needs to check it and set it to **Active**.
+
+## The manager can't complete the review
+
+- Only the reviewer can complete it. HR can start a review on the reviewer's behalf, but not answer it.
+- **Final summary**, **Strengths** and **Areas for improvement** all need text.
+- If the final score differs from the one the task ratings suggest, the manager has to say why.
+
+## A completed review needs changing
+
+Completed reviews are locked, so their answers and conclusion can't change. To change a manager review's score, use **Adjust score** on [Calibration](/performance/use/calibration); a reason is required, and the original is kept.
+
+## Calibration says “Not available” or “Nothing to compare yet”
+
+- **Not available:** calibration is for HR and for managers of managers.
+- **Nothing to compare yet:** only completed manager reviews appear. Self and peer reviews never do.
+
+## Nobody gets check-in reminders
+
+- Reminders go to task owners who have a CentaHR login.
+- They go out on the anchor day and hour set in your task policies, in your company's time zone.
+- Each task keeps the schedule it was created with, so policy changes only affect new tasks ([step 4](/performance/setup/task-policies-and-feedback)).
+
+## People can't see some kinds of feedback in Give feedback
+
+The menu only lists kinds switched on for their group in [feedback settings](/performance/setup/task-policies-and-feedback#feedback-settings), and nothing at all if 360° feedback is switched off for the group. Employees can be given Self, Peer and Employee to manager; Manager to employee is for managers only, and starts switched off.
+
+## Someone isn't in the list when giving feedback
+
+That kind of feedback may be limited to the sender's own office or department in [feedback settings](/performance/setup/task-policies-and-feedback#feedback-settings). Employees' peer feedback starts limited to the same office.
+
+## Send anonymously is missing
+
+**Allow Anonymous 360 Feedback** is switched off in [feedback settings](/performance/setup/task-policies-and-feedback#feedback-settings).
+
+## The cycle length is wrong
+
+Change **Cycle length** in [general settings](/performance/setup/general-settings). The current cycle keeps its dates, so edit them from the cycle's menu under **Performance → Appraisals**. Don't delete a cycle that has appraisals or tasks: everything in it is deleted too.
+
+## HR can't see one-to-ones
+
+That's by design. Only the manager and the employee in a one-to-one can open it.

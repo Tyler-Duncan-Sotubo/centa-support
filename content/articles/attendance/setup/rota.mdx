@@ -1,0 +1,51 @@
+---
+title: "Step 4: Plan the rota"
+navTitle: "Rota"
+summary: "Give people their shifts for each day of the week, office by office."
+section: "setup"
+order: 4
+updated: "2026-11-26"
+---
+The rota shows who works which shift on each day of the week. People with a shift are timed against it; with **Use shifts** on, people without one can't clock in that day.
+
+Go to **Attendance → Rota** and choose the office at the top.
+
+<Screen
+  label="The Rota for Lekki Office: a week with each person's shift on each day, and gaps where nobody is scheduled."
+  path={["Attendance", "Rota"]}
+  title="Rota"
+  description="Plan who works when. Drag a shift to move it to another day."
+  actions={<Select value="Lekki Office" width={170} />}
+  caption="Names and shifts are examples."
+>
+  <Card title="Lekki Office" description="2 shifts · 3 of 4 people scheduled">
+    <Table
+      columns="1.5fr repeat(5, 1fr)"
+      head={["Person", "Mon", "Tue", "Wed", "Thu", "Fri"]}
+      rows={[
+        [<Person name="Adaeze Okafor" />, <Badge tone="primary">Morning</Badge>, <Badge tone="primary">Morning</Badge>, <Badge tone="primary">Morning</Badge>, <Badge tone="primary">Morning</Badge>, <Badge tone="primary">Morning</Badge>],
+        [<Person name="Chinedu Eze" />, <Badge tone="violet">Late</Badge>, <Badge tone="violet">Late</Badge>, "–", <Badge tone="violet">Late</Badge>, <Badge tone="violet">Late</Badge>],
+        [<Person name="Bola Ahmed" />, <Badge tone="primary">Morning</Badge>, "–", <Badge tone="primary">Morning</Badge>, "–", <Badge tone="primary">Morning</Badge>],
+        [<Person name="Kemi Lawal" />, "–", "–", "–", "–", "–"],
+      ]}
+    />
+  </Card>
+</Screen>
+
+## Give someone a shift
+
+1. Find the person and the day, and click the empty day.
+2. In **Add shift**, choose the **Shift** and save.
+3. To move a shift to another day, drag it there. To change it, click it and choose **Change shift**.
+
+Use the arrows at the top to plan the weeks ahead.
+
+## Rules the rota follows
+
+- **One shift per person per day.** A second shift on the same day is refused.
+- **Shifts match locations.** A person can only be given shifts from the office they're located at.
+- **Line managers can plan the rota** for the people below them in the reporting line; HR can plan everyone's.
+
+## When the rota is done
+
+People clock in as usual. Their lateness and overtime are worked out against their shift, and [shift reports](/attendance/use/reports) show who was rostered and who turned up.

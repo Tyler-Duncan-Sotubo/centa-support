@@ -1,0 +1,76 @@
+---
+title: "Onboard a new joiner"
+summary: "Invite someone who's about to start, and follow them until they've finished onboarding."
+section: "lifecycle"
+order: 2
+updated: "2026-11-26"
+---
+An onboarding invite adds someone with just the essentials. They fill in the rest themselves, following your [onboarding template](/staff/lifecycle/onboarding-templates), when they first sign in.
+
+## Send the invite
+
+1. Go to **Staff → Onboarding** and click **Send onboarding invite**.
+2. Under **Template**, choose the **Onboarding template**.
+3. Under **Personal**, enter their **Employee ID** (or click **Generate**), **First name**, **Last name** and **Email**.
+4. Under **Work**, choose their **Role**, **Department**, **Job Role**, **Cost Center**, **Pay Group** and **Location**, and their **Employment start date**. Missing one? Use **Add new** beside it.
+5. Under **Compensation**, enter their yearly **Gross salary (naira)**.
+6. Click **Send invite**.
+
+<Screen
+  label="The Send onboarding invite page: the template, their name and email, their job and their salary."
+  path={["Staff", "Onboarding", "Send onboarding invite"]}
+  title="Send onboarding invite"
+  description="They’ll get an email to complete their details."
+  caption="Names are examples."
+>
+  <Columns template="1fr 1fr">
+    <Card title="Template">
+      <Field label="Onboarding template">
+        <Select value="Full-Time Employee Onboarding" />
+      </Field>
+    </Card>
+    <Card title="Personal">
+      <Field label="Employee ID" required>
+        <Inline>
+          <Input value="OF-031" width={140} />
+          <Button variant="outline">Generate</Button>
+        </Inline>
+      </Field>
+      <Field label="Email" required>
+        <Input value="tunde@okaforfoods.com" />
+      </Field>
+    </Card>
+  </Columns>
+  <Card title="Work">
+    <Columns template="1fr 1fr 1fr">
+      <Field label="Department">
+        <Select value="Sales" />
+      </Field>
+      <Field label="Job Role">
+        <Select value="Sales Analyst" />
+      </Field>
+      <Field label="Employment status" required>
+        <Input value="Onboarding" />
+      </Field>
+    </Columns>
+  </Card>
+</Screen>
+
+Their status is **Onboarding** until they've finished.
+
+## What they do
+
+They get an email to set a password. When they sign in, they see your onboarding steps, and fill in the fields from your template. See [complete your onboarding](/getting-started/complete-onboarding) for their side.
+
+Once they've finished their steps, they become **Active** and join your [employee list](/staff/people/employees). If they're on probation, set their status and probation end date on their profile.
+
+## Follow their progress
+
+**Staff → Onboarding** lists everyone onboarding, with when they started, their **Progress** and their **Status**: **Pending**, **In Progress** or **Completed**. Filter by status to see who's still going.
+
+Click someone's progress to see their checklist, including the tasks for HR and their manager, such as **Assign a buddy** or **Hold a 30-day check-in**. Managers see their own tasks under **To do for your team**, on **My team**.
+
+## Before their first day
+
+- **Give them a line manager,** so their requests have somewhere to go. See [org chart](/staff/company/org-chart).
+- **Check their bank details** once they've added them, before their first pay run.

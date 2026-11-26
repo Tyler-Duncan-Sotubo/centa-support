@@ -1,0 +1,74 @@
+---
+title: "The timesheet"
+navTitle: "Timesheet"
+summary: "See who clocked in each day, when, how long they worked, and who's late or absent."
+section: "use"
+order: 1
+updated: "2026-11-26"
+---
+The timesheet shows one day at a time: who clocked in and out, how long they worked, and each person's status. HR sees everyone; line managers see the people below them in the reporting line.
+
+Go to **Attendance → Timesheet**. Use the arrows beside the date to move between days.
+
+<Screen
+  label="The Timesheet for one day: a summary panel with the attendance rate, clocked in, late, absent and average check-in, then a list of people with their check-in, check-out, hours worked and status."
+  path={["Attendance", "Timesheet"]}
+  title="Timesheet"
+  description="Clock-ins, lateness and absences across your team."
+  caption="Names and numbers are examples."
+>
+  <PanelCard>
+    <Inline gap={30}>
+      <Figure value="92%" label="Attendance" />
+      <Figure value="23" label="Clocked in" />
+      <Figure value="3" label="Late" />
+      <Figure value="2" label="Absent" />
+      <Figure value="8:47 AM" label="Average check-in" />
+    </Inline>
+  </PanelCard>
+  <Tabs
+    items={[
+      { label: "All", count: 26, active: true },
+      { label: "Present", count: 20 },
+      { label: "Late", count: 3 },
+      { label: "Absent", count: 2 },
+      { label: "On leave", count: 1 },
+    ]}
+  />
+  <Card>
+    <Table
+      columns="1.6fr 1fr 0.9fr 0.9fr 0.8fr 0.9fr"
+      head={["Employee", "Department", "Check in", "Check out", "Worked", "Status"]}
+      rows={[
+        [<Person name="Adaeze Okafor" />, "Sales", "8:52 AM", "5:06 PM", "8h 14m", <Badge tone="success">Present</Badge>],
+        [<Person name="Chinedu Eze" />, "Sales", "9:24 AM", "5:30 PM", "8h 6m", <Badge tone="warning">Late</Badge>],
+        [<Person name="Bola Ahmed" />, "Finance", "–", "–", "–", <Badge tone="danger">Absent</Badge>],
+        [<Person name="Ifeoma Nwosu" />, "Finance", "–", "–", "–", <Badge tone="primary">On leave</Badge>],
+      ]}
+    />
+  </Card>
+</Screen>
+
+The panel at the top sums up the day. Below it, **By department** compares departments, and the list shows each person. Filter the list by status, or sort it by any column.
+
+## What each status means
+
+| Status | Meaning |
+| --- | --- |
+| Present | Clocked in on time |
+| Late | Clocked in after the start time plus the late tolerance |
+| Absent | A working day with no clock-in, no approved leave and no holiday |
+| On leave | Approved leave for that day |
+| Holiday | A public holiday from **Leave → Settings → Holidays** |
+| Weekend | Not a working day, under your **Default working days** |
+| Day off | Not rostered to work that day, when you use shifts |
+
+Start times, tolerance and working days come from [attendance settings](/attendance/setup/settings), or from each person's [shift](/attendance/setup/shifts).
+
+## Fixing a day
+
+If someone forgot to clock in or out, or clocked in at the wrong time, they ask for a [correction](/attendance/use/corrections) from their own timesheet. Their line manager approves it, and the timesheet updates.
+
+## For line managers
+
+**My team** shows today at a glance: who's in, late, on leave and not clocked in. Open **Attendance → Timesheet** for the full day, or any past day.

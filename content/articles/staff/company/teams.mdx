@@ -1,0 +1,57 @@
+---
+title: "Teams"
+summary: "Group people across departments, for projects, interests or access, and give each team a lead."
+section: "company"
+order: 3
+updated: "2026-11-26"
+---
+Departments follow your structure. Teams are for anything else: a project, a squad that spans departments, or an interest group. Performance uses them for team objectives, and Benefits for who a plan covers.
+
+Go to **Staff → Teams**.
+
+## Create a team
+
+1. Click **Create Group**.
+2. Enter the **Group Name**, for example Engineering Team. The **Slug** fills itself in from the name.
+3. Choose the **Group Type**.
+4. Add people under **Team members**, then choose the team's **Lead** from them.
+5. Click **Create**.
+
+<Screen label="The Create Team dialog: the group name, its slug, the group type, the lead and the team members." bare>
+  <Dialog
+    title="Create Team"
+    footer={<><Button variant="outline">Cancel</Button><Button>Create</Button></>}
+  >
+    <Field label="Group Name" required>
+      <Input value="Lagos Expansion" />
+    </Field>
+    <Field label="Slug (auto from name)">
+      <Input value="lagos-expansion" />
+    </Field>
+    <Columns template="1fr 1fr">
+      <Field label="Group Type">
+        <Select value="PROJECT" />
+      </Field>
+      <Field label="Lead">
+        <Select value="Adaeze Okafor" />
+      </Field>
+    </Columns>
+    <Field label="Team members">
+      <Inline>
+        <Badge>Adaeze Okafor</Badge>
+        <Badge>Ngozi Obi</Badge>
+        <Badge>Bola Ahmed</Badge>
+      </Inline>
+    </Field>
+  </Dialog>
+</Screen>
+
+The **Group Type** is TEAM, PROJECT, INTEREST or SECURITY. It describes the team, and you can filter the list by it.
+
+## Manage teams
+
+- **Search** by team or lead, and filter by type.
+- To add or remove people, edit the team and change its **Team members**.
+- Deleting a team removes it and its memberships, and can't be undone.
+
+A team lead doesn't become anyone's line manager. Reporting lines come from the [org chart](/staff/company/org-chart).

@@ -1,0 +1,53 @@
+---
+title: "Approve a pay run"
+navTitle: "Approve a pay run"
+summary: "For approvers: check a pay run and approve it, and what happens next."
+section: "use"
+order: 2
+updated: "2026-11-26"
+---
+When a pay run is sent for approval, your approvers approve it one at a time, in the order set in [general settings](/payroll/setup/settings). Each approver gets an email, **Action Required: Approve Payroll for** the month, when it's their turn.
+
+## Approve
+
+1. Click **Review & Approve** in the email. It opens **Payroll approval** for that month.
+2. Click **Detailed report** to download everyone's pay, and check it.
+3. Under **Your approval**, add any remarks, and click **Approve**.
+
+<Screen
+  label="The Payroll approval page for December 2026: the workflow with each approver's status, your approval with a remarks box and an Approve button, and the approvals so far."
+  path={["Payroll", "Payroll approval"]}
+  title="Payroll approval"
+  description="Approval workflow for December 2026"
+  actions={<Button variant="outline">Detailed report</Button>}
+>
+  <Columns template="1fr 1fr">
+    <Card title="Workflow">
+      <Row label="Payroll specialist"><Badge tone="success">Approved</Badge></Row>
+      <Row label="Finance officer"><Badge tone="warning">Pending</Badge></Row>
+    </Card>
+    <Card title="Your approval" description="Signed in as finance officer">
+      <Stack gap={10}>
+        <Input tall placeholder="Add optional remarks" />
+        <Inline>
+          <Button>Approve</Button>
+        </Inline>
+      </Stack>
+    </Card>
+  </Columns>
+  <Card title="Approved so far">
+    <Item done>Payroll specialist</Item>
+  </Card>
+</Screen>
+
+- **Workflow** lists each approver role, with whether it has approved.
+- **Your approval** only lets you approve when it's your turn. Otherwise it says who it's waiting for, or **Every approval is complete.** once everyone has approved.
+- **Approved so far** lists the roles that have approved.
+
+Once the last approver approves, the run is approved. Payslips are created, and whoever is running payroll can download the bank advice and pay people. See [run payroll](/payroll/use/run-payroll).
+
+## Before you approve
+
+- **Compare with last month.** The [Payroll variance](/payroll/use/reports) report shows how this run differs from the one before. Ask about anything unexpected.
+- **Check joiners and leavers** have the right pay for the days they worked.
+- **Something wrong?** Don't approve. Tell whoever is running payroll: they can fix it, sync the run and send it again.

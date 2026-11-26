@@ -1,0 +1,66 @@
+---
+title: "Add your employees"
+summary: "Add people one at a time, upload a spreadsheet, or invite new joiners to fill in their own details."
+section: "admins"
+order: 2
+updated: "2026-11-26"
+---
+There are three ways to add people. Each one emails the person an invitation to set their password and sign in.
+
+| Way | Use it for | Where |
+| --- | --- | --- |
+| Add employee | One person at a time, with all their details | **Staff → Employees → Add employee** |
+| Upload employees | Many existing staff at once, from a CSV file | **Staff → Employees → Upload employees** |
+| Onboarding invite | New joiners, who fill in their own details | **Staff → Onboarding → Send onboarding invite** |
+
+<Screen
+  label="The Employees page with buttons to export, upload employees and add an employee, and the list of employees."
+  path={["Staff", "Employees"]}
+  title="Employees"
+  actions={<><Button variant="outline">Export</Button><Button variant="outline" mark={2}>Upload employees</Button><Button mark={1}>Add employee</Button></>}
+  caption="Names are examples."
+>
+  <Card>
+    <Table
+      columns="1.6fr 0.7fr 1.2fr 0.8fr"
+      head={["Employee", "ID", "Role", "Status"]}
+      rows={[
+        [<Person name="Adaeze Okafor" sub="adaeze@okaforfoods.com" />, "OF-014", "Account Executive", <Badge tone="success">Active</Badge>],
+        [<Person name="Chinedu Eze" sub="chinedu@okaforfoods.com" />, "OF-022", "Account Executive", <Badge tone="warning">Probation</Badge>],
+        [<Person name="Bola Ahmed" sub="bola@okaforfoods.com" />, "OF-019", "Sales Analyst", <Badge tone="success">Active</Badge>],
+      ]}
+    />
+  </Card>
+</Screen>
+
+## 1. Add one person
+
+1. On **Staff → Employees**, click **Add employee**.
+2. Fill in their details: basic information, their work (job role, department and location), personal information, pay, and any dependents.
+3. Click **Submit**. They get an email titled “Invitation to Join” followed by your company's name and their role.
+4. Give them a line manager: on their profile's **Employment** tab, click **Change Manager**.
+
+Every field is explained in [add and import employees](/staff/people/add-and-import).
+
+## 2. Upload many at once
+
+1. On **Staff → Employees**, click **Upload employees**.
+2. Click **Download Example** and fill it in, one person per row.
+3. Drag the file in, or click to choose it, and click **Add**.
+
+Each person in the file is added and gets an invitation email. See [getting the file right](/staff/people/add-and-import#getting-the-file-right) before you upload.
+
+## 3. Invite a new joiner
+
+For someone starting soon, send an onboarding invite instead. They fill in their own details through your onboarding steps before their first day.
+
+1. Go to **Staff → Onboarding** and fill in **Send onboarding invite**.
+2. Click **Send invite**.
+
+They'll see your onboarding steps when they first sign in. See [complete your onboarding](/getting-started/complete-onboarding).
+
+## Before people sign in
+
+- **Set each person's location and line manager.** Clocking in and approvals depend on them.
+- **Check the email addresses.** Invitations go to the address you entered.
+- **Tell people to expect the email,** from noreply@centahr.com. See [didn't get an email](/troubleshooting/emails-not-arriving) if it doesn't arrive.

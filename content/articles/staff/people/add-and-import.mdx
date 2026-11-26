@@ -1,0 +1,84 @@
+---
+title: "Add and import employees"
+summary: "Add people one at a time with all their details, or many at once from a spreadsheet."
+section: "people"
+order: 2
+updated: "2026-11-26"
+---
+Add the people who already work for you here. For someone about to start, [send an onboarding invite](/staff/lifecycle/onboard-a-new-joiner) instead, so they fill in their own details.
+
+However you add someone, they get an email inviting them to set a password and sign in.
+
+## Add one person
+
+On **Staff → Employees**, click **Add employee**. **Invite Employees** has five parts:
+
+| Part | What to enter |
+| --- | --- |
+| Basic Info | Employee ID, first and last name, and work email |
+| Work | Department, job role, location and pay group; employment status, start date, probation end date and whether they're confirmed; and their **Role**, which decides what they can do in CentaHR |
+| Personal | Date of birth, phone, gender, marital status, address, state, country and an emergency contact |
+| Financial & Compensation Info | Yearly gross salary, TIN, pension PIN, NHF number, bank and account number, and whether NHF applies |
+| Dependents | Family members, with their relationship and date of birth, and whether each is a beneficiary |
+
+<Screen
+  label="The Work part of Invite Employees: department, job role, location, pay group, employment status, start date, probation end date and role."
+  path={["Staff", "Employees", "Add employee"]}
+  title="Invite Employees"
+  description="Fill in the details below to invite employees to the system."
+  caption="Names are examples."
+>
+  <Card title="Work">
+    <Columns template="1fr 1fr">
+      <Field label="Department">
+        <Select value="Sales" />
+      </Field>
+      <Field label="Job Role">
+        <Select value="Account Executive" />
+      </Field>
+      <Field label="Location">
+        <Select value="Head Office" />
+      </Field>
+      <Field label="Pay Group">
+        <Select value="Monthly staff" />
+      </Field>
+      <Field label="Employment Status" required>
+        <Select value="Probation" />
+      </Field>
+      <Field label="Employment Start Date" required>
+        <Input value="5 January 2027" />
+      </Field>
+      <Field label="Probation End Date">
+        <Input value="5 April 2027" />
+      </Field>
+      <Field label="Role" required>
+        <Select value="Team Member" />
+      </Field>
+    </Columns>
+  </Card>
+</Screen>
+
+Click **Submit**.
+
+- **The bank account is checked** as you enter it. **Account Verified** shows the name on the account, so you can see it's the right one.
+- **Gross salary is yearly.** Payroll pays a twelfth of it each month.
+- **Most people are Team Members.** See [roles and access](/getting-started/roles-and-access) for the others.
+
+Then give them a line manager: on their profile's **Employment** tab, click **Change Manager** under **Reporting Manager**. Or use the [org chart](/staff/company/org-chart).
+
+## Import many people
+
+1. On **Staff → Employees**, click **Upload employees**.
+2. Click **Download Example**, and fill in the spreadsheet with one person per row.
+3. Drag the file into **Upload CSV File**, or click to choose it. CSV and Excel (.xlsx) files both work.
+4. Click **Add**.
+
+Each person gets their invitation. Rows with a problem are skipped and the rest are added, and you're told which rows to fix and upload again.
+
+### Getting the file right
+
+- **Employee Number and Email are required** for every row. Each email can only belong to one person.
+- **Names must match CentaHR exactly:** department, job role, location and pay group. Create any that are missing first. See [departments and job roles](/staff/company/departments-and-job-roles).
+- **Manager Email** sets each person's line manager. It can be someone else in the same file.
+- **Have a Managing Director job role.** People with no manager email report to whoever holds it. The import won't run without it.
+- **Is Head of Department** is Yes or No, with one head per department.

@@ -1,0 +1,47 @@
+---
+title: "The leave calendar and reports"
+navTitle: "Calendar and reports"
+summary: "See who's off when, and where leave is going by type and department."
+section: "use"
+order: 2
+updated: "2026-11-26"
+---
+The calendar shows approved leave and upcoming public holidays, so you can see who's off before you plan. The reports show balances and where leave is going.
+
+## The leave calendar
+
+Go to **Leave → Calendar**. Switch between **Month** and **Timeline**, and use the arrows to move between months.
+
+<Screen
+  label="The Leave calendar in timeline view: each person's approved leave shown across the days of the week, and a public holiday."
+  path={["Leave", "Calendar"]}
+  title="Leave calendar"
+  description="Approved leave and upcoming public holidays."
+  actions={<Segmented items={["Month", "Timeline"]} active="Timeline" />}
+  caption="Names and dates are examples."
+>
+  <Card>
+    <Table
+      columns="1.5fr repeat(5, 1fr)"
+      head={["Person", "Mon 30", "Tue 1", "Wed 2", "Thu 3", "Fri 4"]}
+      rows={[
+        [<Person name="Adaeze Okafor" />, <Badge tone="warning">Sick</Badge>, "–", "–", "–", "–"],
+        [<Person name="Chinedu Eze" />, "–", <Badge tone="violet">Holiday</Badge>, <Badge tone="primary">Annual</Badge>, <Badge tone="primary">Annual</Badge>, <Badge tone="primary">Annual</Badge>],
+        [<Person name="Bola Ahmed" />, "–", <Badge tone="violet">Holiday</Badge>, "–", "–", "–"],
+      ]}
+    />
+  </Card>
+</Screen>
+
+Each leave type shows in its **Color tag** from [leave types](/leave/setup/types-and-policies). Line managers also see their team's leave on **My team**.
+
+## Reports
+
+Go to **Leave** and choose a report under **Reports**.
+
+| Report | What it answers | What it shows |
+| --- | --- | --- |
+| Leave balance | How much leave everyone has left | Entitlement, used and remaining days for every employee. Filter by year and leave type. |
+| Leave utilization | Where leave days are going | Days requested to date, by leave type and by department |
+
+Use **Leave balance** at the end of the year to check carryover, and before payroll to check unpaid leave.

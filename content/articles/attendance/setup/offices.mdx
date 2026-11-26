@@ -1,0 +1,87 @@
+---
+title: "Step 2: Offices and clock-in locations"
+navTitle: "Offices and locations"
+summary: "Add your offices and pin them on the map, so people can only clock in where they work."
+section: "setup"
+order: 2
+updated: "2026-11-26"
+---
+People can clock in within 100 metres of their own location, or of any of your offices. Each office needs its exact position on the map for this to work.
+
+Go to **Staff → Company → Offices**. Your company starts with one office, **Head Office**.
+
+## Add an office
+
+1. Click **Add office**.
+2. Under **Details**, enter the **Name**, choose the **Type** and enter the **Address**. City, state, country and postal code are optional.
+3. Under **Map position**, place the pin exactly on the building.
+4. Save.
+
+<Screen
+  label="The New office form: name, type and address, and a map with the pin on the office and a 100-metre circle around it."
+  path={["Staff", "Company", "Offices"]}
+  title="New office"
+>
+  <Columns template="1fr 1fr">
+    <Card title="Details">
+      <Stack gap={12}>
+        <Field label="Name" required>
+          <Input value="Lekki Office" />
+        </Field>
+        <Field label="Type" required mark={1}>
+          <Select value="Office" />
+        </Field>
+        <Field label="Address" required>
+          <Input value="No 2 Lekki Phase 1" />
+        </Field>
+        <Columns template="1fr 1fr">
+          <Field label="City">
+            <Input value="Lagos" />
+          </Field>
+          <Field label="State">
+            <Select value="Lagos" />
+          </Field>
+        </Columns>
+      </Stack>
+    </Card>
+    <Card title="Map position" description="Used to check people clock in from the right place.">
+      <MapBox />
+    </Card>
+  </Columns>
+</Screen>
+
+## Office types
+
+| Type | Use it for | Who can clock in there |
+| --- | --- | --- |
+| Office | A place where your company works | Anyone, whatever their own location |
+| Home | Someone's home, for people who work from home | People whose location it is |
+| Remote | Another regular place of work, such as a client's site | People whose location it is |
+
+## Give each person their location
+
+Each person's **Location** is on their profile under **Employment details**. They can clock in:
+
+- within 100 metres of their own location, of any type;
+- within 100 metres of any office of type Office.
+
+So someone who works from home needs a Home location pinned at their address, and set as their location.
+
+## Let someone clock in at more places
+
+Some people work from two places, such as an office and a client's site. Give them up to two extra locations:
+
+1. On **Staff → Company → Offices**, click **Assign Remote Location**.
+2. Choose the **Employee** and the **Remote Location**, and save.
+
+They can then clock in at their own location, at any office, and at up to two extra locations.
+
+## Things to know
+
+- **Pin the building, not the street.** The pin is the centre of the 100-metre circle. A pin placed a block away can block people inside the office.
+- **Inactive offices don't count.** People can't clock in at an office you've switched off.
+- **Head Office can't be deleted**, but you can rename it and move its pin.
+
+## Next
+
+[Step 3: Shifts](/attendance/setup/shifts), if people work different hours. If everyone works the same hours, you're ready: share [clock in and out](/attendance/employee-clock-in-out) with your employees.

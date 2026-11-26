@@ -1,0 +1,95 @@
+---
+title: "Set up CentaHR for your company"
+navTitle: "Set up your company"
+summary: "Create your account, add your company details, offices and teams, then set up each module."
+section: "admins"
+order: 1
+updated: "2026-11-26"
+---
+Setting up CentaHR takes six steps, in this order. The first three are once-only; after that, each module has its own setup checklist and guide.
+
+## 1. Create your account
+
+1. Go to [app.centahr.com](https://app.centahr.com/login) and click **Create account**.
+2. On **Create your account**, enter your first and last name, your **Work email** and a password.
+3. On **Tell us about your company**, enter your **Company name** and **Country**.
+4. Confirm your email address from the link CentaHR sends you. The link works for 7 days.
+
+You're the first user, with full access. You can give others access later.
+
+## 2. Add your company details
+
+Open your avatar menu at the top right and choose **Company**.
+
+<Screen
+  label="The Business page: the company logo, the company's name, country and registration number, and a contact person."
+  path={["Account", "Company"]}
+  title="Business"
+  description="Used on payslips, tax forms and company emails."
+>
+  <Columns template="0.8fr 1.6fr">
+    <Card title="Logo" description="Shown on payslips and company emails.">
+      <Input tall placeholder="Drop your logo here" />
+    </Card>
+    <Card title="Company">
+      <Stack gap={12}>
+        <Field label="Company name">
+          <Input value="Okafor Foods Ltd" />
+        </Field>
+        <Columns template="1fr 1fr">
+          <Field label="Country">
+            <Select value="Nigeria" />
+          </Field>
+          <Field label="Registration number" required>
+            <Input value="RC 1234567" />
+          </Field>
+        </Columns>
+      </Stack>
+    </Card>
+  </Columns>
+  <Card title="Company contact" description="Receives tax forms and important updates.">
+    <Columns template="1fr 1fr 1fr">
+      <Field label="Name" required>
+        <Input value="Amaka Okafor" />
+      </Field>
+      <Field label="Email" required>
+        <Input value="hr@okaforfoods.com" />
+      </Field>
+      <Field label="Phone" required>
+        <Input value="0803 000 0000" />
+      </Field>
+    </Columns>
+  </Card>
+</Screen>
+
+These details appear on payslips, tax forms and the emails CentaHR sends your staff.
+
+## 3. Add offices, departments and job roles
+
+Under **Staff → Company**:
+
+- **Offices:** your company starts with **Head Office**. Pin it on the map and add any others. Clocking in uses these; see [offices and clock-in locations](/attendance/setup/offices).
+- **Departments:** for example Sales, Finance and Operations.
+- **Job roles:** the jobs people do, such as Account Executive.
+
+Add these before your employees, so you can choose them as you add people. See [departments and job roles](/staff/company/departments-and-job-roles).
+
+## 4. Add your employees
+
+Add people one at a time, upload a spreadsheet, or invite new joiners to onboard themselves. See [add your employees](/getting-started/add-employees).
+
+## 5. Give people the right access
+
+Decide who manages what, set line managers, and choose a default manager. See [roles and access](/getting-started/roles-and-access).
+
+## 6. Set up each module
+
+Each module in the menu has a **Setup checklist** that leads you through its settings. Guides so far:
+
+- [Staff](/staff/overview): employee records, the org chart, onboarding and offboarding
+- [Performance](/performance/overview): appraisals, tasks and feedback
+- [Attendance](/attendance/overview): clocking in, shifts and timesheets
+- [Leave](/leave/overview): leave types, requests, approvals and balances
+- [Payroll](/payroll/overview): pay runs, payslips, remittances and salary advances
+
+The checklist leaves the menu once you've worked through it.

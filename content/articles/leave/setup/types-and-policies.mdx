@@ -1,0 +1,87 @@
+---
+title: "Step 2: Leave types and policies"
+navTitle: "Types and policies"
+summary: "Create the kinds of leave people can take, and a policy for each saying how it's earned and who can take it."
+section: "setup"
+order: 2
+updated: "2026-11-26"
+---
+A leave type is a kind of leave, such as Annual Leave or Sick Leave. A policy says how much of it people get, how they earn it, and who can take it. People can only request a type that has a policy.
+
+Go to **Leave → Settings → Leave types & policies**. The page has two tabs: **Types** and **Policies**.
+
+## 1. Create your leave types
+
+1. On the **Types** tab, click **Add leave type**.
+2. Enter the **Name**, for example Sick Leave.
+3. Choose whether it's paid under **Is Paid?**, and pick a **Color tag** for the calendar.
+4. Save.
+
+Most companies start with Annual Leave, Sick Leave, Maternity Leave, Paternity Leave, Compassionate Leave and Unpaid Leave. To add many at once, click **Import**.
+
+## 2. Give each type a policy
+
+On the **Policies** tab, click **Add policy**.
+
+<Screen
+  label="The New leave policy form: the leave type, rules for building up over time with a monthly frequency and 1.67 days earned each time, carryover and splitting, and limits for the maximum balance and who can take it."
+  path={["Leave", "Settings", "Leave types & policies"]}
+  title="New leave policy"
+  description="How a leave type is earned and who can take it."
+>
+  <Card title="Leave type">
+    <Field label="Type" required>
+      <Select value="Annual Leave" />
+    </Field>
+  </Card>
+  <Card title="Rules">
+    <Row mark={1} label="Build up over time" hint="Staff earn this leave gradually."><Toggle on /></Row>
+    <Row mark={2} label="Allow carryover" hint="Unused days roll into next year."><Toggle on /></Row>
+    <Row mark={3} label="Can be split" hint="It can be taken in separate blocks."><Toggle on /></Row>
+    <Columns template="1fr 1fr">
+      <Field label="Frequency" mark={4}>
+        <Select value="Monthly" />
+      </Field>
+      <Field label="Days earned each time">
+        <Input value="1.67" />
+      </Field>
+    </Columns>
+  </Card>
+  <Card title="Limits">
+    <Columns template="1fr 1fr">
+      <Field label="Maximum balance (days)" mark={5}>
+        <Input value="25" />
+      </Field>
+      <Field label="Who can take it" mark={6}>
+        <Select value="Everyone" />
+      </Field>
+    </Columns>
+  </Card>
+</Screen>
+
+| | Field | What it does |
+| --- | --- | --- |
+| 1 | Build up over time | On, people earn the leave gradually. Off, they get the whole allowance at the start of the year. |
+| 2 | Allow carryover | Unused days roll into next year, up to the carryover limit in [leave settings](/leave/setup/settings). |
+| 3 | Can be split | On, the leave can be taken in separate blocks. Off, it has to be taken in one continuous period. |
+| 4 | Frequency and Days earned each time | How often leave builds up (Monthly, Quarterly or Annually) and how much each time. 1.67 days a month is about 20 days a year. With building up off, **Days earned each time** is the yearly allowance. |
+| 5 | Maximum balance (days) | The most anyone can hold. Building up stops at this number. |
+| 6 | Who can take it | **Everyone**, **Women only** or **Men only**, for leave such as maternity or paternity leave. |
+
+## Examples
+
+| Leave type | A typical policy |
+| --- | --- |
+| Annual Leave | Builds up monthly, 1.67 days each time, carryover allowed, can be split |
+| Sick Leave | Doesn't build up: 10 days at the start of the year, can be split |
+| Maternity Leave | Doesn't build up: the full allowance, women only, can't be split |
+| Unpaid Leave | Doesn't build up, with the days your company allows |
+
+## Things to know
+
+- **Balances appear overnight.** After you create a policy, each eligible person's balance for the year is set up overnight; leave that builds up monthly is added on the first of each month.
+- **Unconfirmed employees** only get the types allowed in [leave settings](/leave/setup/settings) until they're confirmed.
+
+## Next
+
+[Step 3: Holidays](/leave/setup/holidays).

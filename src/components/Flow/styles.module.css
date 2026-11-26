@@ -1,0 +1,115 @@
+.flow {
+  position: relative;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+/* The line that joins the stages */
+.flow::before {
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 17px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(var(--c-primary), var(--c-coral));
+  content: "";
+  opacity: 0.35;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0 0 18px;
+}
+
+.stage:last-child {
+  padding-bottom: 0;
+}
+
+.node {
+  z-index: 1;
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--c-primary);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--c-primary);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.content {
+  min-width: 0;
+  padding: 12px 16px 14px;
+  border: 1px solid var(--c-line-soft);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 12px;
+}
+
+.title {
+  color: var(--c-ink);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.actors {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.actor {
+  display: inline-flex;
+  height: 24px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.hr {
+  background: #e6f2f3;
+  color: #00626f;
+}
+
+.managers {
+  background: #ece8ff;
+  color: #4b3aa8;
+}
+
+.employees {
+  background: #fff1d6;
+  color: #7a5200;
+}
+
+.system {
+  background: #eef1f3;
+  color: #4a5866;
+}
+
+.text {
+  margin: 6px 0 0;
+  color: var(--c-ink-2);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

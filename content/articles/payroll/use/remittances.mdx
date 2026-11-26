@@ -1,0 +1,53 @@
+---
+title: "Remittances"
+summary: "The PAYE, pension and other payments you owe after each pay run, and how to track them."
+section: "use"
+order: 3
+updated: "2026-11-26"
+---
+Each pay run creates the payments you owe on behalf of your employees: PAYE to the tax authority, pension to each person's pension administrator, NHF, and any other deductions you pass on, such as a cooperative. **Remittances** lists them, so nothing is missed.
+
+Go to **Payroll → Remittances**.
+
+<Screen
+  label="The Remittances page: the total to remit, pending and completed counts, and a list of remittances with their amount, deposit period and status."
+  path={["Payroll", "Remittances"]}
+  title="Remittances"
+  description="PAYE, pension and other payments due to the authorities."
+  caption="Figures are examples."
+>
+  <Columns template="1fr 1fr 1fr">
+    <Card tight><Figure value="₦2,450,000" label="To remit" /></Card>
+    <Card tight><Figure value="3" label="Pending" /></Card>
+    <Card tight><Figure value="12" label="Completed" /></Card>
+  </Columns>
+  <Segmented items={["Pending", "Completed"]} active="Pending" />
+  <Card>
+    <Table
+      columns="1.2fr 1fr 1.2fr 0.9fr 0.3fr"
+      head={["Remittance", "Amount", "Deposit period", "Status", ""]}
+      rows={[
+        ["PAYE", "₦1,484,000", "December 2026", <Badge tone="warning">Pending</Badge>, <More />],
+        ["Pension", "₦816,000", "December 2026", <Badge tone="warning">Pending</Badge>, <More />],
+        ["NHF", "₦150,000", "December 2026", <Badge tone="warning">Pending</Badge>, <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+**To remit** is the total of everything still pending. Switch between **Pending** and **Completed** above the list.
+
+## Pay a remittance
+
+1. Open a remittance's menu and choose **View details**. You see its status, the **Amount due** and the **Deposit period**.
+2. Click **Download** for the filing as a spreadsheet, with each employee's share. Pension filings include each person's pension PIN and the employer's contribution.
+3. Pay the authority or administrator, using the spreadsheet for the schedule they ask for.
+4. Click **Mark as paid**. The remittance moves to **Completed**.
+
+Your company's tax and pension details (TIN, pension and NHF numbers) come from [general settings](/payroll/setup/settings).
+
+<Callout type="note" title="Deadlines">
+
+Each authority sets its own deadline, usually early in the month after payroll. Check with your tax adviser for the deadlines that apply to you.
+
+</Callout>

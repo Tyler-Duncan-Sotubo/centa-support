@@ -1,0 +1,70 @@
+---
+title: "Step 1: General settings"
+navTitle: "General settings"
+summary: "Decide how long review cycles run, whether appraisals create themselves, and whether managers get a weekly digest."
+section: "setup"
+order: 1
+short: "Cycle length, automatic appraisals and the managers' digest."
+updated: "2026-11-26"
+---
+These five settings decide when review cycles start and whether appraisals create themselves. A new company starts with quarterly cycles and automatic appraisals switched on, so check them before your first cycle begins.
+
+Go to **Performance → Settings → General settings**. Each change saves as soon as you make it.
+
+<Screen
+  label="The General settings page, with four cards: Review cycles, Team tasks, Appraisals and Managers."
+  path={["Performance", "Settings", "General settings"]}
+  title="General settings"
+  description="How review cycles and appraisals run."
+>
+  <Card title="Review cycles" description="The periods reviews and tasks are grouped into.">
+    <Row mark={1} label="Start cycles automatically" hint="When a cycle ends, the next one starts on its own.">
+      <Toggle on />
+    </Row>
+    <Row mark={2} label="Cycle length">
+      <Select value="Quarterly" width={150} />
+    </Row>
+  </Card>
+  <Card title="Team tasks" description="How shared tasks are scored in a manager review.">
+    <Row mark={3} label="Team result share (%)" hint="How much of a shared task's score comes from the team's result. The rest comes from the person's own contribution.">
+      <Input value="50" width={80} />
+    </Row>
+  </Card>
+  <Card title="Appraisals" description="A manager review for every active employee.">
+    <Row mark={4} label="Create reviews automatically" hint="Adds a manager review for anyone without one in the current cycle. It goes to their line manager.">
+      <Toggle on />
+    </Row>
+  </Card>
+  <Card title="Managers" description="Emails sent to people with reports.">
+    <Row mark={5} label="Weekly digest" hint="Monday morning: what's waiting for them, overdue tasks, who's off and what's coming up.">
+      <Toggle />
+    </Row>
+  </Card>
+</Screen>
+
+| | Setting | What it does | New company default |
+| --- | --- | --- | --- |
+| 1 | Start cycles automatically | When a cycle ends, the next one is created overnight. If there's no cycle yet, the first one covers today. | On |
+| 2 | Cycle length | Monthly, Quarterly, Every six months or Yearly. Automatic cycles are named like FEB-2026, Q1 2026, H1 2026 or Annual 2026. | Quarterly |
+| 3 | Team result share (%) | For a task shared by a team, how much of each person's score comes from the team's result. The rest comes from their own contribution. Any whole number from 0 to 100. | 50% |
+| 4 | Create reviews automatically | Every night, adds a manager appraisal in the current cycle for each active or probation employee who doesn't have one, and sends it to their line manager. | On |
+| 5 | Weekly digest | A Monday-morning email to every manager with direct reports: what's waiting for them, overdue tasks, who's off this week and what's coming up (probation ends, birthdays, work anniversaries). Managers with nothing to report get no email. | Off |
+
+## Things to know
+
+- **Cycle length applies from the next cycle.** The current cycle keeps its dates.
+- **Automatic appraisals need two things:** a cycle that covers today, and a default review template (see [step 3](/performance/setup/review-templates)). Without either, nothing is created.
+- **People without a line manager go to your default manager.** With no default manager, they're skipped. See [before you start](/performance/before-you-start#choose-a-default-manager).
+- **Automatic appraisals add up to 100 people a night.** A company larger than that is covered over a few nights.
+- **Prefer to choose who is appraised?** Turn off **Create reviews automatically** and add people to the cycle yourself ([step 5](/performance/setup/first-cycle)).
+- **Prefer your own cycle names and dates?** Turn off **Start cycles automatically** and create each cycle by hand. Two cycles can't share a name or overlap in dates.
+
+<Callout type="warning" title="A quarterly cycle already exists, but you appraise twice a year">
+
+Change **Cycle length** to **Every six months**, then go to **Performance → Appraisals**, open the current cycle's menu and choose **Edit** to set the dates you want. Don't delete the cycle once it has reviews or tasks in it: deleting a cycle deletes everything in it.
+
+</Callout>
+
+## Next
+
+[Step 2: Values and competencies](/performance/setup/values-and-competencies), the qualities you appraise people on.

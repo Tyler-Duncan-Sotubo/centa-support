@@ -1,0 +1,85 @@
+---
+title: "Manage leave requests"
+navTitle: "Leave management"
+summary: "Review and decide leave requests, see everyone's balances, and add leave for someone."
+section: "use"
+order: 1
+updated: "2026-11-26"
+---
+**Leave management** is where HR and line managers see every request, decide the ones waiting, and check balances. HR sees everyone; line managers see the people below them.
+
+Go to **Leave → Leave management**.
+
+<Screen
+  label="The Leave management page: cards for requests awaiting approval, people off today, leave starting soon and leave approved this year, then the Requests tab listing requests with their dates, type, reason and status."
+  path={["Leave", "Leave management"]}
+  title="Leave management"
+  description="Requests, balances and who’s off."
+  actions={<><Button variant="outline">Calendar</Button><Button>Request leave</Button></>}
+  caption="Names and numbers are examples."
+>
+  <Columns template="1fr 1fr 1fr 1fr">
+    <Card tight><Figure value="3" label="Awaiting approval" /></Card>
+    <Card tight><Figure value="2" label="Off today" /></Card>
+    <Card tight><Figure value="4" label="Starting soon" /></Card>
+    <Card tight><Figure value="61" label="Approved this year" /></Card>
+  </Columns>
+  <Tabs items={[{ label: "Requests", active: true }, { label: "Balances" }]} />
+  <Card>
+    <Table
+      columns="1.5fr 1.4fr 1fr 1.2fr 0.9fr 0.3fr"
+      head={["Employee", "Dates", "Type", "Reason", "Status", ""]}
+      rows={[
+        [<Person name="Chinedu Eze" />, "7 – 11 Dec 2026", "Annual Leave", "Family visit", <Badge tone="warning">Pending</Badge>, <More />],
+        [<Person name="Adaeze Okafor" />, "30 Nov 2026", "Sick Leave", "Fever", <Badge tone="success">Approved</Badge>, <More />],
+        [<Person name="Bola Ahmed" />, "21 – 23 Dec 2026", "Annual Leave", "–", <Badge tone="danger">Rejected</Badge>, <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+## Decide a request
+
+1. On the **Requests** tab, filter to **Pending**.
+2. Open a request's menu and choose **Review**.
+3. Check the employee, type, dates, days and reason.
+4. Choose a **Decision**, **Approve** or **Reject**, add a reason if you like, and click **Save decision**.
+
+<Screen label="The Review leave request dialog: the request's details, a decision and an optional reason." bare>
+  <Dialog
+    title="Review leave request"
+    footer={<><Button variant="outline">Cancel</Button><Button>Save decision</Button></>}
+  >
+    <div>
+      <Row label="Employee"><Meta>Chinedu Eze</Meta></Row>
+      <Row label="Type"><Meta>Annual Leave</Meta></Row>
+      <Row label="Dates"><Meta>7 – 11 December 2026</Meta></Row>
+      <Row label="Days"><Meta>5</Meta></Row>
+    </div>
+    <Field label="Decision">
+      <Select value="Approve" />
+    </Field>
+    <Field label="Reason (optional)">
+      <Input placeholder="Shown to the employee" />
+    </Field>
+  </Dialog>
+</Screen>
+
+Line managers can also decide requests from **Approvals**. With a multi-level chain, each step decides in turn, and the request is approved once the last step approves.
+
+## Requests that wait too long
+
+With **Auto-approve after** set in [leave settings](/leave/setup/settings), a request nobody has decided approves itself after that many days. Leave that has already started is left for a person to decide. Approvers can also get a reminder, and requests can escalate to their manager and HR, under your avatar menu → **Users** → **Approvals** → **Waiting approvals**.
+
+## Check balances
+
+The **Balances** tab lists everyone with their department, job role and **Days left**. For a breakdown by leave type and year, use the [leave balance report](/leave/use/calendar-and-reports).
+
+## Add leave for someone
+
+For someone who can't request it themselves, such as sick leave phoned in:
+
+1. Click **Request leave**.
+2. Choose the **Employee**, **Leave type**, **Start date** and **End date**.
+3. For half a day, choose AM or PM under **Partial day (optional)**.
+4. Add a **Reason**, and click **Submit request**.

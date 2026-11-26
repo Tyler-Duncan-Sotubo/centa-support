@@ -1,0 +1,63 @@
+---
+title: "Salary advances"
+summary: "Turn salary advances on, set the limits, review requests and follow repayments."
+section: "use"
+order: 4
+updated: "2026-11-26"
+---
+A salary advance pays part of someone's salary early. They repay it in monthly amounts taken from their payslips until it's cleared.
+
+Go to **Payroll → Salary advance**.
+
+<Screen
+  label="The Salary advance page: the amount outstanding, ongoing advances and the amount repaid to date, tabs for Ongoing, Settled, History and Settings, and each advance with its amount, repaid, outstanding, status and progress."
+  path={["Payroll", "Salary advance"]}
+  title="Salary advance"
+  description="Manage salary advances for employees."
+  actions={<Button>Add request</Button>}
+  caption="Names and figures are examples."
+>
+  <Columns template="1fr 1fr 1fr">
+    <Card tight><Figure value="₦620,000" label="Outstanding" /></Card>
+    <Card tight><Figure value="2" label="Ongoing advances" /></Card>
+    <Card tight><Figure value="₦380,000" label="Repaid to date" /></Card>
+  </Columns>
+  <Tabs items={[{ label: "Ongoing", active: true }, { label: "Settled" }, { label: "History" }, { label: "Settings" }]} />
+  <Card>
+    <Table
+      columns="1.4fr 0.9fr 0.9fr 0.9fr 0.8fr 1fr 0.3fr"
+      head={["Employee", "Amount", "Repaid", "Outstanding", "Status", "Progress", ""]}
+      rows={[
+        [<Person name="Adaeze Okafor" />, "₦600,000", "₦180,000", "₦420,000", <Badge tone="success">Approved</Badge>, <Progress value={30} />, <More />],
+        [<Person name="Bola Ahmed" />, "₦300,000", "₦100,000", "₦200,000", <Badge tone="success">Approved</Badge>, <Progress value={33} />, <More />],
+        [<Person name="Chinedu Eze" />, "₦150,000", "–", "–", <Badge tone="warning">Pending</Badge>, <Progress value={0} />, <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+- **Ongoing** has requests waiting for review and advances being repaid. **Settled** has the ones fully repaid.
+- **History** lists every action on an advance, with the reason, who took it and when.
+- **Outstanding** and **Ongoing advances** count approved advances still being repaid. **Repaid to date** includes settled ones.
+
+## 1. Turn them on and set the limits
+
+Open the **Settings** tab and switch on **Salary advance settings**. Employees can then ask for one. Set the **Minimum Advance Amount (₦)** and **Maximum Advance Amount (₦)**: they start at ₦10,000 and ₦1,000,000.
+
+## 2. Review a request
+
+1. Open the request's menu and choose **Edit**. **Review loan request** opens.
+2. Under **Review salary advance**, choose **Approved** or **Rejected**. If you reject it, add a **Reason if rejected**.
+3. Save. The employee is told.
+
+An approved advance is repaid from each payslip, by the monthly amount agreed, until nothing is outstanding. It then shows as **Paid** and moves to **Settled**.
+
+## Add one for someone
+
+Click **Add request**. Under **Add salary advance**, enter its **Name**, **Amount**, **Length (Months)** and **Preferred monthly payment**, choose who it's for under **Assign to**, and click **Add**.
+
+## The rules
+
+- **Within your limits.** Advances are between your minimum and maximum, and no more than half the person's yearly gross salary.
+- **One at a time.** Someone repaying an advance can't take another until it's cleared. A rejected request doesn't count.
+- **The sums add up.** The monthly payment times the number of months equals the amount.

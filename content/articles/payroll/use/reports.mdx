@@ -1,0 +1,63 @@
+---
+title: "Payroll overview and reports"
+navTitle: "Overview and reports"
+summary: "Your payroll costs at a glance, and the reports for history, deductions, variance, costs and year to date."
+section: "use"
+order: 5
+updated: "2026-11-26"
+---
+**Payroll → Overview** shows a pay period and the year so far. **Payroll → Reports** has the detail.
+
+## Overview
+
+<Screen
+  label="The Payroll overview page: this pay period's gross pay, net pay, deductions and bonuses, and the year-to-date totals."
+  path={["Payroll", "Overview"]}
+  title="Payroll overview"
+  description="Your payroll costs, pay dates and year-to-date totals."
+  caption="Figures are examples."
+>
+  <Card title="This pay period" action={<Select value="December 2026" />}>
+    <Columns template="1fr 1fr 1fr 1fr">
+      <Figure value="₦12.4m" label="Gross pay" />
+      <Figure value="₦9.8m" label="Net pay" />
+      <Figure value="₦2.6m" label="Deductions" />
+      <Figure value="₦400,000" label="Bonuses" />
+    </Columns>
+  </Card>
+  <Columns template="1fr 1fr 1fr 1fr">
+    <Card tight><Figure value="₦146m" label="Gross this year" /></Card>
+    <Card tight><Figure value="₦31m" label="Deductions this year" /></Card>
+    <Card tight><Figure value="₦2.1m" label="Bonuses this year" /></Card>
+    <Card tight><Figure value="₦115m" label="Net pay this year" /></Card>
+  </Columns>
+</Screen>
+
+- **This pay period** shows gross pay, net pay, deductions and bonuses. Choose another month at the top of the card.
+- **Year to date** adds up the same figures for this year.
+- **Payroll by month** charts net pay and deductions over the last 12 months. It appears after your first pay run.
+- **At a glance** shows how many employees you pay, your monthly salaries and your tax filing date.
+
+## Reports
+
+Go to **Payroll → Reports** and pick one.
+
+| Report | What it shows |
+| --- | --- |
+| Payroll history | Every pay run, with its cost and status |
+| Salary report | Pay by employee, salary bands and spend by department |
+| Deductions | What was deducted from pay, by month and by employee |
+| Year to date | Payroll totals for the current year |
+| Off-cycle payroll | Payments made outside the regular pay run |
+| Payroll variance | How the latest pay run differs from the one before |
+| Payroll cost | Gross pay by department and pay group |
+| GL summary | Payroll journal lines for your general ledger |
+| Loan monthly summary | Salary advances issued, repaid and still outstanding |
+| Loan repayments | What each employee has repaid so far |
+| Reimbursements | All expense reimbursement records |
+
+## Each month
+
+- **Before approving,** check **Payroll variance** for anything that changed from last month.
+- **After paying,** send the **GL summary** to your accountants, and pay what's due under [remittances](/payroll/use/remittances).
+- **At the end of the year,** **Year to date** gives each person's totals.

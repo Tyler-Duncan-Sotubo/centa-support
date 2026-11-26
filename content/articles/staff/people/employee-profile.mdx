@@ -1,0 +1,70 @@
+---
+title: "Employee profiles"
+summary: "Everything about one person: their details, job, manager, pay, bank details, payslips, leave and attendance."
+section: "people"
+order: 3
+updated: "2026-11-26"
+---
+Open anyone from **Staff → Employees**. Their profile has a tab for each part of their record.
+
+<Screen
+  label="An employee's profile on the Employment tab: their employment details, reporting manager, compensation and financials, with a Terminate button."
+  path={["Staff", "Employees", "Adaeze Okafor"]}
+  title="Adaeze Okafor"
+  description="Employee ID OF-014"
+  caption="Names and figures are examples."
+>
+  <Tabs items={[{ label: "Personal" }, { label: "Employment", active: true }, { label: "Payroll" }, { label: "Leave" }, { label: "Attendance" }, { label: "Documents" }]} />
+  <Columns template="1.3fr 1fr">
+    <Card title="Employment Details">
+      <Row label="Job Title"><Meta>Account Executive</Meta></Row>
+      <Row label="Department"><Meta>Sales</Meta></Row>
+      <Row label="Location"><Meta>Head Office</Meta></Row>
+      <Row label="Status"><Badge tone="success">Active</Badge></Row>
+      <Row label="Start Date"><Meta>3 March 2025</Meta></Row>
+      <Row label="Confirmed"><Meta>Yes</Meta></Row>
+    </Card>
+    <Stack gap={12}>
+      <Card title="Reporting Manager">
+        <Person name="Amaka Okafor" sub="Managing Director" />
+        <Inline>
+          <Button variant="outline">Change Manager</Button>
+        </Inline>
+      </Card>
+      <Card title="Compensation">
+        <Row label="Gross Salary"><Meta>₦6,000,000</Meta></Row>
+        <Row label="NHF Applied"><Meta>Yes</Meta></Row>
+      </Card>
+      <Inline>
+        <Button variant="outline">Terminate</Button>
+      </Inline>
+    </Stack>
+  </Columns>
+</Screen>
+
+## The tabs
+
+| Tab | What's on it |
+| --- | --- |
+| Personal | Their personal information, education and employment history, family and dependents, and certifications |
+| Employment | Their job, office, pay group, status and dates; their reporting manager; their salary; and their bank and tax details |
+| Payroll | Their payslips, month by month, to download |
+| Leave | Their leave balances and requests |
+| Attendance | Their clock-ins and hours |
+| Documents | Their documents, such as contracts and IDs |
+
+## Change their details
+
+Each card has an edit button. Use it to update a card and save.
+
+- **A new job or department:** edit **Employment Details**. You can also change their status, start date, whether they're confirmed and their **Role** in CentaHR here.
+- **A pay rise:** edit **Compensation** with the new yearly gross salary and the date it takes effect. The next pay run uses it.
+- **New bank details:** edit **Financials**. Check them before the next pay run.
+- **A new manager:** click **Change Manager** under **Reporting Manager**, choose them, and save.
+- **Family, history and certifications:** add or edit entries on the **Personal** tab.
+
+Employees can update much of their own personal information from their profile in the employee portal. See [your profile](/getting-started/your-profile).
+
+## When someone leaves
+
+Click **Terminate** on the **Employment** tab to start their offboarding. While it's under way, the button becomes **View offboarding**. See [offboard someone](/staff/lifecycle/offboard-someone).

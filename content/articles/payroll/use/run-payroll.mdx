@@ -1,0 +1,68 @@
+---
+title: "Run payroll"
+summary: "The monthly pay run in four steps: start, review, approve and pay."
+section: "use"
+order: 1
+updated: "2026-11-26"
+---
+A pay run has four steps, shown across the top of the page: **Start**, **Review**, **Approve** and **Pay**. Go to **Payroll → Run payroll**.
+
+## 1. Start
+
+Pick the pay date and click **Calculate payroll**. CentaHR works out everyone's pay for that month.
+
+## 2. Review
+
+Check the figures before anything goes for approval.
+
+<Screen
+  label="The Review step of a pay run: totals for employees, gross pay, deductions and net pay, and a table of each person's pay, with Sync payroll, Discard and Continue to approval buttons."
+  path={["Payroll", "Run payroll"]}
+  title="Run payroll"
+  description="Check the figures and add any bonuses or deductions."
+  actions={<><Button variant="outline">Discard</Button><Button variant="outline">Sync payroll</Button><Button>Continue to approval</Button></>}
+  caption="Names and figures are examples."
+>
+  <Tabs items={[{ label: "Start" }, { label: "Review", active: true }, { label: "Approve" }, { label: "Pay" }]} />
+  <Columns template="1fr 1fr 1fr 1fr">
+    <Card tight><Figure value="24" label="Employees" /></Card>
+    <Card tight><Figure value="₦9.6m" label="Gross pay" /></Card>
+    <Card tight><Figure value="₦1.9m" label="Deductions" /></Card>
+    <Card tight><Figure value="₦7.7m" label="Net pay" /></Card>
+  </Columns>
+  <Card>
+    <Table
+      columns="1.5fr 1fr 0.9fr 0.9fr 0.8fr 1fr"
+      head={["Employee", "Monthly gross", "PAYE", "Pension", "NHF", "Net salary"]}
+      rows={[
+        [<Person name="Adaeze Okafor" />, "₦500,000", "₦62,255", "₦34,000", "₦6,250", "₦397,495"],
+        [<Person name="Chinedu Eze" />, "₦350,000", "₦37,429", "₦23,800", "₦4,375", "₦284,396"],
+        [<Person name="Bola Ahmed" />, "₦250,000", "₦21,981", "₦17,000", "₦3,125", "₦207,894"],
+      ]}
+    />
+  </Card>
+</Screen>
+
+- **Totals** at the top: employees, gross pay, deductions and net pay.
+- **Each person's pay:** basic, housing, transport, PAYE, pension, NHF, additional deductions, bonus, monthly gross and net salary.
+- **Changed something?** Click **Sync payroll** to recalculate. It also brings in people who left this month, so their final pay is included.
+- **Started wrong?** **Discard** removes the run's calculations so you can start again.
+
+When it's right, click **Continue to approval**.
+
+## 3. Approve
+
+Click **Send for approval**. Your approvers are told, and the page waits; it moves on by itself once the run is approved. If you don't use an approval workflow, the run is approved automatically. See [approve a pay run](/payroll/use/approve-a-pay-run).
+
+## 4. Pay
+
+1. Check the payment summary: total payroll cost, employee net pay, and the change from last payroll.
+2. Click **Download bank advice** and pay people from your bank. **Open the detailed report** gives the full breakdown.
+3. Click **Finish pay run**.
+
+The run is done. Payslips are ready on the page, and each employee can see theirs. The remittances due appear under [remittances](/payroll/use/remittances).
+
+## Things to know
+
+- **Leave and attendance can affect pay.** Unpaid leave and absences can reduce pay for the month, so check [leave](/leave/use/requests) and [attendance](/attendance/use/timesheet) are up to date before you calculate.
+- **Salary advances** are repaid automatically from each payslip until they're cleared. See [salary advances](/payroll/use/salary-advances).

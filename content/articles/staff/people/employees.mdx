@@ -1,0 +1,69 @@
+---
+title: "Your employee list"
+navTitle: "Employee list"
+summary: "Everyone you employ, by status, the people who've left, and exporting the list."
+section: "people"
+order: 1
+updated: "2026-11-26"
+---
+Go to **Staff → Employees**. The cards at the top show your **Total employees**, **Monthly salary** and **Total deductions**.
+
+<Screen
+  label="The Employees page: totals for employees, monthly salary and deductions, tabs by status, and the list of employees with their ID, role, status and monthly pay."
+  path={["Staff", "Employees"]}
+  title="Employees"
+  description="Manage your employees and their information."
+  actions={<><Button variant="outline">Export</Button><Button variant="outline">Upload employees</Button><Button>Add employee</Button></>}
+  caption="Names and figures are examples."
+>
+  <Columns template="1fr 1fr 1fr">
+    <Card tight><Figure value="24" label="Total employees" /></Card>
+    <Card tight><Figure value="₦9.6m" label="Monthly salary" /></Card>
+    <Card tight><Figure value="₦1.9m" label="Total deductions" /></Card>
+  </Columns>
+  <Tabs items={[{ label: "All", active: true }, { label: "Active" }, { label: "Probation" }, { label: "On Leave" }, { label: "Former" }]} />
+  <Card>
+    <Table
+      columns="1.6fr 0.7fr 1.2fr 0.8fr 0.9fr 0.3fr"
+      head={["Employee", "ID", "Role", "Status", "Monthly", ""]}
+      rows={[
+        [<Person name="Adaeze Okafor" sub="adaeze@okaforfoods.com" />, "OF-014", "Account Executive", <Badge tone="success">Active</Badge>, "₦500,000", <More />],
+        [<Person name="Chinedu Eze" sub="chinedu@okaforfoods.com" />, "OF-022", "Account Executive", <Badge tone="warning">Probation</Badge>, "₦350,000", <More />],
+        [<Person name="Bola Ahmed" sub="bola@okaforfoods.com" />, "OF-019", "Sales Analyst", <Badge tone="success">Active</Badge>, "₦250,000", <More />],
+      ]}
+    />
+  </Card>
+</Screen>
+
+Search by name, email or employee ID. Click someone, or **View profile** in their menu, to open their [profile](/staff/people/employee-profile).
+
+## Statuses
+
+**All** lists everyone still employed. Then there's a tab for each status in use, and **Former** for people who've left.
+
+| Status | What it means |
+| --- | --- |
+| Active | Working and confirmed |
+| Probation | Working, but not confirmed yet. Their probation end date is on their profile. |
+| On Leave | Away for a long stretch, such as maternity leave |
+| Resigned, Terminated, Inactive | Left the company. They're under **Former**, and can no longer sign in. |
+
+People you've invited through onboarding join this list once they've completed their onboarding steps. Until then, follow them on [Staff → Onboarding](/staff/lifecycle/onboard-a-new-joiner).
+
+## Probation
+
+People on probation have a **Probation End Date**. Two weeks and three days before it, their line manager is asked what should happen.
+
+1. The manager opens **My team**, finds the person under what's coming up, and clicks **Recommend**.
+2. They choose **Confirm them**, **Extend probation** with a new end date, or **End employment**, add why if they like, and click **Send to HR**.
+3. HR approves or declines it under **Approvals**. Approving a confirmation makes the person **Active**. Approving an extension moves their end date. To end someone's employment, HR then [offboards them](/staff/lifecycle/offboard-someone).
+
+## Former employees
+
+**Former** lists people who've left, from the day after their last day. Their records stay, so you can still look them up.
+
+## Export the list
+
+Click **Export** and choose **Current employees**, **Former employees** or **Everyone**. You get a spreadsheet with each person's employee number, name, email, department, job role, location, pay group, cost center, status, dates, role and manager.
+
+Salaries and bank details are left out, so the export is safe to share for headcount and planning.

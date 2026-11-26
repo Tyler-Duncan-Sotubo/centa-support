@@ -1,0 +1,59 @@
+---
+title: "Step 2: Pay schedules, pay groups and cost centers"
+navTitle: "Schedules and groups"
+summary: "Decide when people are paid, group people who share pay rules, and track costs by cost center."
+section: "setup"
+order: 2
+updated: "2026-11-26"
+---
+A pay schedule sets how often and when people are paid. A pay group puts together people who share a schedule and the same statutory deductions. Cost centers let you track where payroll costs go.
+
+## Pay schedules
+
+Go to **Payroll → Settings → Pay schedules** and create one.
+
+<Screen label="The Create Pay Schedule form: monthly or biweekly pay, the start date and the holiday adjustment." bare>
+  <Dialog
+    title="Create Pay Schedule"
+    footer={<><Button variant="outline">Cancel</Button><Button>Save</Button></>}
+  >
+    <Meta>Configure when you want to pay employees.</Meta>
+    <Field label="Pay frequency" mark={1}>
+      <Columns template="1fr 1fr">
+        <Card tight title="Monthly" description="Once a month on a specific day of the month." />
+        <Card tight title="Biweekly" description="Every two weeks on a specific day of the week (e.g. every other Friday)." />
+      </Columns>
+    </Field>
+    <Field label="Start date" mark={2}>
+      <Input value="28 January 2027" />
+    </Field>
+    <Field label="Holiday adjustment" mark={3}>
+      <Select value="Previous Business Day" />
+    </Field>
+  </Dialog>
+</Screen>
+
+1. Choose the **Pay frequency**: **Monthly**, or **Biweekly** (every other week).
+2. Choose the **Start date**: the first pay date. Later pay dates follow from it.
+3. Choose the **Holiday adjustment**: when a pay date falls on a public holiday, people are paid on the **Previous Business Day**. Pay dates on a weekend move to the Friday before.
+
+Most Nigerian companies pay monthly, around the 28th.
+
+## Pay groups
+
+Go to **Payroll → Settings → Pay groups** and click **Add pay group**.
+
+1. Enter the **Group name**, for example Lagos staff or Contract staff.
+2. Choose which deductions apply: **Apply PAYE**, **Apply Pension** and **Apply NHF**.
+3. Choose the group's pay schedule under **Select pay schedule**.
+4. Add the people in the group, and save.
+
+Use groups when some people are paid differently, such as contractors who don't have pension deducted.
+
+## Cost centers
+
+Go to **Payroll → Settings → Cost centers** and click **Add cost center**. Enter its **Name**, a **Code** and a **Budget**. To add many, click **Import**. Payroll cost reports then show spending by cost center.
+
+## Next
+
+[Step 3: Pay adjustments](/payroll/setup/adjustments).

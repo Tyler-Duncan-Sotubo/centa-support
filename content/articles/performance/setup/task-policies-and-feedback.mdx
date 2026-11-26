@@ -1,0 +1,124 @@
+---
+title: "Step 4: Task policies and feedback"
+navTitle: "Task policies and feedback"
+summary: "Set when people are reminded to update their tasks, and which kinds of 360° feedback they can give."
+section: "setup"
+order: 4
+short: "Check-in reminders and the kinds of 360° feedback."
+updated: "2026-11-26"
+---
+Task policies decide when people are reminded to update their tasks. Feedback settings decide which kinds of 360° feedback people can give, and what they're asked. Both start with workable defaults, so the one change most companies need is the time zone.
+
+## Task policies
+
+Go to **Performance → Settings → Task policies**, change what you need and click **Save company policy**.
+
+<Screen
+  label="The Task and check-in policies page: default visibility, a monthly check-in cadence, the Africa/Lagos time zone, and Monday at 9 as the anchor day and hour."
+  path={["Performance", "Settings", "Task policies"]}
+  title="Task and check-in policies"
+  description="Set company-wide defaults for visibility, cadence, and scheduling of performance tasks."
+>
+  <Card>
+    <Stack gap={18}>
+      <Field mark={1} label="Default visibility" hint="Who can see new objectives by default.">
+        <Inline gap={18}>
+          <Radio checked label="Company" />
+          <Radio label="Manager" />
+          <Radio label="Private" />
+        </Inline>
+      </Field>
+      <Field mark={2} label="Check-in cadence" hint="How often owners are nudged to check in.">
+        <Segmented items={["Weekly", "Bi-weekly", "Monthly"]} active="Monthly" />
+      </Field>
+      <Field mark={3} label="Timezone" hint="Reminders will be scheduled in this local time.">
+        <Select value="Africa/Lagos" width={240} />
+      </Field>
+      <Columns template="1fr 1fr">
+        <Field mark={4} label="Anchor weekday" hint="e.g., reminders go out on Mondays.">
+          <Select value="Monday" />
+        </Field>
+        <Field label="Anchor hour" hint="Local time to send the reminder.">
+          <Select value="9" />
+        </Field>
+      </Columns>
+      <div>
+        <Button>Save company policy</Button>
+      </div>
+    </Stack>
+  </Card>
+</Screen>
+
+| | Setting | What it does | Default |
+| --- | --- | --- | --- |
+| 1 | Default visibility | Who can see a new task: **Company** (anyone in the company), **Manager** (the owner and the managers above them) or **Private** (only the owner and HR). | Company |
+| 2 | Check-in cadence | How often a task's owner is due to update its progress: Weekly, Bi-weekly or Monthly. | Monthly |
+| 3 | Timezone | The local time zone check-ins are scheduled in. | Europe/London |
+| 4 | Anchor weekday and Anchor hour | The day and hour a check-in falls due, and the reminder goes out. | Monday, 9:00 |
+
+- **Set your own time zone**, for example Africa/Lagos. The default is Europe/London.
+- **Policies apply to new tasks.** Each task keeps the schedule it was created with, so set this before managers start giving out tasks.
+- **Owners get an email when a check-in is due**, on the anchor day and hour in your time zone, titled “Check-in:” and the task's name.
+
+## Feedback settings
+
+Go to **Performance → Settings → Feedback settings**. The page has two tabs: **Feedback Settings** and **Feedback Questions**.
+
+<Screen
+  label="The Feedback Settings tab: 360 feedback switched on for employees, with Self, Peer and Employee to Manager feedback each switched on."
+  path={["Performance", "Settings", "Feedback settings"]}
+  title="Performance Settings"
+>
+  <Tabs items={[{ label: "Feedback Settings", active: true }, { label: "Feedback Questions" }]} />
+  <Card>
+    <Row label="Enable 360 Feedback for Employees"><Toggle on /></Row>
+    <Columns template="1fr 1fr 1fr">
+      <Card tight title="Self" action={<Toggle on />}>
+        <Stack gap={8}>
+          <Meta>Reflect on their own performance and contributions.</Meta>
+          <Check label="Restrict to same office" />
+          <Check label="Restrict to same department" />
+        </Stack>
+      </Card>
+      <Card tight title="Peer" action={<Toggle on />}>
+        <Stack gap={8}>
+          <Meta>Get feedback from peers on collaboration and teamwork.</Meta>
+          <Check checked label="Restrict to same office" />
+          <Check label="Restrict to same department" />
+        </Stack>
+      </Card>
+      <Card tight title="Employee → Manager" action={<Toggle on />}>
+        <Stack gap={8}>
+          <Meta>Allow employees to assess their managers.</Meta>
+          <Check label="Restrict to same office" />
+          <Check checked label="Restrict to same department" />
+        </Stack>
+      </Card>
+    </Columns>
+  </Card>
+  <Card>
+    <Row label="Enable 360 Feedback for Managers"><Toggle on /></Row>
+    <Row label="Allow Anonymous 360 Feedback"><Toggle on /></Row>
+  </Card>
+</Screen>
+
+There are four kinds of 360° feedback. Each one is switched on or off separately for employees and for managers, and each change saves at once.
+
+| Kind | What it's for | Employees | Managers |
+| --- | --- | --- | --- |
+| Self | Reflecting on your own work | On | On |
+| Peer | Feedback between colleagues | On | On |
+| Employee → Manager | Feedback for your manager | On | On |
+| Manager → Employee | A manager's feedback for someone they manage | Not offered | Off |
+
+- **Turn Manager → Employee on for managers** if they should give feedback outside the appraisal. It's off to start with.
+- **These switches decide what's in the Give feedback menu.** HR and admins can always send every kind. People with the Line manager role get the manager choices; everyone else gets the employee choices.
+- **Enable 360 Feedback for Employees** and **Enable 360 Feedback for Managers** switch 360° feedback on or off for the whole group. Within a group, each kind has its own switch.
+- **Restrict to same office** and **Restrict to same department** limit who people can send that kind of feedback to. To start with, employees' peer feedback is limited to their own office, and feedback for managers to the manager's own department.
+- **Allow Anonymous 360 Feedback** lets people leave their name off. Switch it off if every piece of feedback should carry a name.
+
+On the **Feedback Questions** tab, each kind starts with three questions, such as “Where does this person perform well?” and “How can this person improve?”. Add your own, choose an input type (Text, Rating, Yes / No, Dropdown or Checkbox), and drag questions into the order you want.
+
+## Next
+
+[Step 5: Run your first cycle](/performance/setup/first-cycle).

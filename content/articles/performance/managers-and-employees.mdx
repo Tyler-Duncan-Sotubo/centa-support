@@ -1,0 +1,107 @@
+---
+title: "What managers and employees see"
+summary: "How managers and employees take part in Performance, on the web portal and the CentaHR mobile app."
+section: "rollout"
+order: 1
+updated: "2026-11-26"
+---
+Employees and managers work in the employee portal on the web and in the **Centa HR** mobile app. Nobody needs HR access to take part: in CentaHR, a manager is anyone with people under them in the reporting line, whatever their role.
+
+Share this page with your managers and employees when you launch Performance.
+
+## Employees
+
+In the web portal, **Performance** (under Growth) has five pages.
+
+| Page | What they do there |
+| --- | --- |
+| Tasks | Add their own tasks (these wait for their manager's approval), post progress updates, comment and attach files |
+| Objectives | See the company and team objectives for the cycle, and their progress |
+| One-to-ones | See upcoming meetings, add agenda items, and keep shared and private notes |
+| Feedback | Give 360° feedback, and read feedback shared with them |
+| Appraisals | Write their self review and see their completed appraisals |
+
+### Write a self review
+
+1. Go to **Performance → Appraisals** and click **New appraisal**.
+2. Pick the cycle.
+3. Click **Start assessment**, then fill in the tabs: **Values**, **Tasks** and **Summary**.
+4. Click **Submit assessment**. Submitting locks it.
+
+<Screen
+  label="An employee's self assessment open on the Summary tab, where they describe their impact this cycle, with a Submit assessment button."
+  path={["Performance", "Appraisals"]}
+  title="Self assessment"
+  description="Default Performance Review"
+  actions={<Button>Submit assessment</Button>}
+>
+  <Tabs items={[{ label: "Values" }, { label: "Tasks" }, { label: "Summary", active: true }]} />
+  <Card
+    title="Your summary"
+    description="Your impact this cycle: wins, challenges, what you learned and what’s next"
+  >
+    <Input
+      tall
+      value="Closed all eleven supplier reviews on time and brought two new vendors on board. Next: lead the Q3 stock count."
+    />
+  </Card>
+</Screen>
+
+They can read their manager's conclusion once the manager completes their appraisal.
+
+The mobile app covers self reviews, tasks (with progress updates and attachments) and 360° feedback. One-to-ones and objectives are on the web portal only.
+
+## Managers
+
+Managers get everything employees get, plus **My team**: everyone who reports to them, today's attendance, and a menu of actions for each person.
+
+<Screen
+  label="The My team page: today's attendance, a list of direct reports with their appraisal status, and an open menu with Assign a task, Schedule a one-to-one, Give feedback and Start a review."
+  path={["My team"]}
+  title="My team"
+  description="3 reporting to you · H1 2026 Appraisal"
+  actions={<><Button variant="outline">One-to-ones</Button><Button variant="outline">Calibration</Button></>}
+  caption="Names and numbers are examples."
+>
+  <Segmented items={["Direct reports", "Everyone under me"]} active="Direct reports" />
+  <Card title="Today">
+    <Inline gap={32}>
+      <Figure value="2" label="In today" />
+      <Figure value="0" label="Late" />
+      <Figure value="1" label="On leave" />
+      <Figure value="0" label="Not clocked in" />
+    </Inline>
+  </Card>
+  <Card>
+    <Columns template="1fr auto">
+      <Table
+        columns="1.6fr 1fr 0.3fr"
+        head={["Person", "Appraisal", ""]}
+        rows={[
+          [<Person name="Adaeze Okafor" sub="Account Executive" />, <Badge tone="warning">In progress</Badge>, <More />],
+          [<Person name="Chinedu Eze" sub="Account Executive" />, <Badge>Not started</Badge>, <More />],
+          [<Person name="Bola Ahmed" sub="Sales Analyst" />, <Badge>Not started</Badge>, <More />],
+        ]}
+      />
+      <Menu items={["Assign a task", "Schedule a one-to-one", "Give feedback", "Start a review"]} />
+    </Columns>
+  </Card>
+</Screen>
+
+- **My team** lists everyone who reports to them, with today's attendance: in today, late, on leave and not clocked in. They can switch between **Direct reports** and **Everyone under me**.
+- **Each person's menu** offers **Assign a task**, **Schedule a one-to-one**, **Give feedback**, and **Start a review** or **Open review**.
+- **Approvals** holds the tasks their people create for themselves, waiting for a decision.
+- **Calibration** appears on My team for managers of managers.
+- **The weekly digest**, if HR switches it on, arrives on Monday mornings.
+
+On the mobile app, managers also see their team's tasks, reviews and feedback.
+
+## A short brief for managers
+
+Copy this into your launch email:
+
+1. **Set tasks in the first week of the cycle**, with weights that add up to 100 for each person, and link them to an objective.
+2. **Approve tasks** your people add for themselves, from **Approvals**.
+3. **Hold one-to-ones** at least monthly, from **My team**. Use the agenda, and link items to tasks.
+4. **When appraisals open**, start each review from **My team**, answer every question, rate every task, and write the conclusion.
+5. **If your score differs from the one the task ratings suggest**, say why. Then click **Complete review**: it locks.

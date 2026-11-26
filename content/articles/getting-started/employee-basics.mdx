@@ -1,0 +1,76 @@
+---
+title: "Find your way around the employee portal"
+navTitle: "The employee portal"
+summary: "What's on Home, what's in the menu, and the quickest way to everyday tasks."
+section: "employees"
+order: 2
+updated: "2026-11-26"
+---
+The employee portal is where you clock in, ask for leave, see your payslips and keep up with your work. Everything starts from **Home**.
+
+<Screen
+  label="The employee portal: the menu on the left, and Home with today's clock, leave balance and quick actions."
+  rail={false}
+  caption="What you see depends on your company and your role."
+>
+  <Columns template="200px 1fr">
+    <NavPanel
+      groups={[
+        { items: [{ label: "Home", active: true }, { label: "Approvals" }, { label: "My team" }, { label: "Profile" }] },
+        { label: "Time", items: [{ label: "Timesheet" }, { label: "Leave" }] },
+        { label: "Growth", items: [{ label: "Performance" }] },
+        { label: "Pay and perks", items: [{ label: "Salary advance" }, { label: "Reimbursements" }, { label: "Benefits" }, { label: "Assets" }] },
+      ]}
+    />
+    <Stack gap={12}>
+      <PanelCard>
+        <Stack gap={8}>
+          <Meta>Today</Meta>
+          <Figure value="8:52 AM" label="Not clocked in" />
+          <div>
+            <Button variant="light">Clock in</Button>
+          </div>
+        </Stack>
+      </PanelCard>
+      <Columns template="1fr 1fr">
+        <Card title="Leave balance">
+          <Figure value="14 days" label="Annual leave left" />
+        </Card>
+        <Card title="Coming up">
+          <Meta>Public holiday on Friday</Meta>
+        </Card>
+      </Columns>
+      <Inline gap={8}>
+        <Button variant="outline">Request leave</Button>
+        <Button variant="outline">Claim expense</Button>
+        <Button variant="outline">My tasks</Button>
+      </Inline>
+    </Stack>
+  </Columns>
+</Screen>
+
+## Home
+
+- **Today:** clock in and out, and see how long you've worked. See [clock in and out](/attendance/employee-clock-in-out).
+- **Leave balance:** how much leave you have left.
+- **Coming up:** holidays, birthdays and other dates ahead.
+- **To do:** new joiners see the steps left to [complete onboarding](/getting-started/complete-onboarding).
+- **My team:** if people report to you, who's in today.
+- **Quick actions:** Request leave, Claim expense, Salary advance, Request asset, My tasks and Feedback.
+
+## The menu
+
+| Menu | What's there |
+| --- | --- |
+| Approvals | Things waiting for your decision, if you approve anything |
+| My team | The people who report to you, if anyone does |
+| Profile | Your details, your job and your payslips. See [your profile and payslips](/getting-started/your-profile). |
+| Timesheet | Your clock-ins, lateness and absences |
+| Leave | Your balances and requests |
+| Performance | Your tasks, objectives, one-to-ones, feedback and appraisals. See [what managers and employees see](/performance/managers-and-employees). |
+| Salary advance | Ask for part of your pay early |
+| Reimbursements | Claim back work expenses |
+| Benefits | The benefits your company offers |
+| Assets | Equipment you've been given, and requests for more |
+
+Some items only appear if your company uses that part of CentaHR, or if they apply to you.
