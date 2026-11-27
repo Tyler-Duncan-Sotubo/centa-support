@@ -4,21 +4,31 @@ navTitle: "Rota"
 summary: "Give people their shifts for each day of the week, office by office."
 section: "setup"
 order: 4
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 The rota shows who works which shift on each day of the week. People with a shift are timed against it; with **Use shifts** on, people without one can't clock in that day.
 
-Go to **Attendance → Rota** and choose the office at the top.
+Go to **Attendance → Rota**. If you have more than one office, choose one from the list above the rota.
 
 <Screen
-  label="The Rota for Lekki Office: a week with each person's shift on each day, and gaps where nobody is scheduled."
+  label="The Rota for Lekki Office: offices to choose from above it, the week beside its title with arrows either side, and each person's shift on each day, with gaps where nobody is scheduled."
   path={["Attendance", "Rota"]}
   title="Rota"
-  description="Plan who works when. Drag a shift to move it to another day."
-  actions={<Select value="Lekki Office" width={170} />}
+  actions={<Button variant="outline">Manage shifts</Button>}
   caption="Names and shifts are examples."
 >
-  <Card title="Lekki Office" description="2 shifts · 3 of 4 people scheduled">
+  <Tabs items={[{ label: "Lekki Office", active: true }, { label: "Ikeja Office" }]} />
+  <Card
+    title="Lekki Office"
+    description="2 shifts · 3 of 4 people scheduled"
+    action={
+      <Inline gap={6}>
+        <Button variant="outline">‹</Button>
+        <Meta>30 Nov – 6 Dec 2026</Meta>
+        <Button variant="outline">›</Button>
+      </Inline>
+    }
+  >
     <Table
       columns="1.5fr repeat(5, 1fr)"
       head={["Person", "Mon", "Tue", "Wed", "Thu", "Fri"]}
@@ -38,7 +48,7 @@ Go to **Attendance → Rota** and choose the office at the top.
 2. In **Add shift**, choose the **Shift** and save.
 3. To move a shift to another day, drag it there. To change it, click it and choose **Change shift**.
 
-Use the arrows at the top to plan the weeks ahead.
+Use the arrows beside the week, at the top of the rota, to plan the weeks ahead. **This week** brings you back.
 
 ## Rules the rota follows
 

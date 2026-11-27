@@ -1,11 +1,11 @@
 ---
 title: "One-to-ones"
-summary: "Private manager–employee meetings with a shared agenda, shared notes and private notes."
+summary: "Manager–employee meetings with a shared agenda, shared notes and private notes, and who can see them."
 section: "use"
 order: 3
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
-One-to-ones are regular meetings between a manager and someone who reports to them, with an agenda and notes. Only the two people in a one-to-one can open it, HR included, so people can speak freely.
+One-to-ones are regular meetings between a manager and someone who reports to them, with an agenda and notes. Only the two people in a one-to-one can change it. HR, and the managers above the lead, can read it, but never anyone's private notes.
 
 ## Schedule one
 
@@ -13,7 +13,18 @@ One-to-ones are regular meetings between a manager and someone who reports to th
 2. Click **Schedule**.
 3. Choose who it's **With** and **When**, and click **Schedule**.
 
-Anything left open on the agenda from your last one-to-one carries over.
+Anything left open on the agenda from your last one-to-one carries over. The person you're meeting gets an email with a calendar invite, so it lands in their calendar.
+
+Your upcoming one-to-ones also show under **Coming up** on **My team**, and open from there.
+
+## Find one
+
+**Performance → One-to-ones** lists them in a table:
+
+- **Upcoming**, **Done**, **Cancelled** or **All**. Upcoming ones run soonest first; the rest, newest first.
+- A month, or a review cycle, from the menu beside the search.
+- Search by name.
+- If you can read others' one-to-ones, switch between **Mine** and **Across my team**.
 
 ## During the meeting
 
@@ -22,7 +33,7 @@ Anything left open on the agenda from your last one-to-one carries over.
   path={["Performance", "One-to-ones"]}
   title="One-to-one with Adaeze Okafor"
   description="Thursday 4 December 2026, 10:00"
-  actions={<><Badge tone="primary">Scheduled</Badge><Button variant="outline">Cancel it</Button><Button>Mark as done</Button></>}
+  actions={<><Badge tone="primary">Scheduled</Badge><Button variant="outline">Change time</Button><Button variant="outline">Cancel it</Button><Button>Mark as done</Button></>}
 >
   <Card title="Agenda" description="Either of you can add to this.">
     <Stack gap={10}>
@@ -38,7 +49,7 @@ Anything left open on the agenda from your last one-to-one carries over.
     </Stack>
   </Card>
   <Columns template="1fr 1fr">
-    <Card title="Shared notes" description="You both see these.">
+    <Card title="Shared notes" description="You both see these. HR can read them too.">
       <Input tall value="Supplier list to finance by Friday." />
     </Card>
     <Card title="Private notes" description="Only you can ever see these.">
@@ -49,8 +60,28 @@ Anything left open on the agenda from your last one-to-one carries over.
 
 - **Either person** can add agenda items, tick them off, and link an item to one of the employee's current tasks.
 - **Shared notes** are seen by both people. **Private notes** are only ever seen by their author.
-- **Only the manager** can cancel the meeting or mark it as done.
+- **Only the manager** can change the time, cancel the meeting or mark it as done. Click **Change time** to move it: the employee is told, and the invite in their calendar moves too.
 
-## What HR can see
+## Who can see them
 
-Nothing: one-to-ones don't appear for HR or in reports. To encourage them, include them in your [first 30 days plan](/performance/first-30-days) and ask managers to book them from **My team**.
+| Who | What they can do |
+| --- | --- |
+| The manager and the employee | Everything above. Each keeps their own private notes. |
+| HR and admins | Read every one-to-one in the company: when it is, the agenda and the shared notes |
+| Managers higher up | Read the one-to-ones held by leads anywhere under them, in the same way |
+
+People who can read a one-to-one find it under **Across my team** on **Performance → One-to-ones**. They can't add to it or change it, and nobody but the author ever sees private notes.
+
+To encourage one-to-ones, include them in your [first 30 days plan](/performance/first-30-days) and ask managers to book them from **My team**.
+
+## Emails and reminders
+
+| When | Who hears | How |
+| --- | --- | --- |
+| It's booked | The employee | Email with a calendar invite, and a notification |
+| It's moved or cancelled | The other person | Email, with the calendar invite updated or removed, and a notification |
+| The day before | Both of you | Email and a notification at 8am |
+| Something's added to the agenda | The other person | A notification |
+| It's marked as done | Both of you | Email with the shared notes and anything still open |
+
+Nobody is told about something they did themselves, and nothing goes to people who have left.
