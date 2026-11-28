@@ -4,7 +4,7 @@ navTitle: "Leave settings"
 summary: "Choose who approves leave, the yearly allowance, carryover, who can take leave, which days count, and who's told."
 section: "setup"
 order: 1
-updated: "2026-11-27"
+updated: "2026-11-28"
 ---
 These settings apply to every kind of leave. A new company starts with the line manager approving, 20 days a year, up to 5 days carried over, and weekends and public holidays left out of leave days.
 
@@ -50,6 +50,7 @@ With **Multi-level approval** off, each person's line manager approves their lea
 
 - **Who can approve a step:** from the reporting line (**Line manager**, **Manager's manager** or **Department head**), anyone with a role such as HR manager, or **A specific person**.
 - **Nobody approves their own leave.** A step that would land on the person asking is skipped, so an HR manager's own request goes to another HR manager. A step that finds nobody, such as **Line manager** for someone without one, is skipped too. A line manager who has left is passed over for the manager above them.
+- **HR covers other roles.** A step for a role such as Finance that finds nobody (no one has the role, they've left, or the only one is the person asking) goes to an HR manager instead of being skipped. If its only holder is on leave with no stand-in, HR can approve while they're away.
 - **When no step finds anyone,** an HR manager approves, then an admin. The super admin, usually the CEO, approves only when there's nobody else.
 - **Only when over:** later steps can apply only to longer requests, for example HR only for requests over 5 days.
 - **Auto-approve after** (1): requests with no decision after this many days approve themselves. Leave that has already started is left for a person to decide. Set 0 to turn it off.
